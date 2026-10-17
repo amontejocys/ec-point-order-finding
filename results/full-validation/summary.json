@@ -1,0 +1,35 @@
+{
+  "scope": "Complete pytest run (quick, slow exhaustive and p29 Q=32 chain) on the committed source tree; no circuit algorithm changes",
+  "code_commit": "c4edfbd2c95adb2fde43bfb25f81ced741c7227d",
+  "source_tree_sha256": "18a69d14e147ef4bfd3a7e6b035311675fbf8ecc3fab0bfab5a32e07b6a3bbf1",
+  "command": "python -m pytest -o addopts=\"--strict-markers\" -p no:cacheprovider -q -rA --durations=10 --junitxml=raw/full_suite.xml",
+  "tests_passed": 143,
+  "failures": 0,
+  "wall_seconds": 841.44,
+  "environment": {
+    "python": "3.12.10",
+    "qiskit": "2.0.0",
+    "numpy": "2.1.3",
+    "pytest": "8.3.5",
+    "platform": "Windows"
+  },
+  "mcx_pending_deprecation_filtered": true,
+  "linux_ci": {
+    "workflow": "Tests",
+    "commit": "c4edfbd2c95adb2fde43bfb25f81ced741c7227d",
+    "conclusion": "success",
+    "scope": "quick tests only (tests/unit, tests/integration), Ubuntu, Python 3.11",
+    "run": "https://github.com/amontejocys/ec-point-order-finding/actions/runs/39043052719"
+  },
+  "artifacts": [
+    {
+      "path": "results/full-validation/raw/full_suite.log",
+      "sha256": "4eb4d0985aae9ff1cfc171ba12a0bc7fe6f657db581040c0c8e0ad0b64d1b2e8"
+    },
+    {
+      "path": "results/full-validation/raw/full_suite.xml",
+      "sha256": "4fa9c3b6fa663ffe8da1332a740a4eff561edd7d754041afd3e19371f5045c38"
+    }
+  ],
+  "limitations": "Validates reversible arithmetic and recovery on the stated domains; not a fresh Q=2048 run, not M1, not novelty or security evidence. Raw logs are ignored by Git and contain local paths."
+}

@@ -13,7 +13,7 @@ python -m pip install --no-deps -e . (or pip install -c requirements-lock.txt -e
 Use experiments/scripts/lock_environment.py to regenerate it only after reviewing
 pyproject changes and resolving dependencies in a clean, dedicated environment.
 The lock was validated on Windows with Python 3.11 and 3.12 (identical pins); the
-Linux CI remains to be exercised. Active files use LF line endings via .gitattributes.
+Linux CI quick-test workflow passed on commit c4edfbd (Ubuntu, Python 3.11). Active files use LF line endings via .gitattributes.
 
 Historical documentation reports Qiskit 2.0.0. Saved Monte Carlo metadata reports
 Python 3.11.5 and NumPy 2.1.3. The migration uses these versions, but freshly

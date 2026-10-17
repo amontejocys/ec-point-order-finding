@@ -7,7 +7,7 @@
 | R8 novelty | Comparative audit and evidence required | Determined after M2 | docs/audit/, manuscript | Open |
 | Motivation | Assess why the selected capability matters | Decision with advisor | docs/decisions/ | Open |
 | References [27], [28], [30] | Verify primary sources | Correct only supported entries | Manuscript bibliography | Pending |
-| Migration slow validation | Supplied logs: 104 slow plus p29 chain passed | Preserve evidence and qualify snapshot | docs/audit/validation_followup.md | Evidence inspected; not rerun here |
+| Migration slow validation | Supplied logs: 104 slow plus p29 chain passed | Preserve evidence and qualify snapshot | docs/audit/validation_followup.md | Superseded: full suite rerun on commit c4edfbd, 143 passed, results/full-validation/summary.json |
 | Adder coverage | Small complete domains vs p29 selected inputs | Populate coverage inventory | docs/audit/coverage.md | Documented; manuscript untouched |
 | Duplicate recovery | Experiments and package shared gcd policy | Central iterator and shared prefix API | recovery/, experiments/ | Validation recorded in maintenance summary |
 | MCX warnings | Exact known warning, Qiskit 2.0.0 | Narrow pytest filter only | pyproject.toml | Other warnings remain enabled |
@@ -15,3 +15,4 @@
 | Overleaf-only author workflow | Author retains manual editing | Restore explicit rule; proposals only, no TeX/Bib edits | CLAUDE.md | Restored |
 | Provenance and portability | Recipe/manifest for source hash; isolated interpreter metadata | Version reproducible auditor; normalize active metadata paths | docs/audit/source_provenance.md | No dependency or scientific-code changes |
 | Pre-commit hygiene | CRLF working copy vs LF clones broke fingerprints; interpreter paths leaked user names; AI instruction files were about to be versioned | .gitattributes with LF policy and -text historical artifacts; active files converted to LF; fingerprint regenerated; interpreter path no longer recorded; CLAUDE.md/AGENTS.md ignored | .gitattributes, .gitignore, results/eol-normalization/ | Done before first commit; no scientific-code changes |
+| Historical path redaction | results/legacy/r6/manuscript_zip_audit.json exposed a local user directory | Replace directory with a placeholder, keep ZIP name and all other bytes; record new hash and original hash in historical_artifacts.json | results/legacy/r6/, docs/audit/historical_artifacts.json | Done; r6/ backup keeps the original |

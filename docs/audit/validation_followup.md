@@ -51,7 +51,9 @@ The filter does not change circuits. The old runs' large warning counts are
 observed; no profiled causal timing improvement is claimed. Changing pytest
 configuration requires refreshing the lock header hash, not dependency pins.
 
-Git initialization, milestone tags, Linux CI and importing the reviewed Overleaf
-snapshot remain pending. Historical notes are preserved unchanged; current
+Git was initialized and the Linux CI quick-test workflow passed on commit c4edfbd;
+the complete suite (143 tests) also passed on that code, see
+results/full-validation/summary.json. Milestone tags and importing the reviewed
+Overleaf snapshot remain pending. Historical notes are preserved unchanged; current
 coverage and configuration indexes supersede their missing entries. The
 manuscript, signing admission and circuit construction remain unchanged.

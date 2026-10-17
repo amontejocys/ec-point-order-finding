@@ -63,7 +63,8 @@ were inspected and preserved; see validation_followup.md. These results refer
 to the migrated snapshot BEFORE the shared-recovery maintenance described there.
 A fresh Q=2048 circuit run was not performed by that follow-up.
 Qiskit's existing MCX pending-deprecation warnings were observed, not suppressed.
-The Linux GitHub Actions workflow has not been run locally.
+The Linux GitHub Actions workflow first ran on GitHub for commit c4edfbd (quick
+tests, success); see results/full-validation/summary.json.
 
 ## Next step
 
