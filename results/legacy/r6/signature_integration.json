@@ -1,0 +1,16 @@
+{
+  "scope": "Toy ECDSA-like arithmetic only; correctness conditional on exact recovered order",
+  "shots": 4,
+  "z_test": 2,
+  "d_test": 2,
+  "k_test": 1,
+  "reference_signature": [
+    1,
+    4
+  ],
+  "recovery_minimality_certification": false,
+  "exact_order": 100,
+  "no_candidate": 0,
+  "nonminimal_period": 0,
+  "matching_verified_signatures": 100
+}

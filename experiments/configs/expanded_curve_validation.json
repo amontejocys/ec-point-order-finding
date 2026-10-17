@@ -1,0 +1,32 @@
+{
+  "status": "Recovered from historical metadata; not a new experiment",
+  "scope": "Ideal noiseless postprocessing only; no circuit execution",
+  "seed": 429931,
+  "primes": [
+    11,
+    17,
+    23,
+    29,
+    41,
+    47,
+    59,
+    67,
+    83,
+    101
+  ],
+  "curves_per_prime": 100,
+  "trials_per_instance": 100,
+  "budgets": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "sampling": "Uniform nonsingular (a,b), distinct per p; uniform finite P per curve",
+  "generator": "experiments.scripts.random_curve_pilot",
+  "report": "results/legacy/r6/raw/expanded_curve_validation.json",
+  "arrays": "results/legacy/r6/raw/expanded_curve_validation.npz"
+}

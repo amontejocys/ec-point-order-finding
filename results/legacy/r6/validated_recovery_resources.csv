@@ -1,0 +1,6 @@
+p,a,b,Px,Py,ell,m,Q,controlled_additions,arithmetic_high_level_instructions,arithmetic_ccx,logical_qubits_with_clean_mcx_pool,full_x,full_cx,full_h,full_cp_ideal,full_mixed_basis_instructions,sufficient_T_for_epsilon_0_01
+5,1,1,0,1,3,7,128,7,1676598,10172230,136,1,12889,14,21,10185155,295
+7,0,1,3,0,3,8,256,1,190047,1187227,137,1,1532,16,28,1188804,295
+7,0,1,0,1,3,8,256,8,1520456,9498696,137,1,12300,16,28,9511041,295
+11,4,3,10,3,4,9,512,9,4810791,33090651,183,1,17964,18,36,33108670,369
+29,0,7,6,7,5,11,2048,11,11735259,92752247,237,1,24287,22,55,92776612,443

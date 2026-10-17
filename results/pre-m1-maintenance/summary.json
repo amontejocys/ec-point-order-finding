@@ -1,0 +1,30 @@
+{
+  "scope": "Pre-M1 shared-policy and documentation maintenance; not a full circuit rerun",
+  "environment": {
+    "python": "3.11.5",
+    "qiskit": "2.0.0",
+    "numpy": "2.1.3",
+    "pytest": "8.3.5"
+  },
+  "tests_passed": {
+    "quick": 34,
+    "fourier_recovery": 8
+  },
+  "total_tests_passed_here": 42,
+  "previous_full_validation": "results/validation-followup/summary.json (pre-maintenance snapshot)",
+  "full_suite_after_this_change": "Not rerun",
+  "historical_pilot_rows_reproduced": 7000,
+  "historical_signatures_reproduced": 100,
+  "source_tree_sha256": "721b2873d8d05987c6e7a41c230b8fbe694c1e697bbc724b406b08f966377ce4",
+  "pyproject_sha256": "6f714b1b8097d1e521720f9749d21e9aa4df86a1dfb0a56445171853148497c1",
+  "dependency_pins_unchanged": true,
+  "legacy_files_unchanged": 100,
+  "circuit_signer_baselines_changed": false,
+  "M1_implemented": false,
+  "git_commit": null,
+  "linux_ci": "Not executed",
+  "source_fingerprint_definition": "docs/audit/source_provenance.md",
+  "source_manifest": "results/pre-m1-maintenance/source_manifest.json",
+  "environment_evidence": "results/pre-m1-maintenance/source_manifest.json#environment_observed_now",
+  "fingerprint_line_endings_note": "Computed on the CRLF working copy before LF normalization; superseded by results/eol-normalization/summary.json"
+}

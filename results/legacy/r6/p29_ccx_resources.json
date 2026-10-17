@@ -1,0 +1,127 @@
+{
+  "scope": "scalar_update arithmetic only; excludes preparation, H, IQFT, measurements, classical work, and shots",
+  "basis": "X,CX,CCX with exact full-Toffoli clean AND chains",
+  "method": "actual gate-arity histogram plus verified expansion formula, not a scheduled or materialized large lowered circuit",
+  "parameters": {
+    "m": 5,
+    "p": 29,
+    "a": 0,
+    "b": 7,
+    "point": [
+      6,
+      7
+    ]
+  },
+  "control_profile": {
+    "1": 11024,
+    "2": 95341,
+    "3": 466286,
+    "4": 1154356,
+    "5": 1452618,
+    "6": 746490,
+    "7": 607938,
+    "8": 451370,
+    "9": 251880,
+    "10": 83520,
+    "11": 13200,
+    "12": 160
+  },
+  "resources": {
+    "input_instructions": 5334183,
+    "x_count": 0,
+    "cx_count": 11024,
+    "ccx_count": 42160043,
+    "maximum_controls": 12,
+    "extra_clean_ancillas": 10,
+    "original_qubits": 221,
+    "lowered_qubits": 231,
+    "lowered_instructions": 42171067
+  },
+  "per_addition": [
+    {
+      "point": [
+        6,
+        7
+      ],
+      "resources": {
+        "input_instructions": 1066799,
+        "x_count": 0,
+        "cx_count": 2192,
+        "ccx_count": 8431907,
+        "maximum_controls": 12,
+        "extra_clean_ancillas": 10,
+        "original_qubits": 217,
+        "lowered_qubits": 227,
+        "lowered_instructions": 8434099
+      }
+    },
+    {
+      "point": [
+        12,
+        13
+      ],
+      "resources": {
+        "input_instructions": 1066893,
+        "x_count": 0,
+        "cx_count": 2224,
+        "ccx_count": 8432161,
+        "maximum_controls": 12,
+        "extra_clean_ancillas": 10,
+        "original_qubits": 217,
+        "lowered_qubits": 227,
+        "lowered_instructions": 8434385
+      }
+    },
+    {
+      "point": [
+        6,
+        22
+      ],
+      "resources": {
+        "input_instructions": 1066799,
+        "x_count": 0,
+        "cx_count": 2192,
+        "ccx_count": 8431907,
+        "maximum_controls": 12,
+        "extra_clean_ancillas": 10,
+        "original_qubits": 217,
+        "lowered_qubits": 227,
+        "lowered_instructions": 8434099
+      }
+    },
+    {
+      "point": [
+        12,
+        16
+      ],
+      "resources": {
+        "input_instructions": 1066893,
+        "x_count": 0,
+        "cx_count": 2224,
+        "ccx_count": 8432161,
+        "maximum_controls": 12,
+        "extra_clean_ancillas": 10,
+        "original_qubits": 217,
+        "lowered_qubits": 227,
+        "lowered_instructions": 8434385
+      }
+    },
+    {
+      "point": [
+        6,
+        7
+      ],
+      "resources": {
+        "input_instructions": 1066799,
+        "x_count": 0,
+        "cx_count": 2192,
+        "ccx_count": 8431907,
+        "maximum_controls": 12,
+        "extra_clean_ancillas": 10,
+        "original_qubits": 217,
+        "lowered_qubits": 227,
+        "lowered_instructions": 8434099
+      }
+    }
+  ]
+}

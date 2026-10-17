@@ -1,0 +1,640 @@
+{
+  "scope": "Actual phase-free arithmetic gate propagation for every scalar input; ideal IQFT via FFT; no noise",
+  "not_dense_statevector": true,
+  "no_factorization_in_recovery": true,
+  "cache_is_simulation_only_not_circuit_lookup": true,
+  "cases": [
+    {
+      "p": 5,
+      "a": 1,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "order_upper_bound": 10,
+      "m": 7,
+      "q": 128,
+      "reference_order_for_evaluation_only": 9,
+      "seed": 20261008,
+      "trials": 100,
+      "minimality_certified_by_recovery": false,
+      "logical_resources_arithmetic": {
+        "input_instructions": 1676598,
+        "x_count": 0,
+        "cx_count": 12880,
+        "ccx_count": 10172230,
+        "maximum_controls": 9,
+        "extra_clean_ancillas": 7,
+        "original_qubits": 129,
+        "lowered_qubits": 136,
+        "lowered_instructions": 10185110
+      },
+      "controlled_additions": 7,
+      "distinct_adder_definitions": 6,
+      "basis_inputs_checked": 128,
+      "actual_gate_propagations": 82,
+      "simulation_cache_hits": 814,
+      "expanded_instructions_actually_propagated": 19640122,
+      "quantum_overhead": {
+        "identity_preparation_x": 1,
+        "initial_h": 7,
+        "iqft_h": 7,
+        "iqft_cp": 21,
+        "iqft_swaps": 3,
+        "iqft_cx_after_swaps": 9,
+        "cp_angles_radians": [
+          {
+            "angle": -1.5707963267948966,
+            "count": 6
+          },
+          {
+            "angle": -0.7853981633974483,
+            "count": 5
+          },
+          {
+            "angle": -0.39269908169872414,
+            "count": 4
+          },
+          {
+            "angle": -0.19634954084936207,
+            "count": 3
+          },
+          {
+            "angle": -0.09817477042468103,
+            "count": 2
+          },
+          {
+            "angle": -0.04908738521234052,
+            "count": 1
+          }
+        ],
+        "measurements": 7,
+        "additional_qubits": 0
+      },
+      "recovery_results": [
+        {
+          "shots": 1,
+          "exact": 62,
+          "nonminimal_multiple": 0,
+          "no_candidate": 38,
+          "exact_rate": 0.62
+        },
+        {
+          "shots": 2,
+          "exact": 83,
+          "nonminimal_multiple": 0,
+          "no_candidate": 17,
+          "exact_rate": 0.83
+        },
+        {
+          "shots": 4,
+          "exact": 97,
+          "nonminimal_multiple": 0,
+          "no_candidate": 3,
+          "exact_rate": 0.97
+        },
+        {
+          "shots": 8,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 16,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 32,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 64,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        3,
+        0
+      ],
+      "order_upper_bound": 13,
+      "m": 8,
+      "q": 256,
+      "reference_order_for_evaluation_only": 2,
+      "seed": 20261009,
+      "trials": 100,
+      "minimality_certified_by_recovery": false,
+      "logical_resources_arithmetic": {
+        "input_instructions": 190047,
+        "x_count": 0,
+        "cx_count": 1520,
+        "ccx_count": 1187227,
+        "maximum_controls": 9,
+        "extra_clean_ancillas": 7,
+        "original_qubits": 130,
+        "lowered_qubits": 137,
+        "lowered_instructions": 1188747
+      },
+      "controlled_additions": 1,
+      "distinct_adder_definitions": 1,
+      "basis_inputs_checked": 256,
+      "actual_gate_propagations": 2,
+      "simulation_cache_hits": 254,
+      "expanded_instructions_actually_propagated": 380094,
+      "quantum_overhead": {
+        "identity_preparation_x": 1,
+        "initial_h": 8,
+        "iqft_h": 8,
+        "iqft_cp": 28,
+        "iqft_swaps": 4,
+        "iqft_cx_after_swaps": 12,
+        "cp_angles_radians": [
+          {
+            "angle": -1.5707963267948966,
+            "count": 7
+          },
+          {
+            "angle": -0.7853981633974483,
+            "count": 6
+          },
+          {
+            "angle": -0.39269908169872414,
+            "count": 5
+          },
+          {
+            "angle": -0.19634954084936207,
+            "count": 4
+          },
+          {
+            "angle": -0.09817477042468103,
+            "count": 3
+          },
+          {
+            "angle": -0.04908738521234052,
+            "count": 2
+          },
+          {
+            "angle": -0.02454369260617026,
+            "count": 1
+          }
+        ],
+        "measurements": 8,
+        "additional_qubits": 0
+      },
+      "recovery_results": [
+        {
+          "shots": 1,
+          "exact": 59,
+          "nonminimal_multiple": 0,
+          "no_candidate": 41,
+          "exact_rate": 0.59
+        },
+        {
+          "shots": 2,
+          "exact": 73,
+          "nonminimal_multiple": 0,
+          "no_candidate": 27,
+          "exact_rate": 0.73
+        },
+        {
+          "shots": 4,
+          "exact": 95,
+          "nonminimal_multiple": 0,
+          "no_candidate": 5,
+          "exact_rate": 0.95
+        },
+        {
+          "shots": 8,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 16,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 32,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 64,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "order_upper_bound": 13,
+      "m": 8,
+      "q": 256,
+      "reference_order_for_evaluation_only": 3,
+      "seed": 20261010,
+      "trials": 100,
+      "minimality_certified_by_recovery": false,
+      "logical_resources_arithmetic": {
+        "input_instructions": 1520456,
+        "x_count": 0,
+        "cx_count": 12288,
+        "ccx_count": 9498696,
+        "maximum_controls": 9,
+        "extra_clean_ancillas": 7,
+        "original_qubits": 130,
+        "lowered_qubits": 137,
+        "lowered_instructions": 9510984
+      },
+      "controlled_additions": 8,
+      "distinct_adder_definitions": 2,
+      "basis_inputs_checked": 256,
+      "actual_gate_propagations": 12,
+      "simulation_cache_hits": 2036,
+      "expanded_instructions_actually_propagated": 2280684,
+      "quantum_overhead": {
+        "identity_preparation_x": 1,
+        "initial_h": 8,
+        "iqft_h": 8,
+        "iqft_cp": 28,
+        "iqft_swaps": 4,
+        "iqft_cx_after_swaps": 12,
+        "cp_angles_radians": [
+          {
+            "angle": -1.5707963267948966,
+            "count": 7
+          },
+          {
+            "angle": -0.7853981633974483,
+            "count": 6
+          },
+          {
+            "angle": -0.39269908169872414,
+            "count": 5
+          },
+          {
+            "angle": -0.19634954084936207,
+            "count": 4
+          },
+          {
+            "angle": -0.09817477042468103,
+            "count": 3
+          },
+          {
+            "angle": -0.04908738521234052,
+            "count": 2
+          },
+          {
+            "angle": -0.02454369260617026,
+            "count": 1
+          }
+        ],
+        "measurements": 8,
+        "additional_qubits": 0
+      },
+      "recovery_results": [
+        {
+          "shots": 1,
+          "exact": 65,
+          "nonminimal_multiple": 0,
+          "no_candidate": 35,
+          "exact_rate": 0.65
+        },
+        {
+          "shots": 2,
+          "exact": 87,
+          "nonminimal_multiple": 0,
+          "no_candidate": 13,
+          "exact_rate": 0.87
+        },
+        {
+          "shots": 4,
+          "exact": 97,
+          "nonminimal_multiple": 0,
+          "no_candidate": 3,
+          "exact_rate": 0.97
+        },
+        {
+          "shots": 8,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 16,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 32,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 64,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        }
+      ]
+    },
+    {
+      "p": 11,
+      "a": 4,
+      "b": 3,
+      "point": [
+        10,
+        3
+      ],
+      "order_upper_bound": 18,
+      "m": 9,
+      "q": 512,
+      "reference_order_for_evaluation_only": 7,
+      "seed": 20261011,
+      "trials": 100,
+      "minimality_certified_by_recovery": false,
+      "logical_resources_arithmetic": {
+        "input_instructions": 4810791,
+        "x_count": 0,
+        "cx_count": 17952,
+        "ccx_count": 33090651,
+        "maximum_controls": 10,
+        "extra_clean_ancillas": 8,
+        "original_qubits": 175,
+        "lowered_qubits": 183,
+        "lowered_instructions": 33108603
+      },
+      "controlled_additions": 9,
+      "distinct_adder_definitions": 3,
+      "basis_inputs_checked": 512,
+      "actual_gate_propagations": 42,
+      "simulation_cache_hits": 4566,
+      "expanded_instructions_actually_propagated": 22450358,
+      "quantum_overhead": {
+        "identity_preparation_x": 1,
+        "initial_h": 9,
+        "iqft_h": 9,
+        "iqft_cp": 36,
+        "iqft_swaps": 4,
+        "iqft_cx_after_swaps": 12,
+        "cp_angles_radians": [
+          {
+            "angle": -1.5707963267948966,
+            "count": 8
+          },
+          {
+            "angle": -0.7853981633974483,
+            "count": 7
+          },
+          {
+            "angle": -0.39269908169872414,
+            "count": 6
+          },
+          {
+            "angle": -0.19634954084936207,
+            "count": 5
+          },
+          {
+            "angle": -0.09817477042468103,
+            "count": 4
+          },
+          {
+            "angle": -0.04908738521234052,
+            "count": 3
+          },
+          {
+            "angle": -0.02454369260617026,
+            "count": 2
+          },
+          {
+            "angle": -0.01227184630308513,
+            "count": 1
+          }
+        ],
+        "measurements": 9,
+        "additional_qubits": 0
+      },
+      "recovery_results": [
+        {
+          "shots": 1,
+          "exact": 81,
+          "nonminimal_multiple": 0,
+          "no_candidate": 19,
+          "exact_rate": 0.81
+        },
+        {
+          "shots": 2,
+          "exact": 98,
+          "nonminimal_multiple": 0,
+          "no_candidate": 2,
+          "exact_rate": 0.98
+        },
+        {
+          "shots": 4,
+          "exact": 99,
+          "nonminimal_multiple": 0,
+          "no_candidate": 1,
+          "exact_rate": 0.99
+        },
+        {
+          "shots": 8,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 16,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 32,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 64,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        }
+      ]
+    },
+    {
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "order_upper_bound": 40,
+      "m": 11,
+      "q": 2048,
+      "reference_order_for_evaluation_only": 5,
+      "seed": 20261012,
+      "trials": 100,
+      "minimality_certified_by_recovery": false,
+      "logical_resources_arithmetic": {
+        "input_instructions": 11735259,
+        "x_count": 0,
+        "cx_count": 24272,
+        "ccx_count": 92752247,
+        "maximum_controls": 12,
+        "extra_clean_ancillas": 10,
+        "original_qubits": 227,
+        "lowered_qubits": 237,
+        "lowered_instructions": 92776519
+      },
+      "controlled_additions": 11,
+      "distinct_adder_definitions": 4,
+      "basis_inputs_checked": 2048,
+      "actual_gate_propagations": 40,
+      "simulation_cache_hits": 22488,
+      "expanded_instructions_actually_propagated": 42673840,
+      "quantum_overhead": {
+        "identity_preparation_x": 1,
+        "initial_h": 11,
+        "iqft_h": 11,
+        "iqft_cp": 55,
+        "iqft_swaps": 5,
+        "iqft_cx_after_swaps": 15,
+        "cp_angles_radians": [
+          {
+            "angle": -1.5707963267948966,
+            "count": 10
+          },
+          {
+            "angle": -0.7853981633974483,
+            "count": 9
+          },
+          {
+            "angle": -0.39269908169872414,
+            "count": 8
+          },
+          {
+            "angle": -0.19634954084936207,
+            "count": 7
+          },
+          {
+            "angle": -0.09817477042468103,
+            "count": 6
+          },
+          {
+            "angle": -0.04908738521234052,
+            "count": 5
+          },
+          {
+            "angle": -0.02454369260617026,
+            "count": 4
+          },
+          {
+            "angle": -0.01227184630308513,
+            "count": 3
+          },
+          {
+            "angle": -0.006135923151542565,
+            "count": 2
+          },
+          {
+            "angle": -0.0030679615757712823,
+            "count": 1
+          }
+        ],
+        "measurements": 11,
+        "additional_qubits": 0
+      },
+      "recovery_results": [
+        {
+          "shots": 1,
+          "exact": 77,
+          "nonminimal_multiple": 0,
+          "no_candidate": 23,
+          "exact_rate": 0.77
+        },
+        {
+          "shots": 2,
+          "exact": 96,
+          "nonminimal_multiple": 0,
+          "no_candidate": 4,
+          "exact_rate": 0.96
+        },
+        {
+          "shots": 4,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 8,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 16,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 32,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        },
+        {
+          "shots": 64,
+          "exact": 100,
+          "nonminimal_multiple": 0,
+          "no_candidate": 0,
+          "exact_rate": 1.0
+        }
+      ]
+    }
+  ]
+}

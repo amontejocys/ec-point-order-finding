@@ -1,0 +1,24 @@
+{
+  "scope": "Pre-commit hygiene: line-ending normalization, provenance refresh and metadata redaction; no scientific-code changes",
+  "line_endings": {
+    "policy": ".gitattributes: active text files LF; paper/drafts/, docs/history/, results/legacy/ marked -text",
+    "active_files_converted_crlf_to_lf": 127,
+    "historical_files_kept_byte_for_byte": 16
+  },
+  "source_tree_sha256_before_crlf": "721b2873d8d05987c6e7a41c230b8fbe694c1e697bbc724b406b08f966377ce4",
+  "source_tree_sha256_after_lf": "18a69d14e147ef4bfd3a7e6b035311675fbf8ecc3fab0bfab5a32e07b6a3bbf1",
+  "source_manifest": "results/eol-normalization/source_manifest.json",
+  "historical_artifacts_hash_verified": 20,
+  "legacy_r5_r6_unchanged": 100,
+  "requirements_lock": "Header regenerated from a Python 3.12.10 environment; pins identical to the 3.11.5 lock",
+  "redaction": "Interpreter executable paths removed from audit_source_tree.py output and from previously recorded summaries",
+  "ignored_assistant_files": [
+    "CLAUDE.md",
+    "AGENTS.md",
+    ".claude/",
+    ".codex/",
+    ".cursor/",
+    ".agents/"
+  ],
+  "git_commit": null
+}

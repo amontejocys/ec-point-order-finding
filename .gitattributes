@@ -1,0 +1,29 @@
+# Line-ending policy: active sources are stored and checked out with LF on every
+# platform, so raw-byte fingerprints (docs/audit/source_provenance.md) are
+# reproducible from any clone.
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cfg text eol=lf
+*.csv text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+
+# Binary artifacts
+*.npz binary
+*.npy binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
+
+# Historical artifacts are preserved byte-for-byte; their hashes are recorded in
+# docs/audit/historical_artifacts.json. Git must not normalize them.
+paper/drafts/** -text
+docs/history/** -text
+results/legacy/** -text

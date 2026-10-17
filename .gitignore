@@ -1,0 +1,62 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Temporary migration inputs: preserved on disk, not part of published layout
+/r5/
+/r6/
+
+# Large or intermediate outputs: small reviewed summaries remain trackable
+/results/**/raw/
+/results/**/cache/
+/results/**/logs/
+/results/**/*.npz
+/results/**/*.npy
+/results/**/*.pkl
+/results/**/*.pickle
+
+# LaTeX build output
+/paper/**/*.aux
+/paper/**/*.bbl
+/paper/**/*.blg
+/paper/**/*.log
+/paper/**/*.out
+/paper/**/*.fls
+/paper/**/*.fdb_latexmk
+/paper/**/*.synctex.gz
+/paper/**/*.toc
+/paper/**/*.pdf
+
+# Local notebook state
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# AI assistant instructions and local agent state: kept local, never versioned
+/CLAUDE.md
+/CLAUDE.local.md
+/AGENTS.md
+.claude/
+.agents/
+.codex/
+.cursor/
+.cursorrules
+.windsurfrules
+GEMINI.md
+.gemini/
+.aider*

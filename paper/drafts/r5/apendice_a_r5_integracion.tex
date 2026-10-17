@@ -1,0 +1,302 @@
+% Replacement for Appendix A only. Keep the existing \appendix command.
+% Stop before the section labelled app:complexity. Do not append to old A.
+\section{\textcolor{blue}{Reversible construction of the point-arithmetic circuit}}
+\label{app:oracle}
+
+\begin{revision}
+The construction uses affine-coordinate arithmetic and controlled point
+translations within the framework of \cite{ProosZalka2003,Roetteler2017}.
+The elliptic-curve group law is standard
+\cite{Silverman2009,Washington2008}. The explicit identity flag, total
+extension to invalid encodings, branch organisation, and arithmetic
+assembly described below specify the reference implementation used here.
+They are not presented as improvements over the optimized circuits of
+the cited studies, and their resource estimates are analysed separately.
+
+Let $\ell=\lceil\log_2 p\rceil$ and use the point encoding in
+Equation~\eqref{eq:point_encoding}. On valid point encodings, the scalar
+evaluation has the action
+\begin{equation}
+\label{eq:reversible_circuit}
+\begin{aligned}
+U_{f_P}:\quad
+&\lvert k\rangle\lvert\mathrm{enc}(R)\rangle
+ \lvert0\rangle_{\mathrm{aux}}\\
+&\longmapsto
+ \lvert k\rangle\lvert\mathrm{enc}(R+kP)\rangle
+ \lvert0\rangle_{\mathrm{aux}}.
+\end{aligned}
+\end{equation}
+Initializing $R=\mathcal O$ gives the periodic-function evaluation in
+Equation~\eqref{eq:oracle}. The auxiliary-zero requirement is part of
+each block's interface.
+\end{revision}
+
+\subsection{\textcolor{blue}{Classical precomputation}}
+\begin{revision}
+For the scalar-register width $m$ selected in Algorithm~\ref{alg:hybrid},
+compute
+\[
+P_0=P,\qquad P_{j+1}=2P_j,
+\qquad j=0,\ldots,m-2.
+\]
+Thus $P_j=2^jP$, using at most $m-1$ classical point doublings. These
+constants configure the controlled translations. A constant
+$P_j=\mathcal O$ contributes no update and is omitted. Neither the order
+of $P$ nor a table of all $2^m$ scalar outputs is required. The values
+$A$, $-A$, and $2A$ needed by a finite constant-point block are also
+classical constants, rather than quantum inputs to be enumerated.
+\end{revision}
+
+\subsection{\textcolor{blue}{Reversible modular arithmetic}}
+\begin{revision}
+The reference blocks are assembled from $X$, controlled-$X$, Toffoli,
+and multi-controlled-$X$ operations. Standard reversible gate
+constructions provide the underlying framework
+\cite{Barenco1995,NielsenChuang2010}; the particular assembly and
+workspace management below describe the local implementation.
+
+\textbf{Comparisons and flags.}
+Equality and range predicates are written into flag qubits by XOR,
+preserving their input registers. Equality with a constant is implemented
+by temporarily complementing input bits corresponding to zeros in that
+constant, applying a multi-controlled $X$ to the flag, and undoing the
+complements. Range comparisons use reversible subtraction in workspace
+to extract the comparison result before reversing the subtraction.
+Flags are cleared by recomputing the appropriate predicate; they are
+not measured or discarded during arithmetic evaluation.
+
+\textbf{Addition.}
+For a classical constant $a\in\{0,\ldots,p-1\}$, the addition block maps
+\begin{equation}
+\label{eq:app_r5_constant_addition}
+\begin{aligned}
+&\lvert x\rangle\lvert0\rangle_{\mathrm{aux}}\\
+&\longmapsto
+ \lvert(x+a)\bmod p\rangle
+ \lvert0\rangle_{\mathrm{aux}},\quad x<p.
+\end{aligned}
+\end{equation}
+Encodings with $x\geq p$ remain unchanged. A validity flag records
+$x<p$. For valid inputs, addition is performed in an extended register
+and $p$ is subtracted if the sum is at least $p$. If
+$u=(x+a)\bmod p$, reduction occurred exactly when $u<a$, allowing the
+reduction flag to be cleared using the output. Repeating the range
+comparison clears the validity flag because modular addition preserves
+the valid range and invalid inputs were fixed.
+
+For $y=\sum_{j=0}^{\ell-1}y_j2^j$, addition of a quantum register is
+assembled by letting $y_j$ control addition of $2^j\bmod p$. This maps
+$(x,y)$ to $((x+y)\bmod p,y)$ for $x<p$. Subtraction is obtained by
+reversing the corresponding addition circuit. Every constituent block,
+including its cleanup operations, is controlled when required.
+
+\textbf{Multiplication and squaring.}
+Multiplication uses a separate modular accumulator:
+\begin{equation}
+\label{eq:app_r5_multiply_accumulate}
+\begin{aligned}
+&\lvert x\rangle\lvert y\rangle\lvert t\rangle
+ \lvert0\rangle_{\mathrm{aux}}\\
+&\longmapsto
+ \lvert x\rangle\lvert y\rangle
+ \lvert(t+xy)\bmod p\rangle
+ \lvert0\rangle_{\mathrm{aux}},\quad t<p.
+\end{aligned}
+\end{equation}
+The identity $xy=\sum_{i,j}x_i y_j2^{i+j}$ gives an implementation
+through constant additions of $2^{i+j}\bmod p$, jointly controlled by
+$x_i$ and $y_j$. Both operands are preserved. Invalid accumulator
+encodings are fixed. Squaring uses the analogous expansion of $x^2$
+and accumulates its value without overwriting $x$. A zero accumulator
+therefore yields a product or square, while reversal subtracts it.
+
+\textbf{Modular inversion.}
+The inversion evaluator preserves its input and XORs its inverse into
+an arbitrary target. For an $\ell$-bit input $w$, define
+\[
+I_p(w)=
+\begin{cases}
+w^{-1}\bmod p,&0<w<p,\\
+0,&\text{otherwise}.
+\end{cases}
+\]
+The clean interface is
+\begin{equation}
+\label{eq:app_r5_inverse_evaluator}
+\begin{aligned}
+&\lvert w\rangle\lvert t\rangle
+ \lvert0\rangle_{\mathrm{aux}}\\
+&\longmapsto
+ \lvert w\rangle\lvert t\oplus I_p(w)\rangle
+ \lvert0\rangle_{\mathrm{aux}}.
+\end{aligned}
+\end{equation}
+Here $\oplus$ denotes bitwise XOR, not modular addition.
+
+The implemented evaluator uses quotient-based Euclidean updates,
+initialized with $(r_0,r_1,c_0,c_1)=(p,w,0,1)$. In each active round,
+\begin{equation}
+\label{eq:app_r5_euclidean_update}
+\begin{aligned}
+q&=\lfloor r_0/r_1\rfloor,\\
+(r_0,r_1)&\longmapsto(r_1,r_0-qr_1),\\
+(c_0,c_1)&\longmapsto(c_1,c_0-qc_1\bmod p).
+\end{aligned}
+\end{equation}
+The invariant $r_i\equiv c_iw\pmod p$ is preserved. For a valid
+nonzero input, termination at $(r_0,r_1)=(1,0)$ gives
+$c_0=w^{-1}\bmod p$. The circuit uses $2\ell+1$ scheduled rounds,
+with activation flags disabling updates after $r_1=0$. This bound
+follows from the reduction of the Euclidean remainder by at least
+a factor of two within every two active rounds.
+
+The compact variant keeps one remainder/coefficient quartet and
+retains quotient and activation history for reversal. The inverse is
+XORed into the target under the validity and terminal-state predicates;
+the complete computation is then reversed. This clears the Euclidean
+state, history, and arithmetic workspace. The method is the local
+reference implementation, not an adoption of the optimized inversion
+circuit or resource bounds of \cite{Roetteler2017}.
+\end{revision}
+
+\subsection{\textcolor{blue}{Controlled point translation}}
+\begin{revision}
+For a finite constant $A=(x_A,y_A)$ and an ordinary input
+$R=(x_R,y_R)$ with $x_R\neq x_A$, evaluate the affine group law
+\cite{Silverman2009,Washington2008}:
+\begin{equation}
+\label{eq:affine_translation}
+\begin{aligned}
+\lambda&=(y_R-y_A)(x_R-x_A)^{-1}\pmod p,\\
+x_{R+A}&=\lambda^2-x_R-x_A\pmod p,\\
+y_{R+A}&=\lambda(x_R-x_{R+A})-y_R\pmod p.
+\end{aligned}
+\end{equation}
+The implementation computes the coordinate differences, their required
+inverse, and the slope, retaining shared intermediates until both output
+coordinates have been XORed into their targets. The arithmetic
+computation is then reversed once to clear those intermediates.
+
+\textbf{Validity and exceptional cases.}
+A finite encoding is valid only when its coordinates are canonical
+residues and satisfy the curve equation. The identity is valid only
+with its identity flag set and both coordinate registers zero.
+Mutually exclusive branch flags select the following outputs:
+\[
+R+A=
+\begin{cases}
+A,&R=\mathcal O,\\
+\mathcal O,&R=-A,\\
+2A,&R=A\text{ and }A\neq-A,\\
+\text{ordinary affine sum},&\text{otherwise, for valid }R.
+\end{cases}
+\]
+When $A=-A$, the opposite-point branch takes precedence, so
+$A+A=\mathcal O$. The first three outputs are constant encodings;
+the ordinary branch alone invokes the nonzero-denominator formula.
+Validity predicates use the curve equation, not a list of curve points.
+
+\textbf{Total evaluator and in-place cleanup.}
+Let $H_A$ map valid encodings to the encoding of their translation by
+$A$, and fix invalid encodings. Translation preserves the valid set and
+has inverse translation by $-A$, so $H_{-A}=H_A^{-1}$ on all encodings.
+The evaluator has the clean XOR action
+\begin{equation}
+\label{eq:app_r5_total_point_evaluator}
+\begin{aligned}
+&\lvert z\rangle\lvert t\rangle
+ \lvert0\rangle_{\mathrm{aux}}\\
+&\longmapsto
+ \lvert z\rangle\lvert t\oplus H_A(z)\rangle
+ \lvert0\rangle_{\mathrm{aux}}.
+\end{aligned}
+\end{equation}
+In particular, an invalid input is XORed unchanged into the target;
+the evaluator does not leave an arbitrary target untouched.
+
+Starting with a zero target, evaluate $H_A$, exchange the point and
+target registers, and evaluate $H_{-A}$ into the old-input register.
+Since $H_{-A}(H_A(z))=z$, the old encoding cancels by XOR. This is
+the construction in Equation~\eqref{eq:point_update_cleanup}, with
+the zero target serving as workspace rather than as a representation
+of $\mathcal O$. Controlling all three stages, including exchange and
+cleanup, gives $V_A$. For control zero the registers are unchanged;
+for control one the point is translated and all auxiliary registers
+return to zero. Invalid point encodings are fixed by the completed
+in-place update.
+
+The compact evaluator shares arithmetic intermediates and reuses a
+scratch pool between branch selection and ordinary arithmetic, whose
+scratch lifetimes do not overlap. Branch flags remain available until
+their final uncomputation. These are local implementation choices,
+not claimed improvements over published optimized arithmetic.
+\end{revision}
+
+\subsection{\textcolor{blue}{Coherent scalar evaluation}}
+\begin{revision}
+Initialize the accumulator in $\mathrm{enc}(\mathcal O)$ and apply
+$V_{P_j}$ with control $k_j$ for $j=0,\ldots,m-1$. After the first
+$j$ bits, the accumulator represents
+\begin{equation}
+\label{eq:partial_scalar_accumulation}
+R_j=\sum_{i=0}^{j-1}k_iP_i,\qquad R_0=\mathcal O.
+\end{equation}
+The next update gives $R_{j+1}=R_j+k_jP_j$, and hence $R_m=kP$.
+The scalar bits are preserved and the auxiliary workspace is reused
+only after each update has cleared it. The basis-state action extends
+by linearity to a superposition of scalars. No scalar-output lookup
+table or row-dependent enumeration is used.
+
+The point-register width is $2\ell+1$, distinct from the scalar width
+$m$. Preparing the identity requires setting its flag to one while
+leaving the coordinate registers zero. The all-zero point-register
+string is not the chosen identity encoding. Fourier transformation,
+measurement, and probabilistic recovery belong to the surrounding
+procedure in Algorithm~\ref{alg:hybrid}, not to this arithmetic block.
+\end{revision}
+
+\subsection{\textcolor{blue}{Implementation correspondence and validation}}
+\begin{revision}
+The arithmetic contracts correspond to the functions
+\texttt{modular\_add\_constant},
+\texttt{modular\_add\_register},
+\texttt{modular\_multiply\_accumulate}, and
+\texttt{modular\_square\_accumulate}.
+The compact inversion is implemented by
+\texttt{modular\_inverse\_inplace}, using
+\texttt{binary\_quotient} and retained Euclidean history;
+the name refers to in-place internal state updates, while its external
+interface remains the clean XOR evaluator above.
+
+Point validity and branch selection correspond to
+\texttt{point\_encoding\_check} and
+\texttt{point\_addition\_cases}.
+The shared-intermediate ordinary evaluator is
+\texttt{ordinary\_point\_sum\_shared}; the total compact evaluator is
+\texttt{point\_sum\_evaluator\_compact}.
+The evaluate--exchange--cleanup construction and its controlled
+version correspond to \texttt{point\_add\_inplace} and
+\texttt{controlled\_point\_add}, selected with
+\texttt{evaluator\_variant="compact"}.
+The \texttt{EllipticOrderFinding} class assembles these updates with
+register preparation and the inverse QFT.
+
+Validation compares arithmetic outputs against modular and
+elliptic-curve reference calculations and checks input preservation,
+exceptional branches, invalid-encoding behaviour, and zero auxiliary
+outputs. Since the point-arithmetic circuits consist of positive-phase
+computational-basis permutations, their basis-state action also
+determines their coherent action on the tested initialized subspace.
+Complete order-finding validation propagates the actual arithmetic
+gate sequences and computes the Fourier measurement distribution
+from their resulting outputs, rather than assuming an ideal
+$k\mapsto kP$ table. Such simulation validates noiseless functional
+behaviour; it is not a hardware experiment or a fault-tolerant resource
+demonstration. Quantitative recovery and signature results are reported
+separately from these arithmetic contracts.
+
+The gate and workspace costs of this construction, together with the
+cost of repeated order-recovery executions, are analysed in
+Appendix~\ref{app:complexity}.
+\end{revision}

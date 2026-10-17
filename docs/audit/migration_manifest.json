@@ -1,0 +1,1251 @@
+[
+  {
+    "source": "r5\\binary_add_constant.py",
+    "symbol": "binary_add_constant",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\binary_add_constant.py",
+    "original_body_sha256": "685fb15a6f27b4f60f288c15444b2fb792cd6a5f62c0338180eba1b09013f22d",
+    "migrated_body_sha256": "685fb15a6f27b4f60f288c15444b2fb792cd6a5f62c0338180eba1b09013f22d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\binary_divide.py",
+    "symbol": "binary_divide",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\binary_divide.py",
+    "original_body_sha256": "c271d5dc25e34e520d1fba31e83918990f18cbe054a8aad9d6d06a05db95ed4b",
+    "migrated_body_sha256": "c271d5dc25e34e520d1fba31e83918990f18cbe054a8aad9d6d06a05db95ed4b",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\binary_quotient.py",
+    "symbol": "binary_quotient",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\binary_quotient.py",
+    "original_body_sha256": "099b1720497e58c145debba9a015cc13d32b3ef655f5c88795f55050aa14f7fe",
+    "migrated_body_sha256": "099b1720497e58c145debba9a015cc13d32b3ef655f5c88795f55050aa14f7fe",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\controlled_point_add.py",
+    "symbol": "controlled_point_add",
+    "destination": "src\\quantum_ec\\circuits\\points\\controlled_point_add.py",
+    "original_body_sha256": "69b778b3cdb05cc768f847484f29e78c3869dc89b7e4c4b54fae8c667063c8f3",
+    "migrated_body_sha256": "69b778b3cdb05cc768f847484f29e78c3869dc89b7e4c4b54fae8c667063c8f3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\curve_residual_accumulate.py",
+    "symbol": "curve_residual_accumulate",
+    "destination": "src\\quantum_ec\\circuits\\points\\curve_residual_accumulate.py",
+    "original_body_sha256": "69166750328c3db5f8194afd444d43c92c42b284d8a82235668917066d28d01e",
+    "migrated_body_sha256": "69166750328c3db5f8194afd444d43c92c42b284d8a82235668917066d28d01e",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\division_reduce_step.py",
+    "symbol": "division_reduce_step",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\division_reduce_step.py",
+    "original_body_sha256": "dc0b8964dcecb1c0b5e7981960e7722bb0a70075990b3bc12e0be5155731d5e6",
+    "migrated_body_sha256": "dc0b8964dcecb1c0b5e7981960e7722bb0a70075990b3bc12e0be5155731d5e6",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\elliptic_order_finding.py",
+    "symbol": "inverse_qft_gate",
+    "destination": "src\\quantum_ec\\circuits\\order_finding\\elliptic_order_finding.py",
+    "original_body_sha256": "9191ef61afb7b87be38b5286c5a5d5e8b06b8b38e26d102594f83ae6c13b7a5c",
+    "migrated_body_sha256": "9191ef61afb7b87be38b5286c5a5d5e8b06b8b38e26d102594f83ae6c13b7a5c",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\elliptic_order_finding.py",
+    "symbol": "EllipticOrderFinding",
+    "destination": "src\\quantum_ec\\circuits\\order_finding\\elliptic_order_finding.py",
+    "original_body_sha256": "bd5e03d832ffd54548fe5ddf6da8a21320ef87cb5911cafd84ac09a0eca049dc",
+    "migrated_body_sha256": "bd5e03d832ffd54548fe5ddf6da8a21320ef87cb5911cafd84ac09a0eca049dc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\elliptic_order_finding.py",
+    "symbol": "classical_add",
+    "destination": "src\\quantum_ec\\classical\\curve.py",
+    "original_body_sha256": "1936ddb152c6b2a4cc6169ba4c6a46ce0573fd58162bfa4f7d566f0c33497735",
+    "migrated_body_sha256": "1936ddb152c6b2a4cc6169ba4c6a46ce0573fd58162bfa4f7d566f0c33497735",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "scalar_multiple",
+    "destination": "src\\quantum_ec\\classical\\curve.py",
+    "original_body_sha256": "7dfa803ac0f61f981697d764dfece9e7cd635b53b5230b4502111450b5d8112d",
+    "migrated_body_sha256": "7dfa803ac0f61f981697d764dfece9e7cd635b53b5230b4502111450b5d8112d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\equality_constant.py",
+    "symbol": "equality_constant",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\equality_constant.py",
+    "original_body_sha256": "f704ada93baed64b31b10bd02b67591494b037db63b859b06264df67649d4c7d",
+    "migrated_body_sha256": "f704ada93baed64b31b10bd02b67591494b037db63b859b06264df67649d4c7d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\euclid_update.py",
+    "symbol": "euclid_update",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\euclid_update.py",
+    "original_body_sha256": "1daec05590d540a2ab6381aaa8e69a66e7be12ecfba76653af2d6ab3620f2df8",
+    "migrated_body_sha256": "1daec05590d540a2ab6381aaa8e69a66e7be12ecfba76653af2d6ab3620f2df8",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\finite_curve_check.py",
+    "symbol": "finite_curve_check",
+    "destination": "src\\quantum_ec\\circuits\\points\\finite_curve_check.py",
+    "original_body_sha256": "3c276b95cb5b90051fdb1a32200df45cd9c9affd6a91ef01824c06703e31829c",
+    "migrated_body_sha256": "3c276b95cb5b90051fdb1a32200df45cd9c9affd6a91ef01824c06703e31829c",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\less_than_constant.py",
+    "symbol": "less_than_constant",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\less_than_constant.py",
+    "original_body_sha256": "400354e1f6fc831be24188bf5fae181fce51e7110cde745f86d13a1e21d1dc50",
+    "migrated_body_sha256": "400354e1f6fc831be24188bf5fae181fce51e7110cde745f86d13a1e21d1dc50",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\less_than_register.py",
+    "symbol": "less_than_register",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\less_than_register.py",
+    "original_body_sha256": "17ae40c0404c6d2f10630dc799f9afcba31cf03f8fb89b929132b385db4bb01d",
+    "migrated_body_sha256": "17ae40c0404c6d2f10630dc799f9afcba31cf03f8fb89b929132b385db4bb01d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_add_constant.py",
+    "symbol": "_append_controlled_binary_add",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_add_constant.py",
+    "original_body_sha256": "102c2cc790d68663d4e83258b6198286dd04657eb82befba9e8a8d94a17ca9db",
+    "migrated_body_sha256": "102c2cc790d68663d4e83258b6198286dd04657eb82befba9e8a8d94a17ca9db",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_add_constant.py",
+    "symbol": "modular_add_constant",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_add_constant.py",
+    "original_body_sha256": "c3a99b136ed1802c35487194b1c546587d06e26d2342a407bddeeac914d2f47f",
+    "migrated_body_sha256": "c3a99b136ed1802c35487194b1c546587d06e26d2342a407bddeeac914d2f47f",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_add_register.py",
+    "symbol": "modular_add_register",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_add_register.py",
+    "original_body_sha256": "cb6d4c27de3849036eeb9a1338fbdd20bf6a03384f5301fe315d2de1adb19f68",
+    "migrated_body_sha256": "cb6d4c27de3849036eeb9a1338fbdd20bf6a03384f5301fe315d2de1adb19f68",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_cube_accumulate.py",
+    "symbol": "modular_cube_accumulate",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_cube_accumulate.py",
+    "original_body_sha256": "cdda400329c34effa1d380c1dc74cffc2c7f2fde1248df119b378f53c0bde54a",
+    "migrated_body_sha256": "cdda400329c34effa1d380c1dc74cffc2c7f2fde1248df119b378f53c0bde54a",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_inverse.py",
+    "symbol": "modular_inverse",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_inverse.py",
+    "original_body_sha256": "25b0e415fcdaba0d8fde5b66fafa8f81dcd1bc4e5fcc2a9b66ed87c0bbf8954c",
+    "migrated_body_sha256": "25b0e415fcdaba0d8fde5b66fafa8f81dcd1bc4e5fcc2a9b66ed87c0bbf8954c",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_inverse_inplace.py",
+    "symbol": "modular_inverse_inplace",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_inverse_inplace.py",
+    "original_body_sha256": "55bd946cc4284faf165475a53f9167e13c44498bea3ba30174ac54f000e341d5",
+    "migrated_body_sha256": "55bd946cc4284faf165475a53f9167e13c44498bea3ba30174ac54f000e341d5",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_multiply_accumulate.py",
+    "symbol": "modular_multiply_accumulate",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_multiply_accumulate.py",
+    "original_body_sha256": "2590b1f65b01af7716bff9711282e3fa8a2d8a76f1f83a4bd2d570721628b1a2",
+    "migrated_body_sha256": "2590b1f65b01af7716bff9711282e3fa8a2d8a76f1f83a4bd2d570721628b1a2",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\modular_square_accumulate.py",
+    "symbol": "modular_square_accumulate",
+    "destination": "src\\quantum_ec\\circuits\\arithmetic\\modular_square_accumulate.py",
+    "original_body_sha256": "a8312ace674e90dea62a0fb2c54871d24fe484c5295b9b75f40778ba3a06c1bd",
+    "migrated_body_sha256": "a8312ace674e90dea62a0fb2c54871d24fe484c5295b9b75f40778ba3a06c1bd",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\ordinary_point_slope.py",
+    "symbol": "ordinary_point_slope",
+    "destination": "src\\quantum_ec\\circuits\\points\\ordinary_point_slope.py",
+    "original_body_sha256": "f60b5fecb165dbca5e283117bf4c350dbdef00986a7de64b9bd31625a6580a84",
+    "migrated_body_sha256": "f60b5fecb165dbca5e283117bf4c350dbdef00986a7de64b9bd31625a6580a84",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\ordinary_point_sum.py",
+    "symbol": "ordinary_point_sum",
+    "destination": "src\\quantum_ec\\circuits\\points\\ordinary_point_sum.py",
+    "original_body_sha256": "74e06ff5eab34f3dc66e54a644cc2e6ff0b8a9c60ae10dbfdc34a4e56d18e6cb",
+    "migrated_body_sha256": "74e06ff5eab34f3dc66e54a644cc2e6ff0b8a9c60ae10dbfdc34a4e56d18e6cb",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\ordinary_point_sum_shared.py",
+    "symbol": "ordinary_point_sum_shared",
+    "destination": "src\\quantum_ec\\circuits\\points\\ordinary_point_sum_shared.py",
+    "original_body_sha256": "1ab1fc118b49100d2ada29827f7587a217c294b6055cdaf66685ec428bd87aa3",
+    "migrated_body_sha256": "1ab1fc118b49100d2ada29827f7587a217c294b6055cdaf66685ec428bd87aa3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\ordinary_point_x.py",
+    "symbol": "ordinary_point_x",
+    "destination": "src\\quantum_ec\\circuits\\points\\ordinary_point_x.py",
+    "original_body_sha256": "755ad8d3af8d73c595611992ad1032105fec9f529dd4433b3f987d1929d2bd8b",
+    "migrated_body_sha256": "755ad8d3af8d73c595611992ad1032105fec9f529dd4433b3f987d1929d2bd8b",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\point_add_inplace.py",
+    "symbol": "point_add_inplace",
+    "destination": "src\\quantum_ec\\circuits\\points\\point_add_inplace.py",
+    "original_body_sha256": "c66055d8197091841964404ad2e3b41807b9170977e72bd127e82a58285b0c48",
+    "migrated_body_sha256": "c66055d8197091841964404ad2e3b41807b9170977e72bd127e82a58285b0c48",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\point_addition_cases.py",
+    "symbol": "point_addition_cases",
+    "destination": "src\\quantum_ec\\circuits\\points\\point_addition_cases.py",
+    "original_body_sha256": "ade883f090056ea362b547857a3c589fedc6404b02a3d683b7b940b5e734f4d9",
+    "migrated_body_sha256": "ade883f090056ea362b547857a3c589fedc6404b02a3d683b7b940b5e734f4d9",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\point_differences.py",
+    "symbol": "point_differences",
+    "destination": "src\\quantum_ec\\circuits\\points\\point_differences.py",
+    "original_body_sha256": "3ffd7a29d988a2a8a1939de52d2e622d9743e4804bd74dfdb837d180030822e6",
+    "migrated_body_sha256": "3ffd7a29d988a2a8a1939de52d2e622d9743e4804bd74dfdb837d180030822e6",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\point_encoding_check.py",
+    "symbol": "point_encoding_check",
+    "destination": "src\\quantum_ec\\circuits\\points\\point_encoding_check.py",
+    "original_body_sha256": "ed3184c1e1d95cc3089334516015982eb37061409baee032c8a4912f1f746bbc",
+    "migrated_body_sha256": "ed3184c1e1d95cc3089334516015982eb37061409baee032c8a4912f1f746bbc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\point_sum_evaluator.py",
+    "symbol": "point_sum_evaluator",
+    "destination": "src\\quantum_ec\\circuits\\points\\point_sum_evaluator.py",
+    "original_body_sha256": "783fb30022c11e1392f35c129820984850fafe03ff68d16800e4b9e4510a4657",
+    "migrated_body_sha256": "783fb30022c11e1392f35c129820984850fafe03ff68d16800e4b9e4510a4657",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\point_sum_evaluator_compact.py",
+    "symbol": "point_sum_evaluator_compact",
+    "destination": "src\\quantum_ec\\circuits\\points\\point_sum_evaluator_compact.py",
+    "original_body_sha256": "5ff956065e54d6cabc472bd414ce40d9e8034120466a211b135716fc6940fddc",
+    "migrated_body_sha256": "5ff956065e54d6cabc472bd414ce40d9e8034120466a211b135716fc6940fddc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "compile_permutation",
+    "destination": "src\\quantum_ec\\simulation\\sparse_order_finding.py",
+    "original_body_sha256": "c23f380177dc07906f8bd3c8cc934a639d2e5c63d457a84a1cfc3cda7ffa365b",
+    "migrated_body_sha256": "c23f380177dc07906f8bd3c8cc934a639d2e5c63d457a84a1cfc3cda7ffa365b",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "propagate",
+    "destination": "src\\quantum_ec\\simulation\\sparse_order_finding.py",
+    "original_body_sha256": "965eee453f1d8701fb7621dbcff967b0b8150cf2918dcaf482bbf1f7e586023e",
+    "migrated_body_sha256": "965eee453f1d8701fb7621dbcff967b0b8150cf2918dcaf482bbf1f7e586023e",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "arithmetic_outputs",
+    "destination": "src\\quantum_ec\\simulation\\sparse_order_finding.py",
+    "original_body_sha256": "521f02402825e4778cef84e52831877453606a7a4d62681dc9c2ba615c4f3523",
+    "migrated_body_sha256": "521f02402825e4778cef84e52831877453606a7a4d62681dc9c2ba615c4f3523",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "fourier_probabilities",
+    "destination": "src\\quantum_ec\\simulation\\sparse_order_finding.py",
+    "original_body_sha256": "45ff02249b400ca69b17cdfc652db6ba84e5b79ddfb7b46bd45fc62bb0ea2cf2",
+    "migrated_body_sha256": "45ff02249b400ca69b17cdfc652db6ba84e5b79ddfb7b46bd45fc62bb0ea2cf2",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "convergent_denominators",
+    "destination": "src\\quantum_ec\\recovery\\continued_fractions.py",
+    "original_body_sha256": "ef858fbc50042f8d3b3d7aaf5b5e555046eb6a2a96d33866916b9b022a7dab7e",
+    "migrated_body_sha256": "ef858fbc50042f8d3b3d7aaf5b5e555046eb6a2a96d33866916b9b022a7dab7e",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "verified_candidates",
+    "destination": "src\\quantum_ec\\recovery\\continued_fractions.py",
+    "original_body_sha256": "ea047bf3d1c79f02438f9930f6de4076a40a9c6bb6fd3a3b149ef07d64edb5c3",
+    "migrated_body_sha256": "ea047bf3d1c79f02438f9930f6de4076a40a9c6bb6fd3a3b149ef07d64edb5c3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "prime_factors_trial",
+    "destination": "src\\quantum_ec\\baselines\\trial_recovery.py",
+    "original_body_sha256": "c755f550a94f0ebddb130e9ae7b817f84bb84254656c58f18bd0136626ab0725",
+    "migrated_body_sha256": "c755f550a94f0ebddb130e9ae7b817f84bb84254656c58f18bd0136626ab0725",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "reduce_order_multiple",
+    "destination": "src\\quantum_ec\\baselines\\trial_recovery.py",
+    "original_body_sha256": "ea0f35bdae9953956b8d0dc317309ab9471348c1ea54892901c87d89bd2ff1ed",
+    "migrated_body_sha256": "ea0f35bdae9953956b8d0dc317309ab9471348c1ea54892901c87d89bd2ff1ed",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "recovered_orders",
+    "destination": "src\\quantum_ec\\baselines\\trial_recovery.py",
+    "original_body_sha256": "1bb126d42785107756f8012f6c0fd0aace38c9515768fbce7a7589ce6e2f42fe",
+    "migrated_body_sha256": "1bb126d42785107756f8012f6c0fd0aace38c9515768fbce7a7589ce6e2f42fe",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\sparse_order_finding.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\sparse_order_finding.py",
+    "original_body_sha256": "44ffaa9bd4401237a6713be0a7b9eedbee6da9dbd04367f2376760787fcf816d",
+    "migrated_body_sha256": "44ffaa9bd4401237a6713be0a7b9eedbee6da9dbd04367f2376760787fcf816d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\special_point_sum.py",
+    "symbol": "special_point_sum",
+    "destination": "src\\quantum_ec\\circuits\\points\\special_point_sum.py",
+    "original_body_sha256": "fea1ace488c13d6879beb7c528292b1e56e185a0abd360af236a503852f9c3d0",
+    "migrated_body_sha256": "fea1ace488c13d6879beb7c528292b1e56e185a0abd360af236a503852f9c3d0",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_binary_divide.py",
+    "symbol": "BinaryDivideTests",
+    "destination": "tests\\exhaustive\\test_binary_divide.py",
+    "original_body_sha256": "846c455f0884f3ff86491b1e796d41fb480848ac17b8b474675bfd9fdac3be7d",
+    "migrated_body_sha256": "846c455f0884f3ff86491b1e796d41fb480848ac17b8b474675bfd9fdac3be7d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_compact_scalar_pipeline.py",
+    "symbol": "ReportingBuilder",
+    "destination": "tests\\exhaustive\\test_compact_scalar_pipeline.py",
+    "original_body_sha256": "8b5d417e503c088133d88ebf41cddbe1c392b59012c294d09b6e053dbe5d2138",
+    "migrated_body_sha256": "8b5d417e503c088133d88ebf41cddbe1c392b59012c294d09b6e053dbe5d2138",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_compact_scalar_pipeline.py",
+    "symbol": "verify_scalar_chain",
+    "destination": "tests\\exhaustive\\test_compact_scalar_pipeline.py",
+    "original_body_sha256": "53ad36c478c8c8d3e31448d7025868c35306df141844a9f15e9b917b1f411e77",
+    "migrated_body_sha256": "53ad36c478c8c8d3e31448d7025868c35306df141844a9f15e9b917b1f411e77",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_compact_scalar_pipeline.py",
+    "symbol": "CompactScalarPipelineTests",
+    "destination": "tests\\exhaustive\\test_compact_scalar_pipeline.py",
+    "original_body_sha256": "ab5da62ba66faee4864d9b188bbea99f2da27f5d245e4691edcb1630716adf73",
+    "migrated_body_sha256": "ab5da62ba66faee4864d9b188bbea99f2da27f5d245e4691edcb1630716adf73",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_controlled_point_add.py",
+    "symbol": "ControlledPointAddTests",
+    "destination": "tests\\exhaustive\\test_controlled_point_add.py",
+    "original_body_sha256": "037608d230c6a625d7b0f229560757e03bf72ea3ce03730bcc97b122152b371f",
+    "migrated_body_sha256": "037608d230c6a625d7b0f229560757e03bf72ea3ce03730bcc97b122152b371f",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_curve_residual_accumulate.py",
+    "symbol": "compile_x_permutation",
+    "destination": "tests\\support\\permutation.py",
+    "original_body_sha256": "292bcb85444e132073fa5cab777a97330800f3dd3b7f9039422420de59f2d6a5",
+    "migrated_body_sha256": "292bcb85444e132073fa5cab777a97330800f3dd3b7f9039422420de59f2d6a5",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_curve_residual_accumulate.py",
+    "symbol": "apply_basis",
+    "destination": "tests\\support\\permutation.py",
+    "original_body_sha256": "106bd26da7dd925a80dd69577eafbda27c9889aae057633e2b13746f34ed68f3",
+    "migrated_body_sha256": "106bd26da7dd925a80dd69577eafbda27c9889aae057633e2b13746f34ed68f3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_curve_residual_accumulate.py",
+    "symbol": "CurveResidualTests",
+    "destination": "tests\\exhaustive\\test_curve_residual_accumulate.py",
+    "original_body_sha256": "7c6571ef77c55904b365a570ae3ce3236dbefaf72a9556f91aa9955185c37038",
+    "migrated_body_sha256": "7c6571ef77c55904b365a570ae3ce3236dbefaf72a9556f91aa9955185c37038",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_division_reduce_step.py",
+    "symbol": "DivisionReduceStepTests",
+    "destination": "tests\\exhaustive\\test_division_reduce_step.py",
+    "original_body_sha256": "e5dee63ded87fceab0e23b15564acd1dd33fb530fc1692e648c862dd6092339b",
+    "migrated_body_sha256": "e5dee63ded87fceab0e23b15564acd1dd33fb530fc1692e648c862dd6092339b",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_elliptic_order_finding.py",
+    "symbol": "compile_nested_permutation",
+    "destination": "tests\\exhaustive\\test_elliptic_order_finding.py",
+    "original_body_sha256": "78745b9fa1bc9d25d26cec5f13d27a4face7a5aa5b6f63aa233d6148d782ecfb",
+    "migrated_body_sha256": "78745b9fa1bc9d25d26cec5f13d27a4face7a5aa5b6f63aa233d6148d782ecfb",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_elliptic_order_finding.py",
+    "symbol": "EllipticOrderFindingTests",
+    "destination": "tests\\exhaustive\\test_elliptic_order_finding.py",
+    "original_body_sha256": "0ec60e2efa6788179a7ffdf6e7c457e6755a34904e4763d527d0c31789998e07",
+    "migrated_body_sha256": "0ec60e2efa6788179a7ffdf6e7c457e6755a34904e4763d527d0c31789998e07",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_equality_constant.py",
+    "symbol": "EqualityConstantTests",
+    "destination": "tests\\exhaustive\\test_equality_constant.py",
+    "original_body_sha256": "19722f4fb9cba201238a22f417efdc371dba4745b6daeab2d5cc0ac75548fa0e",
+    "migrated_body_sha256": "19722f4fb9cba201238a22f417efdc371dba4745b6daeab2d5cc0ac75548fa0e",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_euclid_update.py",
+    "symbol": "EuclidUpdateTests",
+    "destination": "tests\\exhaustive\\test_euclid_update.py",
+    "original_body_sha256": "e412839887c80cec7f23272465b2a870d883a3aa84e23d7459a3495c0f2d9590",
+    "migrated_body_sha256": "e412839887c80cec7f23272465b2a870d883a3aa84e23d7459a3495c0f2d9590",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_finite_curve_check.py",
+    "symbol": "FiniteCurveCheckTests",
+    "destination": "tests\\exhaustive\\test_finite_curve_check.py",
+    "original_body_sha256": "958d6f3c5b1a22b70791009d7d4f1ea088b841964a9b90e048d092c2110e6230",
+    "migrated_body_sha256": "958d6f3c5b1a22b70791009d7d4f1ea088b841964a9b90e048d092c2110e6230",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_less_than_constant.py",
+    "symbol": "BinaryAddConstantTests",
+    "destination": "tests\\exhaustive\\test_less_than_constant.py",
+    "original_body_sha256": "b8e59aee76eb7b45ae22c75ef3118ce668c9e73c0071dee52f7651aa77a566f8",
+    "migrated_body_sha256": "b8e59aee76eb7b45ae22c75ef3118ce668c9e73c0071dee52f7651aa77a566f8",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_less_than_constant.py",
+    "symbol": "LessThanConstantTests",
+    "destination": "tests\\exhaustive\\test_less_than_constant.py",
+    "original_body_sha256": "526b93b84238500b3c65ec3d862663c17e580722299a3efd7411c5f3d5029bde",
+    "migrated_body_sha256": "526b93b84238500b3c65ec3d862663c17e580722299a3efd7411c5f3d5029bde",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_less_than_register.py",
+    "symbol": "LessThanRegisterTests",
+    "destination": "tests\\exhaustive\\test_less_than_register.py",
+    "original_body_sha256": "2d7c51ac2a08ec2aaa58def77b15323706bd7ae78420dc37a1d6e8e775c60da3",
+    "migrated_body_sha256": "2d7c51ac2a08ec2aaa58def77b15323706bd7ae78420dc37a1d6e8e775c60da3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_add_constant.py",
+    "symbol": "ModularAddConstantTests",
+    "destination": "tests\\exhaustive\\test_modular_add_constant.py",
+    "original_body_sha256": "19168cc21a92ce958010a73ecf6c707e51c286f03dcab3d671d8cbbdebb37f9f",
+    "migrated_body_sha256": "19168cc21a92ce958010a73ecf6c707e51c286f03dcab3d671d8cbbdebb37f9f",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_add_register.py",
+    "symbol": "ModularAddRegisterTests",
+    "destination": "tests\\exhaustive\\test_modular_add_register.py",
+    "original_body_sha256": "945ad956946f37a34618e30b518175c7bc1fac9db266855491b2be1c6815b578",
+    "migrated_body_sha256": "945ad956946f37a34618e30b518175c7bc1fac9db266855491b2be1c6815b578",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_cube_accumulate.py",
+    "symbol": "ModularCubeAccumulateTests",
+    "destination": "tests\\exhaustive\\test_modular_cube_accumulate.py",
+    "original_body_sha256": "5f06935d7f91b3c4c87281a2c2c4164f92c06617111c54a15386e380f0f2f1a2",
+    "migrated_body_sha256": "5f06935d7f91b3c4c87281a2c2c4164f92c06617111c54a15386e380f0f2f1a2",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_inverse.py",
+    "symbol": "ModularInverseTests",
+    "destination": "tests\\exhaustive\\test_modular_inverse.py",
+    "original_body_sha256": "513183a10ca35c8e3765131be25343194370fab124b857a437c36233d4fe3d85",
+    "migrated_body_sha256": "513183a10ca35c8e3765131be25343194370fab124b857a437c36233d4fe3d85",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_inverse_inplace.py",
+    "symbol": "CompactInverseTests",
+    "destination": "tests\\exhaustive\\test_modular_inverse_inplace.py",
+    "original_body_sha256": "df555fb108d932275ddad2481816044a8d2fac56107ff6e7464e22c09ccedbba",
+    "migrated_body_sha256": "df555fb108d932275ddad2481816044a8d2fac56107ff6e7464e22c09ccedbba",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_multiply_accumulate.py",
+    "symbol": "ModularMultiplyAccumulateTests",
+    "destination": "tests\\exhaustive\\test_modular_multiply_accumulate.py",
+    "original_body_sha256": "9d36bb2bab5c6bb159f1c771a1317fa8bb6487483052b68ae8fefbfe889e7a6c",
+    "migrated_body_sha256": "9d36bb2bab5c6bb159f1c771a1317fa8bb6487483052b68ae8fefbfe889e7a6c",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_modular_square_accumulate.py",
+    "symbol": "ModularSquareAccumulateTests",
+    "destination": "tests\\exhaustive\\test_modular_square_accumulate.py",
+    "original_body_sha256": "f37676ef1370d71c399f2396ccb47d347ccfbd5b68de5fe24240312e4afcd7a1",
+    "migrated_body_sha256": "f37676ef1370d71c399f2396ccb47d347ccfbd5b68de5fe24240312e4afcd7a1",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_ordinary_point_slope.py",
+    "symbol": "OrdinaryPointSlopeTests",
+    "destination": "tests\\exhaustive\\test_ordinary_point_slope.py",
+    "original_body_sha256": "daade154ad7fa767cd39ae9c0b8452a0bcbe340f6838729b7b4d23c17bcfbcfe",
+    "migrated_body_sha256": "daade154ad7fa767cd39ae9c0b8452a0bcbe340f6838729b7b4d23c17bcfbcfe",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_ordinary_point_sum.py",
+    "symbol": "OrdinaryPointSumTests",
+    "destination": "tests\\exhaustive\\test_ordinary_point_sum.py",
+    "original_body_sha256": "794ba1ba9b0a3411fb82119ed3451fc180754ba39840a5bd811c1aca591103de",
+    "migrated_body_sha256": "794ba1ba9b0a3411fb82119ed3451fc180754ba39840a5bd811c1aca591103de",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_ordinary_point_sum_shared.py",
+    "symbol": "SharedOrdinarySumTests",
+    "destination": "tests\\exhaustive\\test_ordinary_point_sum_shared.py",
+    "original_body_sha256": "4b93f327a3305419c58475a8e1870ff7132354d68cc55fb2baecd26c13a0ceae",
+    "migrated_body_sha256": "4b93f327a3305419c58475a8e1870ff7132354d68cc55fb2baecd26c13a0ceae",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_ordinary_point_x.py",
+    "symbol": "OrdinaryPointXTests",
+    "destination": "tests\\exhaustive\\test_ordinary_point_x.py",
+    "original_body_sha256": "1fd1c0581dc9a808762ee2e4c2631a4c0bbef25144f5c21d3504fe3cf138fd61",
+    "migrated_body_sha256": "1fd1c0581dc9a808762ee2e4c2631a4c0bbef25144f5c21d3504fe3cf138fd61",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_add_inplace.py",
+    "symbol": "compile_permutation",
+    "destination": "tests\\exhaustive\\test_point_add_inplace.py",
+    "original_body_sha256": "7b3d53af5d8e2f4656f563b9a566575edcd352aa451c7c38b21731d1bb04d5c4",
+    "migrated_body_sha256": "7b3d53af5d8e2f4656f563b9a566575edcd352aa451c7c38b21731d1bb04d5c4",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_add_inplace.py",
+    "symbol": "PointAddInplaceTests",
+    "destination": "tests\\exhaustive\\test_point_add_inplace.py",
+    "original_body_sha256": "c5fe9065cfd1ef54bc7ad048d8ae10240a29427aaca0fd4d56d6cb13d1a52d4a",
+    "migrated_body_sha256": "c5fe9065cfd1ef54bc7ad048d8ae10240a29427aaca0fd4d56d6cb13d1a52d4a",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_addition_cases.py",
+    "symbol": "PointAdditionCasesTests",
+    "destination": "tests\\exhaustive\\test_point_addition_cases.py",
+    "original_body_sha256": "b4201177d3632fba74818d0f4e1b3f5c473c3009e8bf93bd5aadda05ffbb53b3",
+    "migrated_body_sha256": "b4201177d3632fba74818d0f4e1b3f5c473c3009e8bf93bd5aadda05ffbb53b3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_differences.py",
+    "symbol": "PointDifferencesTests",
+    "destination": "tests\\exhaustive\\test_point_differences.py",
+    "original_body_sha256": "5f39f306676eae1c34ff008bacdc1a80331c679ad17a195fe8522369e1d6f13a",
+    "migrated_body_sha256": "5f39f306676eae1c34ff008bacdc1a80331c679ad17a195fe8522369e1d6f13a",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_encoding_check.py",
+    "symbol": "PointEncodingCheckTests",
+    "destination": "tests\\exhaustive\\test_point_encoding_check.py",
+    "original_body_sha256": "4d0b1eaaa19d4b187bcf0d4d968f038b32056854de53fa5b4f9ed4fc29c3fbc8",
+    "migrated_body_sha256": "4d0b1eaaa19d4b187bcf0d4d968f038b32056854de53fa5b4f9ed4fc29c3fbc8",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_sum_evaluator.py",
+    "symbol": "expected_sum_encoding",
+    "destination": "tests\\reference\\encoding.py",
+    "original_body_sha256": "5a69d6e02d028d65cd79dde988f670441563ea1c801e7ab361cf34dc881a0566",
+    "migrated_body_sha256": "5a69d6e02d028d65cd79dde988f670441563ea1c801e7ab361cf34dc881a0566",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_sum_evaluator.py",
+    "symbol": "PointSumEvaluatorTests",
+    "destination": "tests\\exhaustive\\test_point_sum_evaluator.py",
+    "original_body_sha256": "61c6cde6be0abbc9d1da89bb4133ecc99f7b51335d158863784962f0d254cdd5",
+    "migrated_body_sha256": "61c6cde6be0abbc9d1da89bb4133ecc99f7b51335d158863784962f0d254cdd5",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_point_sum_evaluator_compact.py",
+    "symbol": "CompactPointSumTests",
+    "destination": "tests\\exhaustive\\test_point_sum_evaluator_compact.py",
+    "original_body_sha256": "c65b04f60dc352ee602df8e7fe7f2fd638a353340e9aa83a0a75eb92ec54e7c7",
+    "migrated_body_sha256": "c65b04f60dc352ee602df8e7fe7f2fd638a353340e9aa83a0a75eb92ec54e7c7",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_sparse_order_finding.py",
+    "symbol": "SparseFourierTests",
+    "destination": "tests\\exhaustive\\test_sparse_order_finding.py",
+    "original_body_sha256": "28e2a0b08584c7a52647d93c46c616e3dd50616f8d0cfe93581fe5529ce9e421",
+    "migrated_body_sha256": "28e2a0b08584c7a52647d93c46c616e3dd50616f8d0cfe93581fe5529ce9e421",
+    "body_unchanged": true
+  },
+  {
+    "source": "r5\\test_special_point_sum.py",
+    "symbol": "SpecialPointSumTests",
+    "destination": "tests\\exhaustive\\test_special_point_sum.py",
+    "original_body_sha256": "6487a6e07117121bf80c38989e2e01d5828cd7a71bba1cd68ffceff6eced6015",
+    "migrated_body_sha256": "6487a6e07117121bf80c38989e2e01d5828cd7a71bba1cd68ffceff6eced6015",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\audit_manuscript_zip.py",
+    "symbol": "scientific_cell",
+    "destination": "experiments\\scripts\\audit_manuscript_zip.py",
+    "original_body_sha256": "1b2eb47c606a85c174215a375db505e774d62c699715bd9d5b7b8af9c11fc011",
+    "migrated_body_sha256": "1b2eb47c606a85c174215a375db505e774d62c699715bd9d5b7b8af9c11fc011",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\audit_manuscript_zip.py",
+    "symbol": "audit_zip",
+    "destination": "experiments\\scripts\\audit_manuscript_zip.py",
+    "original_body_sha256": "932135f56f61ba5cf9e40874e5f98e3a5072853ed54c70fea1f76be3f2384802",
+    "migrated_body_sha256": "932135f56f61ba5cf9e40874e5f98e3a5072853ed54c70fea1f76be3f2384802",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\audit_manuscript_zip.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\audit_manuscript_zip.py",
+    "original_body_sha256": "f02517d780fa5280480227513b120e16055b47b5024156fa6cfc626843c44945",
+    "migrated_body_sha256": "558fc425a28fea961c5c02800bbef55ffbf8e612ee0410ffcfdfdce26f592805",
+    "body_unchanged": false,
+    "reason": "CLI paths/output-directory setup"
+  },
+  {
+    "source": "r6\\audit_mcx_basis.py",
+    "symbol": "ReportingBuilder",
+    "destination": "experiments\\scripts\\audit_mcx_basis.py",
+    "original_body_sha256": "eea8cc3b6772a638a5b9944396496b5b635e8d0dfe2b0e6b286302d75cef6094",
+    "migrated_body_sha256": "eea8cc3b6772a638a5b9944396496b5b635e8d0dfe2b0e6b286302d75cef6094",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\audit_mcx_basis.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\audit_mcx_basis.py",
+    "original_body_sha256": "a1a7f9c97e368029ad4dd5bafb9c54f9d6863d17272d3eb93849c7b6e10047b2",
+    "migrated_body_sha256": "b7e181ec844160d90d2e0d4cf1691474484a50038bc62bba36d771eca2d3098c",
+    "body_unchanged": false,
+    "reason": "CLI paths/output-directory setup"
+  },
+  {
+    "source": "r6\\audit_recovery_resources.py",
+    "symbol": "audit_cases",
+    "destination": "experiments\\scripts\\audit_recovery_resources.py",
+    "original_body_sha256": "805ee0c47762fc28c74c2a7c517d5123b0fc81745f145dc68ff0046e51bbc67c",
+    "migrated_body_sha256": "805ee0c47762fc28c74c2a7c517d5123b0fc81745f145dc68ff0046e51bbc67c",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\audit_recovery_resources.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\audit_recovery_resources.py",
+    "original_body_sha256": "59251317855c54bda4035d06a7041fb6bba7b4f59ad2de5d61847a07a4058126",
+    "migrated_body_sha256": "249964fae4c77c1d17a4d53966b11a607093f3b98b13f737088491a89d3bd18d",
+    "body_unchanged": false,
+    "reason": "CLI paths/output-directory setup"
+  },
+  {
+    "source": "r6\\complete_resources.py",
+    "symbol": "qft_with_cx_swaps",
+    "destination": "src\\quantum_ec\\resources\\complete_resources.py",
+    "original_body_sha256": "991e83f615008a5188dcd9b17737698c1841311f0fe109acf0bec3f293ba4b12",
+    "migrated_body_sha256": "991e83f615008a5188dcd9b17737698c1841311f0fe109acf0bec3f293ba4b12",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\complete_resources.py",
+    "symbol": "quantum_overhead",
+    "destination": "src\\quantum_ec\\resources\\complete_resources.py",
+    "original_body_sha256": "2786f4b04327dd2236568100bab6ee96c5e5225107ffce721ac92c9070e9d3dc",
+    "migrated_body_sha256": "2786f4b04327dd2236568100bab6ee96c5e5225107ffce721ac92c9070e9d3dc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\complete_resources.py",
+    "symbol": "complete_quantum_resources",
+    "destination": "src\\quantum_ec\\resources\\complete_resources.py",
+    "original_body_sha256": "d1bbf7a048194b88f93c218f47c18f4720023527eb21ffebaf69a7da8d59204c",
+    "migrated_body_sha256": "d1bbf7a048194b88f93c218f47c18f4720023527eb21ffebaf69a7da8d59204c",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\complete_resources.py",
+    "symbol": "classical_trace",
+    "destination": "src\\quantum_ec\\resources\\complete_resources.py",
+    "original_body_sha256": "cd561b17bf7b4fd74355a04450a81d1858247fe98ecb0bfb7ea302fd441ad497",
+    "migrated_body_sha256": "006ba43ace8678230fc8646f9a6ddd8954dfadb38f88a5b27b5a1fce7ae3d5fc",
+    "body_unchanged": false,
+    "reason": "Mock instrumentation targets updated after module splitting"
+  },
+  {
+    "source": "r6\\complete_resources.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\complete_resources.py",
+    "original_body_sha256": "9358b3f9a6304bbd0c9c5f19db60d3b938b50022627864c5e0f961dbd4aedda5",
+    "migrated_body_sha256": "f01ce3a1c3e35596073ff2a829066d8b133a3828bdd0edb4b1ef38850150432a",
+    "body_unchanged": false,
+    "reason": "CLI paths/output-directory setup"
+  },
+  {
+    "source": "r6\\factor_free_recovery.py",
+    "symbol": "uniform_register_size",
+    "destination": "src\\quantum_ec\\recovery\\factor_free_recovery.py",
+    "original_body_sha256": "b8eb343a6330a7b089dadad827d9fb1f5c980cdc0417175ebd72517600fdda11",
+    "migrated_body_sha256": "b8eb343a6330a7b089dadad827d9fb1f5c980cdc0417175ebd72517600fdda11",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\factor_free_recovery.py",
+    "symbol": "accumulate_verified_periods",
+    "destination": "src\\quantum_ec\\recovery\\factor_free_recovery.py",
+    "original_body_sha256": "24f25153d672a21064ee7f003d3cd114ffb8ddfdc4cd675b933742c44a9966b4",
+    "migrated_body_sha256": "24f25153d672a21064ee7f003d3cd114ffb8ddfdc4cd675b933742c44a9966b4",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\mcx_basis.py",
+    "symbol": "control_profile",
+    "destination": "src\\quantum_ec\\resources\\mcx_basis.py",
+    "original_body_sha256": "bf54b21f6caeb1f51d18e3a5282591d913e3401526929f64a4f1af7bc89746bc",
+    "migrated_body_sha256": "bf54b21f6caeb1f51d18e3a5282591d913e3401526929f64a4f1af7bc89746bc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\mcx_basis.py",
+    "symbol": "basis_resources",
+    "destination": "src\\quantum_ec\\resources\\mcx_basis.py",
+    "original_body_sha256": "ed139de577284bc838e84fe76acad6095085625099e517246d3952df9af15dfa",
+    "migrated_body_sha256": "ed139de577284bc838e84fe76acad6095085625099e517246d3952df9af15dfa",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\mcx_basis.py",
+    "symbol": "append_clean_mcx",
+    "destination": "src\\quantum_ec\\resources\\mcx_basis.py",
+    "original_body_sha256": "9cea71a3ce76592e8270e4abdc0882f66e0554a6ffdad315b5cac546f59b0ff1",
+    "migrated_body_sha256": "9cea71a3ce76592e8270e4abdc0882f66e0554a6ffdad315b5cac546f59b0ff1",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\mcx_basis.py",
+    "symbol": "lower_x_family",
+    "destination": "src\\quantum_ec\\resources\\mcx_basis.py",
+    "original_body_sha256": "ff59f2f90b66ff0766e138ac3ef1a6fe934a0d35965132a69c773e69ed52ea9a",
+    "migrated_body_sha256": "ff59f2f90b66ff0766e138ac3ef1a6fe934a0d35965132a69c773e69ed52ea9a",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "reference_add",
+    "destination": "experiments\\reference\\curve.py",
+    "original_body_sha256": "bb944308fbb2ee57210f1a3a242bdc83fb791009dd41fb7df167bc240d8fdbd1",
+    "migrated_body_sha256": "bb944308fbb2ee57210f1a3a242bdc83fb791009dd41fb7df167bc240d8fdbd1",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "reference_order",
+    "destination": "experiments\\reference\\curve.py",
+    "original_body_sha256": "3af4af59e93e685ad903c10b25dfa5af4e87c509974fd359354c5597d5365492",
+    "migrated_body_sha256": "3af4af59e93e685ad903c10b25dfa5af4e87c509974fd359354c5597d5365492",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "sample_instances",
+    "destination": "experiments\\scripts\\random_curve_pilot.py",
+    "original_body_sha256": "a950601bb26563c3f51a318d8fd4eeb24bbd97c317733ee8255a6c106bb8d81f",
+    "migrated_body_sha256": "a950601bb26563c3f51a318d8fd4eeb24bbd97c317733ee8255a6c106bb8d81f",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "ideal_probabilities",
+    "destination": "experiments\\scripts\\random_curve_pilot.py",
+    "original_body_sha256": "6ca7e33edde3f8a78ca0689fa8e9068faa09f993f1f3e7a30aa82d040b37cc33",
+    "migrated_body_sha256": "6ca7e33edde3f8a78ca0689fa8e9068faa09f993f1f3e7a30aa82d040b37cc33",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "wilson_interval",
+    "destination": "experiments\\scripts\\random_curve_pilot.py",
+    "original_body_sha256": "d315838413c3b7ebe6e6e4622b068ff1b5a7c960e45f84d60e9fd5df9e238b25",
+    "migrated_body_sha256": "d315838413c3b7ebe6e6e4622b068ff1b5a7c960e45f84d60e9fd5df9e238b25",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "recover_prefixes",
+    "destination": "experiments\\scripts\\random_curve_pilot.py",
+    "original_body_sha256": "9624a47ff06dec9274650272a4c8878d3d3359c761dc252af603648a57d6dec3",
+    "migrated_body_sha256": "9624a47ff06dec9274650272a4c8878d3d3359c761dc252af603648a57d6dec3",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "run_pilot",
+    "destination": "experiments\\scripts\\random_curve_pilot.py",
+    "original_body_sha256": "fafa09d412d1112d681813eaf880e65c4ac9bfa6cbcb6dd2bac41d56221e1fb1",
+    "migrated_body_sha256": "fafa09d412d1112d681813eaf880e65c4ac9bfa6cbcb6dd2bac41d56221e1fb1",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\random_curve_pilot.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\random_curve_pilot.py",
+    "original_body_sha256": "4be748280a767afe049d4b573cc687762a8bce3da120b734d6ee772b87c2e193",
+    "migrated_body_sha256": "e837385232c1d6b8ec147f9a0ddf6e21d8b01782d5051611e563deeb438e4bb0",
+    "body_unchanged": false,
+    "reason": "CLI paths/output-directory setup"
+  },
+  {
+    "source": "r6\\real_circuit_recovery.py",
+    "symbol": "cached_arithmetic_outputs",
+    "destination": "src\\quantum_ec\\simulation\\real_arithmetic.py",
+    "original_body_sha256": "96d15007c822525125a5bb95a57d7748a9dfd23fc420bd5244066df291a9c40f",
+    "migrated_body_sha256": "96d15007c822525125a5bb95a57d7748a9dfd23fc420bd5244066df291a9c40f",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\real_circuit_recovery.py",
+    "symbol": "validate_reference_outputs",
+    "destination": "experiments\\scripts\\real_circuit_recovery.py",
+    "original_body_sha256": "1bfc185e618694645ee5837442dc73c98cea8a018395a4a6f2e524d865e8b019",
+    "migrated_body_sha256": "1bfc185e618694645ee5837442dc73c98cea8a018395a4a6f2e524d865e8b019",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\real_circuit_recovery.py",
+    "symbol": "run_case",
+    "destination": "experiments\\scripts\\real_circuit_recovery.py",
+    "original_body_sha256": "830eed71430fc5df113b3d3b3eed0ca28b0213d65f47a4ad5e1cc493321864c5",
+    "migrated_body_sha256": "830eed71430fc5df113b3d3b3eed0ca28b0213d65f47a4ad5e1cc493321864c5",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\real_circuit_recovery.py",
+    "symbol": "main",
+    "destination": "experiments\\scripts\\real_circuit_recovery.py",
+    "original_body_sha256": "47c3df98471622068e245e30458004112bd33e9cd7f84b9913911850b1570fe0",
+    "migrated_body_sha256": "24cd8b32d16f88528ace9ce32b9a046586dd5d858fa0fb1f643c7b4e4a45bdd0",
+    "body_unchanged": false,
+    "reason": "CLI paths/output-directory setup"
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "_width",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "49d3d56b46e22f9bb531b6fa90ea8808055ee1b1707b21ae013501c3ec797963",
+    "migrated_body_sha256": "49d3d56b46e22f9bb531b6fa90ea8808055ee1b1707b21ae013501c3ec797963",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "binary_add_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "17285db58502c666a8f90f3e138c14ea7b5e17cc5c80c3799217a94e1534eece",
+    "migrated_body_sha256": "17285db58502c666a8f90f3e138c14ea7b5e17cc5c80c3799217a94e1534eece",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "less_than_constant_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "215e3a2ec9607b3fbb9d55f7a6fe3b8758be3673f7804df6dcc69b8432f8e9bb",
+    "migrated_body_sha256": "215e3a2ec9607b3fbb9d55f7a6fe3b8758be3673f7804df6dcc69b8432f8e9bb",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "modular_add_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "14082a1078f8814dfa28605993cb0fd104833ff2bd8a9d2ba54db3d1cd1f55e2",
+    "migrated_body_sha256": "14082a1078f8814dfa28605993cb0fd104833ff2bd8a9d2ba54db3d1cd1f55e2",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "_sum_constants",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "fe970f88c7c11ba8268228dcfb150e44ced7c8a4669d3a1c9803ede2a2579ced",
+    "migrated_body_sha256": "fe970f88c7c11ba8268228dcfb150e44ced7c8a4669d3a1c9803ede2a2579ced",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "modular_register_add_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "2ee28c4bd46c1ced83cd5294a05b950b4665842d1b26fb1b0867bce4bf09158d",
+    "migrated_body_sha256": "2ee28c4bd46c1ced83cd5294a05b950b4665842d1b26fb1b0867bce4bf09158d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "modular_multiply_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "3413630194dddf96bf04452215164c51c0761843914e7d8d4c385a5d29d05c62",
+    "migrated_body_sha256": "3413630194dddf96bf04452215164c51c0761843914e7d8d4c385a5d29d05c62",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "modular_square_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "3d91ccc86d086539e049f4f96e3b2551c2d35a4c9a6f02423bb836b96afc6648",
+    "migrated_body_sha256": "3d91ccc86d086539e049f4f96e3b2551c2d35a4c9a6f02423bb836b96afc6648",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "modular_cube_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "dc4d4480e66789030efd71a68b212560a072485124cfb40b66589ec2dc3f3f77",
+    "migrated_body_sha256": "dc4d4480e66789030efd71a68b212560a072485124cfb40b66589ec2dc3f3f77",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "equality_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "8fbe6e3f8b379d5182a0d76981bc9fa7b3f9b067826513ce160c8238d79fffc5",
+    "migrated_body_sha256": "8fbe6e3f8b379d5182a0d76981bc9fa7b3f9b067826513ce160c8238d79fffc5",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "binary_register_subtract_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "c10c1d7d5b8f45e361f84d08ee3f98a7980dbf402d679540dbdb2a10c333cd26",
+    "migrated_body_sha256": "c10c1d7d5b8f45e361f84d08ee3f98a7980dbf402d679540dbdb2a10c333cd26",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "less_than_register_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "182ba1daa9d11d6ef1657aed1cbf85d90550d4746ec39276aa3b5c9751ec4a36",
+    "migrated_body_sha256": "182ba1daa9d11d6ef1657aed1cbf85d90550d4746ec39276aa3b5c9751ec4a36",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "division_step_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "1e9ec846ac64430feea3767f2fa1d63e46706aacfda9c157d4d88a0e3adc02d7",
+    "migrated_body_sha256": "1e9ec846ac64430feea3767f2fa1d63e46706aacfda9c157d4d88a0e3adc02d7",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "division_compute_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "171e48dfab943d40e61d55fdc57bec6935bc2d3092a1c81c5d7123db55b4de50",
+    "migrated_body_sha256": "171e48dfab943d40e61d55fdc57bec6935bc2d3092a1c81c5d7123db55b4de50",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "binary_divide_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "fd0900e4630046bf977c0ec8e1b0118ee5a906c93fef4a788065ad336363469a",
+    "migrated_body_sha256": "fd0900e4630046bf977c0ec8e1b0118ee5a906c93fef4a788065ad336363469a",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "binary_quotient_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "271e5111a85c9459bf66785c2c57c74434dd59274f23db7de471c9dc9218ce73",
+    "migrated_body_sha256": "271e5111a85c9459bf66785c2c57c74434dd59274f23db7de471c9dc9218ce73",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "binary_quotient_qubits",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "812f25d46637d2fb89829713049df1a3c2a0a5e375601861dc9123b611f78e83",
+    "migrated_body_sha256": "812f25d46637d2fb89829713049df1a3c2a0a5e375601861dc9123b611f78e83",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "binary_product_subtract_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "56e9de95ef745619e823b9b1816dca2763f8a4b4351c512890c89215b3abbb98",
+    "migrated_body_sha256": "56e9de95ef745619e823b9b1816dca2763f8a4b4351c512890c89215b3abbb98",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "compact_inverse_breakdown",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "1af3ec6c1ba4a5f2bffc97ed7a98c438f8bc24c5eefc792558ac75705e56f509",
+    "migrated_body_sha256": "1af3ec6c1ba4a5f2bffc97ed7a98c438f8bc24c5eefc792558ac75705e56f509",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "compact_inverse_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "e2f95c818c39f33c80bcacdef35e249e2e9ec8ee4252800e667298f7b0badfbb",
+    "migrated_body_sha256": "e2f95c818c39f33c80bcacdef35e249e2e9ec8ee4252800e667298f7b0badfbb",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "curve_residual_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "3c5a81c0dd3e9c3238e9a94f1c8adcdd49b268241939211fb10fab765e3924a5",
+    "migrated_body_sha256": "3c5a81c0dd3e9c3238e9a94f1c8adcdd49b268241939211fb10fab765e3924a5",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "finite_curve_check_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "e9bfdc6fb740e3fa50e9652c0e585bebd552a88dee3955668fc9a964fb0994db",
+    "migrated_body_sha256": "e9bfdc6fb740e3fa50e9652c0e585bebd552a88dee3955668fc9a964fb0994db",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "point_encoding_check_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "cc1f7f05bfc8fb100e9d84853c56dd882f5097ee9029cba31f63288423f0d3ca",
+    "migrated_body_sha256": "cc1f7f05bfc8fb100e9d84853c56dd882f5097ee9029cba31f63288423f0d3ca",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "_point_constants",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "d614b7b826346f669cfcd8e17af979f620f310d7009a88d4a23c670c890269dc",
+    "migrated_body_sha256": "d614b7b826346f669cfcd8e17af979f620f310d7009a88d4a23c670c890269dc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "point_cases_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "ea0baeaa035319879b09f514b6577bf6757676964947cf26ca42d6198f0bfecb",
+    "migrated_body_sha256": "ea0baeaa035319879b09f514b6577bf6757676964947cf26ca42d6198f0bfecb",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "compact_ordinary_count",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "c8082939dce6597b94bf74214c560e9c2437e986f6d4a71bfd35a4dd3460c2e2",
+    "migrated_body_sha256": "c8082939dce6597b94bf74214c560e9c2437e986f6d4a71bfd35a4dd3460c2e2",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "compact_evaluator_resources",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "a43b5f0f03dc8b8a3c8de834037c732c36d3d608497ce81dd52bbaae434fbd0e",
+    "migrated_body_sha256": "a43b5f0f03dc8b8a3c8de834037c732c36d3d608497ce81dd52bbaae434fbd0e",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "compact_controlled_point_resources",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "25bb2d82c88ff45bbd40ef511ba5b47e93a204b59fc807da9c3b0c73885b2182",
+    "migrated_body_sha256": "25bb2d82c88ff45bbd40ef511ba5b47e93a204b59fc807da9c3b0c73885b2182",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\resource_model.py",
+    "symbol": "compact_scalar_resources",
+    "destination": "src\\quantum_ec\\resources\\resource_model.py",
+    "original_body_sha256": "ecb5c5681510fa4bc0fd0cf7308bf5df4743d745f54952e67a3ec75d5d2bc809",
+    "migrated_body_sha256": "ecb5c5681510fa4bc0fd0cf7308bf5df4743d745f54952e67a3ec75d5d2bc809",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\signature_integration.py",
+    "symbol": "signing_attempt",
+    "destination": "src\\quantum_ec\\signing\\signature.py",
+    "original_body_sha256": "dc72471e368ee310e909bf4e50ee98e671c37cbd687202512d1982b0475485a7",
+    "migrated_body_sha256": "dc72471e368ee310e909bf4e50ee98e671c37cbd687202512d1982b0475485a7",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\signature_integration.py",
+    "symbol": "verify_arithmetic",
+    "destination": "src\\quantum_ec\\signing\\signature.py",
+    "original_body_sha256": "2f336f64db6ebec416eaaca07c2bc53c93d7835847d8ce76ed9a3b97248ba548",
+    "migrated_body_sha256": "2f336f64db6ebec416eaaca07c2bc53c93d7835847d8ce76ed9a3b97248ba548",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\signature_integration.py",
+    "symbol": "reference_attempt",
+    "destination": "experiments\\reference\\signature.py",
+    "original_body_sha256": "b5066d4b926f5b657df7d6c779b5061d06adab467bd25b0bc60dd0d131cc2b02",
+    "migrated_body_sha256": "b5066d4b926f5b657df7d6c779b5061d06adab467bd25b0bc60dd0d131cc2b02",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\signature_integration.py",
+    "symbol": "validate_saved_recoveries",
+    "destination": "experiments\\scripts\\signature_integration.py",
+    "original_body_sha256": "e626fcac9c3a093717f311bc9fc78dfb90b4a0ed915a56fb506be899650ec9ac",
+    "migrated_body_sha256": "e626fcac9c3a093717f311bc9fc78dfb90b4a0ed915a56fb506be899650ec9ac",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\success_budget.py",
+    "symbol": "sufficient_budget",
+    "destination": "src\\quantum_ec\\recovery\\success_budget.py",
+    "original_body_sha256": "8f0123eabc27d451968c6dbfad1ba2fa5410ffd390d280440e69aba323b73e69",
+    "migrated_body_sha256": "8f0123eabc27d451968c6dbfad1ba2fa5410ffd390d280440e69aba323b73e69",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_complete_resources.py",
+    "symbol": "CompleteResourceTests",
+    "destination": "tests\\integration\\test_complete_resources.py",
+    "original_body_sha256": "c11f92e8b87591e98b24e252900b978144289926fab23d98cba0b7400881c09d",
+    "migrated_body_sha256": "c11f92e8b87591e98b24e252900b978144289926fab23d98cba0b7400881c09d",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_factor_free_recovery.py",
+    "symbol": "FactorFreeRecoveryTests",
+    "destination": "tests\\unit\\test_factor_free_recovery.py",
+    "original_body_sha256": "cdb3bc1150c84372735935ec3f72c851315f7987d22d5f35763d010d57b3634a",
+    "migrated_body_sha256": "7dec176a9128b61121a771e7e6202bc617eca73cfefdae31d2a31084c120e1b4",
+    "body_unchanged": false,
+    "reason": "Mock instrumentation targets updated after module splitting"
+  },
+  {
+    "source": "r6\\test_mcx_basis.py",
+    "symbol": "McxBasisTests",
+    "destination": "tests\\integration\\test_mcx_basis.py",
+    "original_body_sha256": "cdf17f8798b1ff95c04ce0d958d09566fc49acc6fdc5804f6e498264b6f50358",
+    "migrated_body_sha256": "cdf17f8798b1ff95c04ce0d958d09566fc49acc6fdc5804f6e498264b6f50358",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_random_curve_pilot.py",
+    "symbol": "RandomCurvePilotTests",
+    "destination": "tests\\integration\\test_random_curve_pilot.py",
+    "original_body_sha256": "47f3ed0b7727e6632364517535cb7a5285dd54eb08ed9e849c4bd819836d89dc",
+    "migrated_body_sha256": "1fc7dd10b1cb9888d4cc6246461d5025277859e0b9d4dfe73a9fba5def540a00",
+    "body_unchanged": false,
+    "reason": "Mock instrumentation targets updated after module splitting"
+  },
+  {
+    "source": "r6\\test_real_circuit_recovery.py",
+    "symbol": "FixtureBuilder",
+    "destination": "tests\\integration\\test_real_circuit_recovery.py",
+    "original_body_sha256": "dadeeda02f28f6907312d952031d24e766bcb92dea51f737bc5f1021db349d2b",
+    "migrated_body_sha256": "dadeeda02f28f6907312d952031d24e766bcb92dea51f737bc5f1021db349d2b",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_real_circuit_recovery.py",
+    "symbol": "RealCircuitRecoveryTests",
+    "destination": "tests\\integration\\test_real_circuit_recovery.py",
+    "original_body_sha256": "34495e7eaadd63b797656e7158f42bb066201afcba29e076057045a6152be6de",
+    "migrated_body_sha256": "34495e7eaadd63b797656e7158f42bb066201afcba29e076057045a6152be6de",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_resource_model.py",
+    "symbol": "ResourceModelTests",
+    "destination": "tests\\exhaustive\\test_resource_model.py",
+    "original_body_sha256": "b25a83512011651f58c5e9f58b982098be48e6ac75f98490b7f310e7366d61a1",
+    "migrated_body_sha256": "b25a83512011651f58c5e9f58b982098be48e6ac75f98490b7f310e7366d61a1",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_signature_integration.py",
+    "symbol": "SignatureIntegrationTests",
+    "destination": "tests\\integration\\test_signature_integration.py",
+    "original_body_sha256": "809f7778f3ba9fd8350fa18669aa7119c157b4e3f4c4b9008ec6a3af914994fc",
+    "migrated_body_sha256": "809f7778f3ba9fd8350fa18669aa7119c157b4e3f4c4b9008ec6a3af914994fc",
+    "body_unchanged": true
+  },
+  {
+    "source": "r6\\test_success_budget.py",
+    "symbol": "SuccessBudgetTests",
+    "destination": "tests\\unit\\test_success_budget.py",
+    "original_body_sha256": "a75381548e509abf6b4260c5b547c591f4d9bb4902e513a6e8494eaf7f1d80eb",
+    "migrated_body_sha256": "a75381548e509abf6b4260c5b547c591f4d9bb4902e513a6e8494eaf7f1d80eb",
+    "body_unchanged": true
+  }
+]

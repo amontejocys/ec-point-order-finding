@@ -1,0 +1,14 @@
+{
+  "status": "Historical instance specification; CLI defaults retain their original semantics",
+  "p": 29,
+  "a": 0,
+  "b": 7,
+  "point": [6, 7],
+  "evaluator_variant": "compact",
+  "scalar_qubits": 11,
+  "q": 2048,
+  "seed": 20261012,
+  "trials": 100,
+  "recovery": "factor_free_gcd",
+  "reference_order_for_validation_only": 5
+}

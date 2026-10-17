@@ -1,0 +1,298 @@
+{
+  "zip_path": "C:\\Users\\amont\\Downloads\\Shor_s_Algorithm_Adapted_for_Determining_the_Order_of_Elliptic_Curves__1_ (3).zip",
+  "sha256_unchanged": "9563dda64b1895d62033c45aead36cb5bb040b94e796e836f08dc00fc1b4fb99",
+  "main_file": "main.tex",
+  "cited_keys_missing_from_bib": [],
+  "relevant_existing_keys": [
+    "Haner2020",
+    "Litinski2023",
+    "ProosZalka2003",
+    "Roetteler2017",
+    "Shor1997"
+  ],
+  "historical_table_scope": "Numerical consistency diagnostic only; not comparable runtimes or a replacement table",
+  "historical_table": [
+    {
+      "n": 8,
+      "reported_classical": "260.0",
+      "reported_coherent": "1500.0",
+      "reported_lookup": "4200000.0",
+      "diagnostic_2_power_n": "256",
+      "diagnostic_n_cubed_log2_n": "1536",
+      "diagnostic_2_power_2n_times_n_squared": "4194304",
+      "reported_lookup_over_expression": "1.0013580322265625"
+    },
+    {
+      "n": 16,
+      "reported_classical": "66000.0",
+      "reported_coherent": "16000.0",
+      "reported_lookup": "1100000000000.0",
+      "diagnostic_2_power_n": "65536",
+      "diagnostic_n_cubed_log2_n": "16384",
+      "diagnostic_2_power_2n_times_n_squared": "1099511627776",
+      "reported_lookup_over_expression": "1.000444171950221061706542969"
+    },
+    {
+      "n": 32,
+      "reported_classical": "4300000000.0",
+      "reported_coherent": "160000.0",
+      "reported_lookup": "19000000000000000000000.0",
+      "diagnostic_2_power_n": "4294967296",
+      "diagnostic_n_cubed_log2_n": "163840",
+      "diagnostic_2_power_2n_times_n_squared": "18889465931478580854784",
+      "reported_lookup_over_expression": "1.005851624864481652643632970"
+    },
+    {
+      "n": 64,
+      "reported_classical": "18000000000000000000.0",
+      "reported_coherent": "1600000.0",
+      "reported_lookup": "7.400000000000000000000000000E+41",
+      "diagnostic_2_power_n": "18446744073709551616",
+      "diagnostic_n_cubed_log2_n": "1572864",
+      "diagnostic_2_power_2n_times_n_squared": "1393796574908163946345982392040522594123776",
+      "reported_lookup_over_expression": "0.5309239621633866918315826645"
+    },
+    {
+      "n": 128,
+      "reported_classical": "3.400000000000000000000000000E+38",
+      "reported_coherent": "14000000.0",
+      "reported_lookup": "1.200000000000000000000000000E+81",
+      "diagnostic_2_power_n": "340282366920938463463374607431768211456",
+      "diagnostic_n_cubed_log2_n": "14680064",
+      "diagnostic_2_power_2n_times_n_squared": "1897137590064188545819787018382342682267975428761855001222473056385648716020711424",
+      "reported_lookup_over_expression": "0.6325318765938313934609144431"
+    },
+    {
+      "n": 256,
+      "reported_classical": "1.200000000000000000000000000E+77",
+      "reported_coherent": "130000000.0",
+      "reported_lookup": "3.400000000000000000000000000E+159",
+      "diagnostic_2_power_n": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+      "diagnostic_n_cubed_log2_n": "134217728",
+      "diagnostic_2_power_2n_times_n_squared": "878694100496718043517683302282418331810487718418343092402491322775749527474899974671687634004666183037093927858109549828751614463963730408009475621262727315456",
+      "reported_lookup_over_expression": "3.869378431103622883177075512"
+    }
+  ],
+  "locations_to_reconcile": [
+    {
+      "file": "sec/08-appendix.tex",
+      "line": 13,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/08-appendix.tex",
+      "line": 43,
+      "markers": [
+        "C(n)"
+      ]
+    },
+    {
+      "file": "sec/08-appendix.tex",
+      "line": 45,
+      "markers": [
+        "4/\\pi"
+      ]
+    },
+    {
+      "file": "sec/08-appendix.tex",
+      "line": 53,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/08-appendix.tex",
+      "line": 55,
+      "markers": [
+        "parity",
+        "bit-identical"
+      ]
+    },
+    {
+      "file": "sec/06-data_availability.tex",
+      "line": 3,
+      "markers": [
+        "statevector"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 8,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 23,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 39,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 48,
+      "markers": [
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 62,
+      "markers": [
+        "C(n)"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 66,
+      "markers": [
+        "C(n)"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 71,
+      "markers": [
+        "C(n)"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 74,
+      "markers": [
+        "C(n)"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 80,
+      "markers": [
+        "C(n)"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 83,
+      "markers": [
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 84,
+      "markers": [
+        "C_{\\mathrm{tbl}}",
+        "parity",
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 93,
+      "markers": [
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 97,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 106,
+      "markers": [
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 122,
+      "markers": [
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 130,
+      "markers": [
+        "parity",
+        "classical order"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 138,
+      "markers": [
+        "constant success",
+        "bit-identical"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 142,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 146,
+      "markers": [
+        "parity",
+        "lookup",
+        "statevector"
+      ]
+    },
+    {
+      "file": "sec/04-results_discussions.tex",
+      "line": 150,
+      "markers": [
+        "parity",
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/03-methods.tex",
+      "line": 46,
+      "markers": [
+        "constant probability"
+      ]
+    },
+    {
+      "file": "sec/02-introduction.tex",
+      "line": 12,
+      "markers": [
+        "lookup"
+      ]
+    },
+    {
+      "file": "sec/02-introduction.tex",
+      "line": 18,
+      "markers": [
+        "parity"
+      ]
+    },
+    {
+      "file": "sec/02-introduction.tex",
+      "line": 19,
+      "markers": [
+        "C(n)",
+        "lookup",
+        "bit-identical"
+      ]
+    }
+  ]
+}
