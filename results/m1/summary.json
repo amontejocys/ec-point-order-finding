@@ -57,7 +57,13 @@
     "note": "Raw logs are ignored by Git and contain local paths"
   },
   "linux_ci_for_M1": "Not run yet",
-  "manuscript": "Manual Overleaf integration by the author pending",
+  "manuscript": {
+    "status": "integrated by the author in Overleaf, reviewer-checked",
+    "snapshot": "paper/manuscript/",
+    "export_zip": "Shor_s_Algorithm_Adapted_for_Determining_the_Order_of_Elliptic_Curves__Post_M1.zip",
+    "export_sha256": "982b0f591ec339f23b3c9d50b9300f8d18cd3b5e65c8a509323978f49efb0953",
+    "snapshot_date": "2026-10-18"
+  },
   "R8": "Open",
   "artifacts": [
     {

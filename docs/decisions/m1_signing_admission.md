@@ -4,8 +4,9 @@
 
 Implement the signing boundary without changing recovery, reversible arithmetic,
 QFT, or historical data. Code and tests are recorded in results/m1/. Ariel alone
-integrates manuscript corrections in Overleaf and creates commits/tags. M1 is
-not fully closed until the manuscript changes have been reviewed and integrated.
+integrates manuscript corrections in Overleaf and creates commits/tags. The
+manuscript changes were integrated and reviewer-checked; the snapshot of
+2026-10-18 is in paper/manuscript/ (see paper/README.md).
 This correction does not close R8 or establish a new primality algorithm.
 
 ## Mathematical reason

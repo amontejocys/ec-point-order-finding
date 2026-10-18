@@ -1,0 +1,498 @@
+\section{Results and Discussions}
+\label{sec:results_discussions}
+
+\begin{revision}
+The problem identified in previous sections is addressed through a hybrid quantum-classical architecture that uses standard Shor order finding to obtain a point-order estimate for the classical signing flow. \end{revision}This section presents the construction in three layers: the proposed pipeline, a complexity analysis, and a discussion that delimits the scope of the asymptotic claim.
+
+\subsection{Proposed hybrid order finding for ECDSA}
+
+\begin{revision}
+The pipeline factors order finding into three components: a reversible point-arithmetic circuit, a classical procedure for probabilistic order recovery, and an ECDSA-like signing flow that uses the recovered estimate.\end{revision} Each component admits independent analysis and validation.
+
+
+\subsubsection{Problem statement}
+
+Let $P \in E(\Fp)$ be a non-identity point of unknown order $r = \ord(P)$. The function \ref{eq:f_periodic}
+
+\begin{equation}\label{eq:f_periodic}
+f_P : \Z_{\geq 0} \to E(\Fp), \quad f_P(k) = kP
+\end{equation}
+
+is periodic with period $r$, since $(k+r)P = kP + rP = kP + \mathcal{O} = kP$. The order $r$ divides $\#E(\Fp)$ by Lagrange's theorem and is the smallest positive period of $f_P$ \cite{Silverman2009}.
+
+
+\begin{revision}
+\subsubsection{{Period preservation}}
+The point encoding in Equation~\eqref{eq:point_encoding} includes $\mathcal O$ and is injective on $E(\Fp)$. Consequently, $\mathrm{enc}((k+t)P)=\mathrm{enc}(kP)$ holds if and only if $tP=\mathcal O$. The smallest positive period of the encoded function is therefore exactly $r=\ord(P)$, whether $r$ is even or odd. No parity adjustment is required: the even-order condition used in Shor's reduction of integer factorisation does not apply to the order-finding task considered here \cite{Shor1997}.
+\end{revision}
+
+\subsubsection{Pipeline}
+
+\begin{revision}
+The hybrid procedure is presented in Algorithm~\ref{alg:hybrid}. Classical preprocessing determines the register size from the Hasse bound and computes the constant points $P_j=2^jP$. Each quantum execution prepares the registers, evaluates $f_P$ through controlled point additions, applies the inverse QFT, and measures the scalar register. Classical post-processing combines accepted continued-fraction denominators into an order candidate $\hat r$, which is passed to order admission; only an admitted candidate is used by the ECDSA-like signing stage. The condition $\hat rP=\mathcal O$ establishes that $\hat r$ is a multiple of the point order, but does not certify its minimality. Equivalence with a classical signature using the true order is therefore conditional on $\hat r=r$ and on valid signing parameters. Order recovery is performed during parameter setup, and its result can be reused for subsequent signing operations with the same $(E,P)$.
+\end{revision}
+
+\begin{algorithm}[t]
+    \color{blue}
+    \caption{Hybrid ECDSA-like signing with probabilistic order recovery}
+    \label{alg:hybrid}
+    \begin{algorithmic}[1]
+        \Require Curve $E/\Fp$, non-identity point $P$, message representative $z$, private key $d$, measurement budget $T\geq1$
+        \Ensure Order candidate $\hat r$ and signature candidate $(r_{\sigma},s)$, or a status indicating recovery failure, \textsc{NotAdmissible}, incompatible key range, or a required nonce retry      
+        \State $B\gets p+1+\lfloor2\sqrt p\rfloor$
+        \State $m\gets\lceil\log_2(B^2+1)\rceil$;
+        $Q\gets2^m$
+        \State Precompute $P_j=2^jP$, $j=0,\ldots,m-1$, by successive classical doublings
+        \State Construct $U_{f_P}$ from the controlled updates $V_{P_j}$, omitting $P_j=\mathcal O$
+        \State $\hat r\gets0$
+        \For{$t=1,\ldots,T$}
+            \State Initialize the scalar register in $\lvert0\rangle^{\otimes m}$, the point accumulator in $\lvert\mathrm{enc}(\mathcal O)\rangle$, and all auxiliary registers in $\lvert0\rangle$
+            \State Apply $H^{\otimes m}$ to the scalar register
+            \State Apply $U_{f_P}$ as defined in Equation~\eqref{eq:oracle}
+            \State Apply the inverse QFT to the scalar register and measure it, obtaining $y$
+            \State Compute the continued-fraction convergents of $y/Q$
+            \For{each convergent denominator $v$ with $1\leq v\leq B$}
+                \If{$vP=\mathcal O$}
+                    \State $\hat r\gets\gcd(\hat r,v)$
+                \EndIf
+            \EndFor
+        \EndFor
+        
+        \If{$\hat r=0$}
+            \State \Return recovery failure
+        \EndIf
+        \State \textcolor{blue}{Apply the primality test to $\hat r$}
+        \If{\textcolor{blue}{$\hat r$ is rejected}}
+            \State \textcolor{blue}{\Return \textsc{NotAdmissible}}
+        \EndIf
+        \If{$d\notin\{1,\ldots,\hat r-1\}$}
+            \State \Return incompatible private-key range
+        \EndIf
+        \State Sample a nonce $k\in\{1,\ldots,\hat r-1\}$
+        \If{$\gcd(k,\hat r)\neq1$}
+            \State \Return nonce retry required
+        \EndIf
+        \State Compute $R=kP$ classically
+        \If{$R=\mathcal O$}
+            \State \Return nonce retry required
+        \EndIf
+        \State $r_{\sigma}\gets x_R\bmod\hat r$
+        \State $s\gets k^{-1}(z+r_{\sigma}d)\bmod\hat r$
+        \If{$r_{\sigma}=0$ or $s=0$}
+            \State \Return nonce retry required
+        \EndIf
+        \State \Return $(\hat r,r_{\sigma},s)$
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{revision}
+
+\subsubsection{{Probabilistic order recovery}}
+
+The order-recovery stage combines quantum sampling with group-based post-processing to obtain the parameter used by the ECDSA-like signing stage.
+For each measured outcome $y$, the continued-fraction expansion of $y/Q$ provides candidate denominators. Those satisfying $1\leq v\leq B$ and
+$vP=\mathcal O$ are retained.
+
+Across $T$ quantum executions, the accepted denominators are combined through their greatest common divisor to obtain $\hat r$. Each accepted
+denominator is a multiple of $r=\ord(P)$, and their combination can recover $r$ even when no individual denominator equals it. If no denominator is
+accepted, the procedure reports recovery failure.
+
+
+
+\begin{revision}
+Before signing, the recovered candidate $\hat r$ is subjected to a primality
+test. Rejection returns \textsc{NotAdmissible} and terminates the signing
+attempt; order recovery is not restarted automatically. Since
+$P\neq\mathcal{O}$ and recovery establishes $\hat rP=\mathcal{O}$, primality
+of $\hat r$ implies $\operatorname{ord}(P)=\hat r$. Candidates not decided by
+exact small-prime checks undergo 64 Miller--Rabin rounds with independent bases
+sampled uniformly from $\{2,\ldots,\hat r-2\}$. For any fixed odd composite
+candidate, the probability of passing all rounds is at most $2^{-128}$
+\cite[Algorithm~4.24 and Fact~4.25]{Menezes1996HAC}.
+Passing Miller--Rabin supplies probable-prime acceptance, not a primality
+certificate.
+\end{revision}
+
+The resulting procedure is probabilistic: successful order recovery provides the parameter required by the signing
+stage, while a nonminimal estimate remains a possible recovery error; being composite, it is rejected at admission. Numerical validation assesses both exact-order recovery and the
+agreement of the resulting signatures with an independent classical reference. The reference order is used only for evaluation and is not supplied to the hybrid procedure. 
+
+\end{revision}
+
+
+\subsection{Complexity analysis}\label{sec:complexity}
+
+\begin{revision}
+This section analyses the cost of recovering $r=\ord(P)$ using the implemented reversible point arithmetic. Quantum gate costs are distinguished from classical preprocessing, post-processing, and signing costs. Throughout, $\ell=\lceil\log_2 p\rceil$ denotes the coordinate-register width, $m$ denotes the scalar-register width, and $T$ is the number of quantum executions. The cost of one controlled point addition is distinguished from that of a complete evaluation of $f_P(k)=kP$. Detailed derivations are provided in Appendix~\ref{app:complexity}.
+\end{revision}
+
+\subsubsection{Classical baseline}
+
+Iterated scalar multiplication computes $P, 2P, 3P, \ldots$ until the identity is hit, performing one curve addition per increment. \begin{revision} Using the same conservative arithmetic bounds as the hybrid analysis, each classical point addition costs $O(\ell^3)$ bit operations (Appendix~\ref{app:complexity}). Hence
+\end{revision}
+
+\begin{revision}
+\begin{equation}
+\label{eq:classical_cost}
+T_{\mathrm{cl}}(r,\ell)=O(r\ell^3).
+\end{equation}
+\end{revision}
+
+\begin{revision}
+This enumeration requires $\Theta(r)$ group
+operations, exponential in the order bit length
+$b_r=\lceil\log_2r\rceil$. It provides the
+direct-enumeration baseline for the comparison.
+\end{revision} \begin{revision}
+Standard generic order algorithms based on
+baby-step giant-step or Pollard's rho have
+square-root group-operation costs in $r$,
+with probabilistic costs interpreted in
+expectation \cite{Shanks1971,Sutherland2007}.
+Their $\sqrt{r}$ dependence remains exponential
+in $b_r$, rather than sub-exponential.
+These algorithms provide generic-search
+baselines, not a lower bound for all
+classical approaches.
+\end{revision} \begin{revision}
+Schoof's algorithm computes
+$M=\#E(\Fp)$ in time polynomial in $\ell$
+\cite{Schoof1985}; SEA provides practical
+refinements \cite{Silverman2009,Cohen2006}.
+Since $r$ divides $M$, its factorization
+allows the point order to be obtained
+by successive prime-factor removal.
+Starting with $u=M$, replace $u$ by $u/q$
+whenever $q$ is a prime divisor of $u$
+and $(u/q)P=\mathcal O$, repeating until
+no further removal is possible.
+The resulting value is $r$.
+
+Given the factorization of $M$, this
+reduction has polynomial cost in $\ell$.
+When that factorization is unavailable,
+its computation must be accounted for
+separately from point counting.
+\end{revision}
+
+\begin{revision}
+For orders satisfying $r=2^{\Theta(\ell)}$,
+enumeration requires exponentially many group
+operations, whereas the hybrid resource bounds
+are polynomial in $\ell$ under the stated ideal
+gate model and a fixed recovery-error target.
+This establishes a separation from enumeration,
+not a general advantage over the best classical
+point-order algorithms.
+\end{revision}
+
+\begin{revision}
+Table~\ref{tab:classical_routes} summarizes the
+classical routes considered. Let
+$C_{\mathrm{pc}}(\ell)$ denote the bit cost
+of point counting and $C_{\mathrm{fact}}(M)$
+the cost of factoring $M=\#E(\Fp)$.
+Given that factorization, order reduction
+requires $O(\ell)$ scalar-multiplication
+checks, yielding the conservative bit bound
+$O(\ell^5)$ under the arithmetic model used here.
+The factorization cost is omitted when the
+factors are already supplied.
+\end{revision}
+
+\begin{table}[t]
+\color{blue}
+\centering
+\small
+\caption{Classical comparison routes.
+The first two rows count group operations;
+the final row counts bit operations.
+The generic-search row describes standard
+BSGS/rho methods, with probabilistic costs
+interpreted in expectation, not a universal
+lower bound \cite{Sutherland2007}.}
+\label{tab:classical_routes}
+\begin{tabular}{lc}
+\hline
+Route & Cost bound \\
+\hline
+Enumeration & $\Theta(r)$ \\
+Generic search & $O(\sqrt{r})$ \\
+Point counting route &
+$C_{\mathrm{pc}}(\ell)+C_{\mathrm{fact}}(M)
++O(\ell^5)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Quantum subroutine, parametric form}
+
+\begin{revision}
+Let $C_{\mathrm{add}}(\ell)$ bound the gate cost of one controlled point translation $V_A$, including exceptional-case handling and auxiliary cleanup. This is a per-addition cost, not the cost of evaluating the complete function $f_P$.
+
+Gate counts use the basis $\{X,\mathrm{CX},\mathrm{CCX},H, \mathrm{CP}(\theta)\}$. Multi-controlled $X$ gates are decomposed into Toffoli chains with clean auxiliary qubits. Controlled phase rotations are counted as ideal gates; fault-tolerant rotation synthesis is not included. 
+
+
+One quantum execution consists of:
+\begin{enumerate}
+    \item Register preparation and a Hadamard
+    layer, requiring $O(m+\ell)$ gates.
+    \item At most $m$ controlled point
+    translations, with total cost
+    $O(mC_{\mathrm{add}}(\ell))$.
+    \item An inverse QFT on the scalar
+    register, requiring $O(m^2)$ gates
+    \cite{NielsenChuang2010}.
+\end{enumerate}
+
+Consequently, the quantum gate cost over $T$ executions satisfies 
+\begin{equation}
+\label{eq:quantum_cost_parametric}
+\begin{aligned}
+G_{\mathrm q}(\ell,m,T)
+=O\bigl(T[&
+mC_{\mathrm{add}}(\ell)\\
+&+m^2+m+\ell]\bigr).
+\end{aligned}
+\end{equation}
+
+For the register choice in Algorithm~\ref{alg:hybrid}, $m=\Theta(\ell)$, so the preparation term is absorbed by the remaining terms. Classical preprocessing and measurement post-processing are accounted for separately.
+\end{revision}
+
+\begin{revision}
+\begin{theorem}[Resource bound for the reference implementation]
+\label{thm:speedup}
+Let $\ell=\lceil\log_2 p\rceil$. For the compact reference implementation and the gate model specified above, one controlled point addition has the upper bound 
+\[
+C_{\mathrm{add}}(\ell)=O(\ell^6).
+\]
+
+With the register choice of Algorithm~\ref{alg:hybrid}, $m=\Theta(\ell)$, the quantum component over $T$ executions therefore satisfies
+\[
+G_{\mathrm q}(\ell,T)=O(T\ell^7).
+\]
+The quantum workspace, including input registers and clean decomposition ancillas, requires $O(\ell^2)$ qubits when executions are performed sequentially.
+\end{theorem}
+
+\begin{remark}[Scope of the reference bound]
+\label{rem:table_cost}
+Before decomposing multi-controlled gates, the reference point-addition circuit contains $O(\ell^5)$ instructions, counting each multi-controlled $X$ as one instruction. Its gates have at most $O(\ell)$ controls. The selected clean-ancilla decomposition therefore yields the upper bound $O(\ell^6)$ in the stated gate basis.
+
+These are conservative upper bounds derived from the implemented arithmetic, including cleanup. They are not tight bounds or resource estimates transferred from optimized published circuits. In particular, the controlled-addition framework of \cite{ProosZalka2003,Roetteler2017} does not imply that this reference implementation attains their resource costs.
+\end{remark}
+
+The arithmetic and workspace derivations are provided in Appendix~\ref{app:complexity}. Classical costs and the measurement budget are analysed separately.
+\end{revision}
+
+\subsubsection{\textcolor{blue}{
+Classical costs of the hybrid procedure}}
+
+\begin{revision}
+Classical preprocessing requires at most $m-1$ point doublings. Using conservative schoolbook arithmetic bounds, one classical point operation costs $O(\ell^3)$ bit operations, giving $O(m\ell^3)$ preprocessing cost.
+
+For each measured outcome, continued fractions produce $O(m)$ convergents. Checking a denominator $v\leq B$ requires $O(\ell)$ point operations through classical scalar multiplication. Including continued fractions and greatest common divisor updates, a conservative post-processing bound per outcome is
+\[
+C_{\mathrm{post}}(\ell,m)
+=O(m^3+m\ell^4).
+\]
+
+\begin{revision}
+Order admission requires $O(\kappa\ell^3)$ bit operations for Miller--Rabin testing, with $\kappa=64$, and $O(\ell^4)$ for the annihilator check. For fixed $\kappa$, these costs do not change the overall classical bound.
+\end{revision}
+For an $O(\ell)$-bit message representative $z$, one signing attempt costs $O(\ell^4)$ bit operations under the same arithmetic bounds. The representative $z$ is supplied as input; message hashing is not included. 
+
+With $m=\Theta(\ell)$, the classical cost of parameter recovery followed by one signing
+attempt is therefore
+\begin{equation}
+\label{eq:hybrid_classical_cost}
+C_{\mathrm{hyb,cl}}(\ell,T)
+=O(\ell^4+T\ell^5).
+\end{equation}
+This is the classical work within the hybrid procedure, not the cost of a competing classical order-finding algorithm. Detailed derivations are given in Appendix~\ref{app:complexity}.
+\end{revision}
+
+\begin{revision}
+\textbf{Measurement budget.}
+Let $0<\varepsilon<1/2$ denote the allowed probability of unsuccessful exact-order recovery under ideal execution. With $Q>B^2$, the standard order-finding analysis gives a sufficient budget of independent executions of order
+\begin{equation}
+\label{eq:measurement_budget}
+T=O\!\left(
+(1+\log\ell)\ln\frac{1}{\varepsilon}
+\right)
+\end{equation}
+\cite{Shor1997}.
+A measurement yielding the exact denominator $r$ fixes the accumulated greatest common divisor at $r$, since all accepted denominators are multiples of $r$. Subsequent accepted
+denominators therefore preserve that value.
+
+Combining this budget with the preceding cost bounds, for fixed $\varepsilon$ the reference implementation satisfies
+\begin{equation}
+\label{eq:fixed_error_resources}
+\begin{aligned}
+G_{\mathrm q}&=\bigOt(\ell^7),\\
+C_{\mathrm{hyb,cl}}&=\bigOt(\ell^5),\\
+N_{\mathrm q}&=O(\ell^2),
+\end{aligned}
+\end{equation}
+where $N_{\mathrm q}$ counts quantum registers and workspace. The notation $\bigOt$  uppresses polylogarithmic factors in $\ell$. The probability bound concerns order recovery, not hardware noise or cryptographic security. Its derivation is provided in Appendix~\ref{app:complexity}.
+\end{revision}
+
+
+\subsection{Scope of the asymptotic claim}\label{sec:scope}
+
+Three points deserve explicit emphasis to avoid overstatement of the results in Section \ref{sec:complexity}.
+
+\begin{revision}
+\textbf{The resource bound describes the implemented reference circuit.}
+Theorem~\ref{thm:speedup} bounds the quantum component of the compact implementation described in Appendix~\ref{app:oracle}. It does not inherit the optimized arithmetic costs of \cite{Roetteler2017,Haner2020}. The measurement budget and classical processing must also be included when assessing the complete hybrid procedure. Comparison with classical order-finding methods is treated separately.
+\end{revision}
+
+\textbf{The deployment of \texttt{secp256k1} does not require order finding at runtime.} In Bitcoin, Ethereum, and any other system that targets the standard \texttt{secp256k1} parameters, the order $n$ of the generator is fixed by the standard \cite{SEC2_2010} and is therefore not a computational task that the signing pipeline performs. The pipeline of Algorithm \ref{alg:hybrid} is therefore not proposed as an acceleration of standard ECDSA signing on the deployed Bitcoin or Ethereum protocols. Its scope is rather the broader class of ECDSA-like signing constructions in which order finding does occur as a subroutine: ad-hoc or custom curves, procedures for validating the parameters of newly proposed curves, ephemeral subgroups, and multi-curve protocols. 
+
+
+\textbf{The architectural decoupling enables independent analysis of each layer.} 
+
+By separating the periodicity step from the coherent point arithmetic, the construction makes it possible to study \begin{revision} (a) the evaluation of $f_P(k)=kP$ through reversible point arithmetic, (b) probabilistic order recovery from the measured outcomes, and (c) the integration with the rest of the ECDSA-like signing flow. Each component can therefore be validated, replaced, or improved independently.
+\end{revision}
+
+\subsection{Theoretical results}
+
+\begin{revision}
+Theorem~\ref{thm:speedup} and the derivations
+in Appendix~\ref{app:complexity} establish
+the resource bounds summarized in
+Table~\ref{tab:complexity}. These describe
+the compact reference implementation with
+$m=\Theta(\ell)$ and $T$ sequential quantum
+executions, followed by one signing attempt.
+Quantum gates, classical bit operations,
+and quantum memory are reported separately.
+\end{revision}
+
+\begin{table}[t]
+\color{blue}
+\centering
+\small
+\caption{Conservative resource bounds for the
+reference hybrid procedure, with
+$\ell=\lceil\log_2p\rceil$. Quantum gates use
+the stated ideal gate model. Classical work
+includes constant-point preprocessing,
+measurement post-processing, and one signing
+attempt; offline circuit construction,
+hashing, and initial key generation are
+excluded.}
+\label{tab:complexity}
+\begin{tabular}{lc}
+\hline
+Resource & Upper bound \\
+\hline
+Quantum gates & $O(T\ell^7)$ \\
+Classical bit operations & $O(\ell^4+T\ell^5)$ \\
+Quantum memory (qubits) & $O(\ell^2)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{revision}
+For a fixed allowed recovery-error probability,
+the sufficient measurement budget in
+Equation~\eqref{eq:measurement_budget} gives
+$\bigOt(\ell^7)$ quantum gates and
+$\bigOt(\ell^5)$ classical bit operations.
+Sequential execution preserves the
+$O(\ell^2)$ quantum-memory bound.
+These are asymptotic upper bounds, not
+physical execution times or measured
+performance at cryptographic sizes.
+\end{revision}
+
+\subsection{Generalised algorithmic behaviour}
+
+The proposed pipeline exhibits three structural properties:
+
+\begin{enumerate}
+    \item \emph{Period concentration.} After the inverse QFT, the measurement distribution concentrates on integers $y \in \{0, Q/r, 2Q/r, \ldots, (r-1)Q/r\}$ when $Q = 2^{m}$ is a multiple of $r$, and on a peaked distribution around those values otherwise, in agreement with the standard analysis of Shor's algorithm \cite{Shor1997, Cleve1998, NielsenChuang2010}.
+    
+    \begin{revision}
+    \item \emph{Probabilistic order recovery.} The encoding includes $\mathcal O$ and preserves the period $r$, whether even or odd. Accepted continued-fraction denominators are combined through their greatest common divisor to obtain the estimate $\hat r$ used by signing.
+
+    \item \emph{Equivalence of signatures.} For valid prime-order signing parameters, when $\hat r=r$, the signature $(r_{\sigma},s)$ produced by Algorithm~\ref{alg:hybrid} coincides bit for bit with the classical reference using the same accepted nonce $k$, message representative $z$, private key $d$, and point $P$.
+    \end{revision}
+    
+\end{enumerate}
+
+\begin{revision}
+These properties provide separate validation criteria for Fourier sampling, order recovery, and signature integration. Numerical evaluation compares recovered estimates and resulting signatures against an independent classical reference, without supplying the reference order to the hybrid procedure.
+\end{revision}
+
+\subsection{Reproducibility regime}
+
+\begin{revision}
+The pipeline of Algorithm~\ref{alg:hybrid} uses a scalar register of $m$ qubits and a point register of $2\ell+1$ qubits, with arithmetic workspace counted separately. Under ideal execution, the inverse QFT produces the standard order-finding distribution, with peaks near multiples of $Q/r$ \cite{Shor1997,Cleve1998}. Continued-fraction denominators from $T$ measurements are processed as described in the probabilistic recovery procedure. The resulting estimate $\hat r$ is then passed to order admission; only an admitted candidate is used in the classical signing flow.
+
+Reproduction requires specifying the curve, point, register sizes, arithmetic
+variant, measurement budget, sampling settings, and the admission policy
+(primality method and number of rounds). Validation compares the recovered estimates and resulting signatures with independent classical references. Recovery and admission outcomes are reported separately: recovered estimates are classified against the reference order as exact, nonminimal multiple, or no candidate, whereas admission outcomes are counted as admitted, recovery failure, or not admissible for signing. Admission uses exact small-prime checks and otherwise 64 Miller--Rabin rounds with bases drawn from an operating-system random source, so these rounds are reproducible by method and round count, not by the measurement-sampling seed. The reference order is used for evaluation, not as an input to the hybrid procedure or to order admission. \end{revision}
+
+\subsection{Discussion}\label{sec:discussion}
+
+
+\textbf{Position with respect to existing studies of resource estimation.}
+\begin{revision}
+Proos and Zalka describe Shor's algorithm
+for ECDLP, including reversible elliptic-curve
+arithmetic \cite{ProosZalka2003}.
+Subsequent studies develop concrete resource
+estimates and optimized arithmetic circuits
+\cite{Roetteler2017,Haner2020,Litinski2023}.
+At the group-algorithmic level, Cheung and
+Mosca describe element-order finding and
+finite Abelian group decomposition
+\cite{CheungMosca2001}.
+The present work builds on these foundations
+to develop and evaluate an integrated hybrid
+process connecting reversible point arithmetic,
+probabilistic order recovery, and classical
+signature generation. Its contribution lies
+in the explicit implementation of these
+interfaces, the analysis of their combined
+computational requirements, and numerical
+validation of the resulting signing workflow.
+\end{revision} 
+
+\textbf{Comparison to other proposals at the quantum-blockchain interface.} Existing hybrid proposals fall broadly into three categories: (i) post-quantum signature schemes used as drop-in replacements for ECDSA \cite{FernandezCarames2020, Aggarwal2018, Allende2023}, (ii) quantum digital signatures with information-theoretic security \cite{Gottesman2001, Amiri2016, Wallden2015}, and (iii) consensus or networking layers augmented with quantum components, including QKD \cite{Kappert2021, Pirandola2020}. \textcolor{blue}{The present proposal examines
+an integration pattern in which quantum
+point-order recovery supplies a parameter
+for classical ECDSA-like signing, while
+the signing arithmetic remains classical.} It is closely aligned in spirit with the hybrid pattern of \cite{Bhatia2020, Endo2021} but specialised to the order-finding step on elliptic curves. 
+
+
+\textbf{Limitations.} Three limitations of the present work should be highlighted explicitly. \begin{revision}First, the implementation uses reference arithmetic blocks, and numerical validation is restricted to small-field instances; its resource requirements are analysed separately from those of optimized published constructions. The noiseless validation exploits the permutation structure of the arithmetic circuit rather than storing a dense statevector over all workspace qubits. Second, order recovery uses a finite measurement budget and may fail or return a composite multiple, which admission rejects; admission itself is a probable-prime test and does not establish the cryptographic suitability of the domain, so the small-field instance validates arithmetic and integration rather than a secure ECDSA parameter set.\end{revision}
+Third, the construction is sensitive to noise and decoherence in the same way standard Shor circuits are \cite{Preskill2018,Devitt2013}, and would require fault-tolerant resources at instances of cryptographic size. 
+
+\subsection{Concluding remarks}\label{sec:conclusion}
+
+This work has presented a hybrid classical-quantum architecture in which the order-finding step of an ECDSA-like signing pipeline is delegated to \textcolor{blue}{a standard Shor order-finding subroutine using reversible elliptic-curve arithmetic.} \begin{revision}
+The contribution consists of the explicit
+integration of reversible point arithmetic,
+probabilistic order recovery, and classical
+signing, together with a computational
+analysis and numerical validation of the
+resulting hybrid process.
+\end{revision} \begin{revision}
+The asymptotic cost is expressed in terms
+of controlled point addition and the
+measurement budget. The resource bounds
+in Theorem~\ref{thm:speedup} and
+Table~\ref{tab:complexity} describe the
+implemented reference circuit, with
+classical processing accounted for separately.
+\end{revision} Beyond any specific instantiation, the construction illustrates a general design pattern for quantum-assisted cryptographic protocols: \textcolor{blue}{identify a well-defined subroutine}, replace it by a coherent quantum step with a clean classical interface, and preserve the rest of the protocol unchanged. \begin{revision}
+Natural directions for future work include
+optimizing the reversible arithmetic and
+workspace allocation, evaluating
+fault-tolerant implementations, and
+extending the integrated process to
+parameter-validation workflows for
+non-standard elliptic-curve settings.
+\end{revision}

@@ -27,3 +27,7 @@
 paper/drafts/** -text
 docs/history/** -text
 results/legacy/** -text
+
+# Overleaf snapshots are stored byte-for-byte (CRLF as exported) so that their
+# hashes match the recorded source ZIP; they are evidence, not edited sources.
+paper/manuscript/** -text

@@ -1,0 +1,81 @@
+\section{Introduction}
+\label{sec:introduction}
+
+The advent of large-scale quantum computers is widely recognized as the single most disruptive event for public-key cryptography currently deployed \cite{Mosca2018, NIST_PQC_2022, Joseph2022}. Two algorithms in particular support this concern: Grover's search \cite{Grover1996}, which provides a quadratic speed-up for unstructured search and weakens symmetric primitives, and Shor's algorithm \cite{Shor1994, Shor1997}, which solves integer factorization and the discrete logarithm in polynomial time on a quantum computer, breaking RSA, finite field Diffie--Hellman and Elliptic Curve Cryptography (ECC) in their currently standardized parameter regimes \cite{Hankerson2004, Bernstein2017}. 
+
+The Elliptic Curve Digital Signature Algorithm (ECDSA) over the Koblitz curve \texttt{secp256k1}, standardized by the SECG \cite{SEC2_2010} and adopted by Bitcoin \cite{Nakamoto2008} and Ethereum \cite{Buterin2014} as the basis of transaction authentication, is among the cryptographic protocols most exposed to this threat. Its security rests on the hardness of the Elliptic Curve Discrete Logarithm Problem (ECDLP) over $E(\Fp)$, with $p$ a 256-bit prime. Concrete resource estimates suggest that an ECDLP instance of cryptographic size could be broken with on the order of $10^{3}$--$10^{4}$ logical qubits and $10^{10}$--$10^{11}$ Toffoli gates \cite{Roetteler2017, Haner2020, Litinski2023}, well within reach of plausible roadmaps for fault-tolerant quantum computing. 
+
+In response, the community has pursued three complementary paths. The first, post-quantum cryptography (PQC), seeks to replace classical algorithms with schemes whose hardness assumptions are believed to resist quantum attack, including lattice-based, hash-based, code-based and isogeny-based constructions \cite{NIST_PQC_2022, Bernstein2017, Ducas2018, Hulsing2020, Avanzi2019, Ding2020}. The second, quantum cryptography proper, exploits quantum mechanics to deliver functionalities such as Quantum Key Distribution \cite{Pirandola2020, BB84_1984}, Quantum Digital Signatures \cite{Gottesman2001, Amiri2016, Wallden2015}, and quantum-resistant blockchain protocols \cite{Kappert2021, FernandezCarames2020, Aggarwal2018}. The third, on which a growing body of literature has emerged, explores hybrid classical quantum protocols, in which only the operations whose classical complexity is dominant are delegated to a quantum coprocessor while the rest of the protocol remains untouched, with the goal of preserving interoperability and limiting deployment friction \cite{Bhatia2020, Bittel2021, Cerezo2021, Endo2021}. 
+
+This paper contributes to the third line by focusing on the order-finding subroutine inside a signing pipeline of ECDSA type. Specifically, given a point $P \in E(\Fp)$ of order $r$ (the smallest positive integer such that $rP = \mathcal{O}$, with $\mathcal{O}$ the identity of the curve group), the task is to determine $r$ via Shor's quantum subroutine and to integrate the recovered value into the remainder of the classical signing flow. The case of \texttt{secp256k1} in production is special, since the order $n$ of the standard generator is fixed by the standard \cite{SEC2_2010} and need not be recomputed at signing time; \begin{revision}
+however, order determination for non-standard
+parameters can use enumeration, generic group
+algorithms, or point counting followed by
+reduction from a factored group order.
+The standard quantum order-finding subroutine
+\cite{Shor1997,Kitaev1995,NielsenChuang2010}
+is assessed against these distinct classical
+routes. An exponential separation from
+enumeration applies in the large-order regime
+specified in Section~\ref{sec:complexity}.
+\end{revision} 
+
+Two methodological aspects are studied with particular care. \begin{revision}
+First, the construction builds on established
+quantum group algorithms. Cheung and Mosca
+explicitly describe element-order finding
+within the hidden-subgroup framework before
+developing finite Abelian group decomposition
+\cite{CheungMosca2001}.
+Proos and Zalka develop Shor's discrete-logarithm
+algorithm for elliptic curves
+\cite{ProosZalka2003}, while Roetteler et al.
+provide concrete arithmetic resource estimates
+\cite{Roetteler2017}.
+These results supply the foundations for
+the explicit integration of point-order
+recovery and classical signing studied here;
+full group decomposition is not required
+for the single-point task.
+\end{revision} \begin{revision}
+Second, the cost analysis distinguishes
+controlled point addition, complete scalar
+evaluation, classical recovery, and quantum
+workspace. Bounds derived from the implemented
+reference blocks are reported separately
+from those of optimized published arithmetic
+\cite{Roetteler2017,Haner2020}.
+This distinction connects the arithmetic
+implementation to the resource requirements
+of the integrated hybrid process.
+\end{revision}
+
+The contribution of this paper is therefore \begin{revision}
+    twofold
+\end{revision}:
+
+\begin{enumerate}
+  \item \textcolor{blue}{An explicit modular
+        hybrid process connecting reversible
+        elliptic-curve arithmetic, standard quantum
+        order finding, probabilistic order recovery,
+        and classical ECDSA-like signing.
+        The implementation specifies the point
+        encoding, exceptional-case handling,
+        auxiliary cleanup, and the transfer of
+        the recovered order estimate to the
+        signing computations.}
+
+    \item \textcolor{blue}{A complexity analysis
+    parametrised by the cost of one controlled
+    point addition, distinguishing full scalar
+    evaluation, repeated quantum executions,
+    classical processing, and quantum workspace.
+    The bounds describe the implemented reference
+    arithmetic rather than inheriting the costs
+    of optimized published circuits. Numerical
+    validation examines order recovery and its
+    integration with classical signature generation.}
+\end{enumerate}
+
+The remainder of the paper is structured as follows. Section \ref{sec:methods} reviews the cryptographic and quantum building blocks that constitute the methodological foundation. Section \ref{sec:results_discussions} presents the proposed hybrid construction together with the parametrised complexity analysis, the theoretical and numerical results, the discussion of limitations and concluding remarks. Appendices provide the detailed complexity derivations, the explicit construction of the oracle and a worked instance.
