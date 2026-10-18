@@ -60,3 +60,6 @@ Thumbs.db
 GEMINI.md
 .gemini/
 .aider*
+
+# Author-only working notes: never versioned
+/docs/**/*_proposals.md

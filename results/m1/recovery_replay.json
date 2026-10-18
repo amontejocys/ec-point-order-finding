@@ -1,0 +1,47 @@
+{
+  "scope": "Replay of saved ideal samples, not circuit execution or resampling",
+  "instances": 1000,
+  "instance_budget_rows_matched": 7000,
+  "instances_with_nonminimal_candidates": 9,
+  "summary": {
+    "1": {
+      "exact": 59292,
+      "nonminimal_multiple": 5,
+      "no_candidate": 40703
+    },
+    "2": {
+      "exact": 78732,
+      "nonminimal_multiple": 3,
+      "no_candidate": 21265
+    },
+    "4": {
+      "exact": 92567,
+      "nonminimal_multiple": 2,
+      "no_candidate": 7431
+    },
+    "8": {
+      "exact": 98706,
+      "nonminimal_multiple": 3,
+      "no_candidate": 1291
+    },
+    "16": {
+      "exact": 99948,
+      "nonminimal_multiple": 0,
+      "no_candidate": 52
+    },
+    "32": {
+      "exact": 100000,
+      "nonminimal_multiple": 0,
+      "no_candidate": 0
+    },
+    "64": {
+      "exact": 100000,
+      "nonminimal_multiple": 0,
+      "no_candidate": 0
+    }
+  },
+  "input_sha256": {
+    "expanded_curve_validation.json": "3f3051ac3d135aa06304419e8a8d8b86c63dee7299d2e8aac7da3289230a5861",
+    "expanded_curve_validation.npz": "e312143bf6de06bc7af91ab8c6528c552a7209621e42fce793aacf275239ee43"
+  }
+}

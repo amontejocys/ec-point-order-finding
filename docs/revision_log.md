@@ -3,7 +3,7 @@
 | Item | Evidence | Minimal change | Location | Status |
 | --- | --- | --- | --- | --- |
 | Structure | Existing R5/R6 files and migration manifests | Modules, imports, scripts and artifact paths migrated; originals retained | Repository | See docs/audit/migration.md for completed and pending checks |
-| M1 signing admission | Nonidentity P, prime candidate annihilating P implies exact order | Admission check and tests | signing/, manuscript algorithm | Pending |
+| M1 signing admission | Nonidentity P, prime candidate annihilating P implies exact order; MR probability stated separately | Admission gate before signing; recovery unchanged | signing/, classical/primality.py | Code locally verified; author review and manual Overleaf integration pending |
 | R8 novelty | Comparative audit and evidence required | Determined after M2 | docs/audit/, manuscript | Open |
 | Motivation | Assess why the selected capability matters | Decision with advisor | docs/decisions/ | Open |
 | References [27], [28], [30] | Verify primary sources | Correct only supported entries | Manuscript bibliography | Pending |
@@ -16,3 +16,4 @@
 | Provenance and portability | Recipe/manifest for source hash; isolated interpreter metadata | Version reproducible auditor; normalize active metadata paths | docs/audit/source_provenance.md | No dependency or scientific-code changes |
 | Pre-commit hygiene | CRLF working copy vs LF clones broke fingerprints; interpreter paths leaked user names; AI instruction files were about to be versioned | .gitattributes with LF policy and -text historical artifacts; active files converted to LF; fingerprint regenerated; interpreter path no longer recorded; CLAUDE.md/AGENTS.md ignored | .gitattributes, .gitignore, results/eol-normalization/ | Done before first commit; no scientific-code changes |
 | Historical path redaction | results/legacy/r6/manuscript_zip_audit.json exposed a local user directory | Replace directory with a placeholder, keep ZIP name and all other bytes; record new hash and original hash in historical_artifacts.json | results/legacy/r6/, docs/audit/historical_artifacts.json | Done; r6/ backup keeps the original |
+| M1 evaluation boundary | Reference order formerly skipped nonminimal candidates before signing | Every candidate now reaches admission; references only score outputs | experiments/scripts/signature_integration.py | Regression fixtures test candidate 10 rejection and candidate 5 admission |

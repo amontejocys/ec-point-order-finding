@@ -1,18 +1,23 @@
-"""Migrated from R5/R6; see docs/audit/migration_manifest.json. No M1 changes."""
+"""Toy signing arithmetic with M1 order admission; not production ECDSA."""
 
 from quantum_ec.classical.curve import scalar_multiple
 from quantum_ec.classical.curve import classical_add
+from quantum_ec.classical.primality import DEFAULT_PRIMALITY_ROUNDS
+from quantum_ec.signing.admission import admit_signing_order, OrderAdmissionError
 
 
-def signing_attempt(z, private_key, nonce, order_candidate, point, p, a):
+def signing_attempt(z, private_key, nonce, order_candidate, point, p, a, *, b=None,
+                    primality_rounds=DEFAULT_PRIMALITY_ROUNDS):
     """Return (r_sigma,s), or None when nonce must be retried.
 
-    This function trusts its supplied domain order; it does NOT certify it.
-    A nonminimal period may give incorrect signing parameters.
+    Raise OrderAdmissionError for recovery failure or inadmissible order.
+    General order recovery is unchanged and may return composite orders.
+    Prime-field/curve preconditions are described by admit_signing_order.
     """
-    if (not isinstance(order_candidate, int) or isinstance(order_candidate, bool)
-            or order_candidate < 2):
-        raise ValueError('order_candidate must be an integer >= 2')
+    admission = admit_signing_order(order_candidate, point, p, a, b=b,
+                                    primality_rounds=primality_rounds)
+    if admission['status'] != 'admitted':
+        raise OrderAdmissionError(admission)
     if not 1 <= private_key < order_candidate or not 1 <= nonce < order_candidate:
         raise ValueError('Private key and nonce must lie in [1,order_candidate)')
     if not isinstance(z, int) or isinstance(z, bool) or z < 0:

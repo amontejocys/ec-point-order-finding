@@ -1,0 +1,228 @@
+{
+  "algorithm": "sha256 of UTF-8 path + space + raw-file SHA256 records, POSIX lexical order, LF separators, no final LF",
+  "scope": "All src/**/*.py only; not tests, experiments, manuscript, or a Git commit",
+  "line_endings": "File bytes are not normalized; checkout line-ending conversion changes the hash",
+  "source_tree_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+  "files": [
+    {
+      "path": "src/quantum_ec/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/baselines/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/baselines/trial_recovery.py",
+      "sha256": "6b442e7d4a7f418045de162d54321031c98a46695f6d72f4db8ef40174742e13"
+    },
+    {
+      "path": "src/quantum_ec/circuits/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/binary_add_constant.py",
+      "sha256": "0d117e7c40c233cbd1f8cae6942b1611861dd3f1a3b29fd2b60aa275de896950"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/binary_divide.py",
+      "sha256": "c59ff5de7aae2e56d6fecb8e7d8f768aed95c0e29700c11a62d338049e759515"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/binary_quotient.py",
+      "sha256": "964b9836308554deb922fda4f6c775d98a6f855b0bb923ff0eeb5b8c0c02ec71"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/division_reduce_step.py",
+      "sha256": "c55131881248f280389464362f28742a50e45c0f6aba2489194c870824404797"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/equality_constant.py",
+      "sha256": "3f2c62994c0d04b654564391ff4e40435b1c17c090590bdcce5d32bef7deab68"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/euclid_update.py",
+      "sha256": "04e6e255dd6f8454ad0a8092045303c6f8b10fd301a334acf6ba3c313a788290"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/less_than_constant.py",
+      "sha256": "26e470214892650946cb0368160bae72f240241d5bcfa746f7689c1e98f93e66"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/less_than_register.py",
+      "sha256": "6d58e612a64fc13dc4d15a1bb5a22bf3e944eb88a713b94ef3d8a04311cddbae"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_add_constant.py",
+      "sha256": "fcc6951e5a44282dfb02f66870b2cc9f290617a9f55d88c7ede89a2fe438ef14"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_add_register.py",
+      "sha256": "9115f6f3aa946486faca33825c384f42fab339cf1e685d88e8c408781a12ad67"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_cube_accumulate.py",
+      "sha256": "37e2e90ab741d3edd1f5e70d517276e0f2723a386b406b53325d2e2428a64504"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_inverse.py",
+      "sha256": "092d2e82dd78f34d5a9d6e996579b9b83018dd19d8bfc16dfa3103ffc225f520"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_inverse_inplace.py",
+      "sha256": "3197563fd198e4127331f635f6f366b3329c632974c091ab3dd0753d93037407"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_multiply_accumulate.py",
+      "sha256": "fdd3e9e099c0bcc96cee525377a9c509fee170a771c08634c1975c18d597be3a"
+    },
+    {
+      "path": "src/quantum_ec/circuits/arithmetic/modular_square_accumulate.py",
+      "sha256": "a2bb7d9d36f5735929cecc44646022661a5dba2c571c672ed296a30778a89893"
+    },
+    {
+      "path": "src/quantum_ec/circuits/order_finding/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/circuits/order_finding/elliptic_order_finding.py",
+      "sha256": "4acd2f133925d39d36a756d78aca1e992a2e749f13563e55c66b777092fb7d5f"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/controlled_point_add.py",
+      "sha256": "557f85656c0529349b1a2b30b4b80f074a35605a794c3a485e9f1071f338a0f5"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/curve_residual_accumulate.py",
+      "sha256": "3d6357f374d8bf51df5e069efde835d6720edea40cb1f35d34827ed6acf328f5"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/finite_curve_check.py",
+      "sha256": "ffa871a944ab046fc4d5bd58807e322f6eabaa7db8228be2a7f0f17c1b4c6d9d"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/ordinary_point_slope.py",
+      "sha256": "42e7124bacd937074873ef24a105eadeb56a45d16edccc0e3aea7337ff328bef"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/ordinary_point_sum.py",
+      "sha256": "8235b76f4d745cbe0c64b53bd1bc59f4cf7199b54bd88efc5e4b6d26ed65ecd8"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/ordinary_point_sum_shared.py",
+      "sha256": "e833d0d5d899374cbdfc0db824bcc55aed4ed4edb807819e19b59c3c3f1164f0"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/ordinary_point_x.py",
+      "sha256": "302767c3216b8d414d3af5b39803d7a7ca8186cd3b758a012cd5f93c10ca280e"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/point_add_inplace.py",
+      "sha256": "8e3775af78283e85a375d1a33b896044b1432cec6ac18d014724da11a9055ff2"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/point_addition_cases.py",
+      "sha256": "b0b8bf8d22f181a39ab0b53ac2e361cfcb9b3fed890e87a0dffab71f0687eeb3"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/point_differences.py",
+      "sha256": "19dd7583f1f5c2f0bf1f7f7ce9fb1415684b964a5e01fbbc2cf492dd4f9f62f9"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/point_encoding_check.py",
+      "sha256": "cf476423439c416ebc9dd16da1e1829b681646b5052f16e011b1bfee248dddc0"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/point_sum_evaluator.py",
+      "sha256": "3b32024d71ce87a1f3602ed19ac0f17ef98dc6267d0d193fd952bd1299ae6501"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/point_sum_evaluator_compact.py",
+      "sha256": "3a7e10210ddfae0e0e450bb1c065ef2febaf799c57230648d74260d2743a4c36"
+    },
+    {
+      "path": "src/quantum_ec/circuits/points/special_point_sum.py",
+      "sha256": "bc39f2d0e1aefaaf12c03d3ea6277cc12c994f6df5085e8812c0e0655e5be942"
+    },
+    {
+      "path": "src/quantum_ec/classical/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/classical/curve.py",
+      "sha256": "478b7e29de3e271e4c30d2f245d369ff7ca5b2956c248a8fef0c6ea962e16886"
+    },
+    {
+      "path": "src/quantum_ec/classical/primality.py",
+      "sha256": "ed3b4e434b5c6406f5fdc24515f1296db1f87b1581ff075d21e4726d80beb525"
+    },
+    {
+      "path": "src/quantum_ec/recovery/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/recovery/continued_fractions.py",
+      "sha256": "75d342548b983eaff056b2642eedb41ce3f354dc3779f64fa24a223296fb2c10"
+    },
+    {
+      "path": "src/quantum_ec/recovery/factor_free_recovery.py",
+      "sha256": "b0eb80c7a74a2b8409f40f0f44c3bbebb7c4b7e149bef5abc97e04eb3ef338af"
+    },
+    {
+      "path": "src/quantum_ec/recovery/success_budget.py",
+      "sha256": "ac0597b2c85499a9c8b19a542fa0042ac499e6e64c3b4896152f72444031d4da"
+    },
+    {
+      "path": "src/quantum_ec/resources/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/resources/complete_resources.py",
+      "sha256": "ddf9d3da9ca4510bd475e8b903c7b95a0c70dfc84838c7b0818d37aff3790f4f"
+    },
+    {
+      "path": "src/quantum_ec/resources/mcx_basis.py",
+      "sha256": "4d3df5973c96b95013bc204d23e6e34f7861ff90ef7a093efbd4d488818a28e2"
+    },
+    {
+      "path": "src/quantum_ec/resources/resource_model.py",
+      "sha256": "5136caebb42b159e972e25a16cc5b538bece201c4bf369882929eb96c3d3294d"
+    },
+    {
+      "path": "src/quantum_ec/signing/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/signing/admission.py",
+      "sha256": "70ee4f3b35e9777fd817dcb40c1a710c69dd7fe797f469ee5753745682910e78"
+    },
+    {
+      "path": "src/quantum_ec/signing/signature.py",
+      "sha256": "988ba660cea7966d026e80d7f23acbc21845c938ecffb1ceb9fff8f15018a899"
+    },
+    {
+      "path": "src/quantum_ec/simulation/__init__.py",
+      "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+    },
+    {
+      "path": "src/quantum_ec/simulation/ideal_distribution.py",
+      "sha256": "2bd114c2be55579b5b8d35dd53feaf0934ed9627109db90b6a239fe722299af0"
+    },
+    {
+      "path": "src/quantum_ec/simulation/real_arithmetic.py",
+      "sha256": "507d7290552191e4ab886e0c7217e819bd828b8ce3275f54a909c724865ec407"
+    },
+    {
+      "path": "src/quantum_ec/simulation/sparse_order_finding.py",
+      "sha256": "cd7c713e39041c7fb667209eac8237f308b6dc1dccb295377e0d7aa4a8bd20da"
+    }
+  ]
+}

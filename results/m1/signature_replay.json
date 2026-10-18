@@ -1,0 +1,25 @@
+{
+  "scope": "Toy signing with order admission; reference order used for evaluation only",
+  "shots": 4,
+  "z_test": 2,
+  "d_test": 2,
+  "k_test": 1,
+  "reference_signature": [
+    1,
+    4
+  ],
+  "recovery_minimality_certification": false,
+  "signing_admission": {
+    "default_primality_rounds": 64,
+    "counts": {
+      "admitted": 100,
+      "recovery_failure": 0,
+      "order_not_admissible_for_signing": 0
+    },
+    "rejection_reasons": {}
+  },
+  "exact_order": 100,
+  "no_candidate": 0,
+  "nonminimal_period": 0,
+  "matching_verified_signatures": 100
+}

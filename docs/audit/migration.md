@@ -1,5 +1,8 @@
 # R5/R6 structural migration
 
+Historical snapshot report. M1 was implemented later; its current status and
+changed signing behavior are recorded in docs/decisions/m1_signing_admission.md.
+
 ## Scope
 
 Migration only: no circuit algorithm, recovery policy, or signing admission was

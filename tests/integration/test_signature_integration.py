@@ -4,6 +4,7 @@ import unittest
 from quantum_ec.signing.signature import signing_attempt, verify_arithmetic
 from tests.reference.signature import reference_attempt
 from quantum_ec.classical.curve import scalar_multiple
+from quantum_ec.signing.admission import OrderAdmissionError
 
 
 class SignatureIntegrationTests(unittest.TestCase):
@@ -23,12 +24,13 @@ class SignatureIntegrationTests(unittest.TestCase):
                         self.assertTrue(verify_arithmetic(actual, z, public, 5, (6, 7), 29, 0))
         self.assertEqual((accepted, rejected), (64, 16))
 
-    def test_example_and_nonminimal_period_changes_signature(self):
+    def test_example_and_nonminimal_period_is_rejected(self):
         actual = signing_attempt(2, 2, 1, 5, (6, 7), 29, 0)
         self.assertEqual(actual, (1, 4))
-        wrong = signing_attempt(2, 2, 1, 10, (6, 7), 29, 0)
-        self.assertNotEqual(wrong, actual)
-        self.assertFalse(verify_arithmetic(wrong, 2, (12, 13), 5, (6, 7), 29, 0))
+        with self.assertRaises(OrderAdmissionError) as error:
+            signing_attempt(2, 2, 1, 10, (6, 7), 29, 0)
+        self.assertEqual(error.exception.status, 'order_not_admissible_for_signing')
+        self.assertEqual(error.exception.reason, 'candidate_not_prime')
 
     def test_rejections(self):
         self.assertIsNone(signing_attempt(3, 2, 1, 5, (6, 7), 29, 0))

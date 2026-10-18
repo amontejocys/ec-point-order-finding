@@ -1,0 +1,1935 @@
+{
+  "scope": "Classical finite admission tests, no circuit execution or production ECDSA security claim",
+  "cases": [
+    {
+      "p": 5,
+      "a": 1,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "reference_order_for_validation_only": 9,
+      "decisions": [
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": 0,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "invalid_order_candidate",
+          "order_candidate": 1,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 2,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 3,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 4,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 5,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 7,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 8,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_above_hasse_bound",
+          "order_candidate": 11,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "a": 1,
+      "b": 1,
+      "point": [
+        2,
+        1
+      ],
+      "reference_order_for_validation_only": 3,
+      "decisions": [
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": 0,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "invalid_order_candidate",
+          "order_candidate": 1,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 2,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 3,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 4,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 5,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 7,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 8,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_above_hasse_bound",
+          "order_candidate": 11,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        3,
+        0
+      ],
+      "reference_order_for_validation_only": 2,
+      "decisions": [
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": 0,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "invalid_order_candidate",
+          "order_candidate": 1,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 2,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 3,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 4,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 5,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 7,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 8,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 11,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 12,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 13,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_above_hasse_bound",
+          "order_candidate": 14,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      ]
+    },
+    {
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "reference_order_for_validation_only": 5,
+      "decisions": [
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": 0,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "invalid_order_candidate",
+          "order_candidate": 1,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 2,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 3,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 4,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 5,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 7,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 8,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 11,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 12,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 13,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 14,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 15,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 16,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 17,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 18,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 19,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 20,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 21,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 22,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 23,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 24,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 25,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 26,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 27,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 28,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 29,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 30,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 31,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 32,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 33,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 34,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 35,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 36,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 37,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 38,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 39,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 40,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_above_hasse_bound",
+          "order_candidate": 41,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      ]
+    },
+    {
+      "p": 41,
+      "a": 31,
+      "b": 18,
+      "point": [
+        28,
+        40
+      ],
+      "reference_order_for_validation_only": 53,
+      "decisions": [
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": 0,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "invalid_order_candidate",
+          "order_candidate": 1,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 2,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 3,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 4,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 5,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 7,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 8,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 11,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 12,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 13,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 14,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 15,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 16,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 17,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 18,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 19,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 20,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 21,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 22,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 23,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 24,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 25,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 26,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 27,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 28,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 29,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 30,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 31,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 32,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 33,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 34,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 35,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 36,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 37,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 38,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 39,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 40,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 41,
+          "primality": {
+            "classification": "probable_prime",
+            "method": "miller_rabin",
+            "rounds_requested": 64,
+            "rounds_performed": 64,
+            "fixed_composite_false_acceptance_bound": "2^-128"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 42,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 43,
+          "primality": {
+            "classification": "probable_prime",
+            "method": "miller_rabin",
+            "rounds_requested": 64,
+            "rounds_performed": 64,
+            "fixed_composite_false_acceptance_bound": "2^-128"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 44,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 45,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 46,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_does_not_annihilate_point",
+          "order_candidate": 47,
+          "primality": {
+            "classification": "probable_prime",
+            "method": "miller_rabin",
+            "rounds_requested": 64,
+            "rounds_performed": 64,
+            "fixed_composite_false_acceptance_bound": "2^-128"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 48,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 49,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 50,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 51,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 52,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 53,
+          "primality": {
+            "classification": "probable_prime",
+            "method": "miller_rabin",
+            "rounds_requested": 64,
+            "rounds_performed": 64,
+            "fixed_composite_false_acceptance_bound": "2^-128"
+          },
+          "order_assurance": "conditional_on_probable_primality",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 54,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_above_hasse_bound",
+          "order_candidate": 55,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      ]
+    }
+  ],
+  "decisions_checked": 142,
+  "all_decisions_match_independent_reference": true
+}
