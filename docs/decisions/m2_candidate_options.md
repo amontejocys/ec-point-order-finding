@@ -85,7 +85,13 @@ Estimated feasibility/runtime below is unbenchmarked, not a measured result.
 - Would reproduce Litinski/Haener-style or Luo et al. inversion circuits; no
   identifiable advance is in reach. Not recommended.
 
-### F. Exact reliability characterization of order recovery (author proposal, 2026-10-18)
+### F. Finite reliability characterization of order recovery (author proposal, 2026-10-18)
+
+Author authorized developing/evaluating the model on 2026-10-18. Formalization,
+the five qualifications, source comparison and bounded validation are in
+docs/audit/m2_f_reliability_model.md. Exact finite formulas do not imply exact
+floating-point arithmetic. Research novelty and manuscript integration remain
+unapproved; the underlying techniques are standard.
 
 - Question. For curves and points across parameter ranges (p, r prime or
   composite, r size, register size m, budget T), what is the probability that
@@ -97,7 +103,7 @@ Estimated feasibility/runtime below is unbenchmarked, not a measured result.
   The finite bound 1/(16 nu_B) and T=443 for p=29 exist (success_budget.py).
   The real-circuit distribution equals the ideal one on the five validated
   instances, so ideal postprocessing is justified there and stated as such.
-- What would be new. (i) Exact probabilities instead of sampling: per shot,
+- Potential evidence, not established novelty. (i) Finite probabilities instead of sampling: per shot,
   P(accept r), P(any candidate); over T shots, the exact law of the gcd
   accumulator by a Markov chain on the multiples of r up to B, giving
   P(exact), P(no candidate), P(nonminimal) without Monte Carlo error.
@@ -117,10 +123,15 @@ Estimated feasibility/runtime below is unbenchmarked, not a measured result.
   direct, it quantifies the reliability the paper claims and supports the
   measurement-budget discussion; it also documents how conservative the
   published bound is.
-- Fit. Compatible with E and with the title; text goes into the probabilistic
+- Fit. Compatible with the existing hybrid process and title; any eventual text goes into the probabilistic
   recovery subsection, the appendix and one figure. Effort: one to two weeks.
 - Caveats. Noiseless ideal distribution; results for small fields; the exact
   Markov analysis assumes independent ideal shots.
+- Second reader (2026-10-18): model verified independently. Because the law
+  depends only on (r, Q, B), enumerating all r <= B per field size yields an exact
+  worst-case unknown-order budget: 13-16 shots for epsilon = 0.01 at p = 5..41
+  versus the published 295-443 (ad hoc numbers in docs/audit/m2_f_reliability_model.md,
+  to be frozen in a run). This is the precise, useful result F should target.
 
 ## Recommendation for the advisor meeting
 
@@ -164,4 +175,5 @@ anchor map and draft fragments in private notes. Blue marks only the new text.
 
 ## Approval
 
-Advisor: pending. Author: pending. No experiment is started by this record.
+Advisor: pending. Author authorized the F model and bounded evaluation, not
+final contribution claims or a manuscript rewrite. A/B main runs remain pending.

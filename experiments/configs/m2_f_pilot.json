@@ -1,0 +1,15 @@
+{
+  "scope": "Initial finite-model validation, not main novelty evidence",
+  "budgets": [0, 1, 2, 4, 8, 16, 32],
+  "epsilon": 0.01,
+  "max_budget_search": 512,
+  "cases": [
+    {"p": 5, "a": 1, "b": 1, "point": [0, 1], "extra_bits": 0},
+    {"p": 7, "a": 0, "b": 1, "point": [3, 0], "extra_bits": 0},
+    {"p": 7, "a": 1, "b": 0, "point": [1, 3], "extra_bits": 0},
+    {"p": 17, "a": 0, "b": 7, "point": [15, 13], "extra_bits": 0},
+    {"p": 29, "a": 0, "b": 7, "point": [6, 7], "extra_bits": 0},
+    {"p": 29, "a": 0, "b": 7, "point": [6, 7], "extra_bits": 1},
+    {"p": 41, "a": 31, "b": 18, "point": [28, 40], "extra_bits": 0}
+  ]
+}

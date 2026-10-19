@@ -1,0 +1,1023 @@
+{
+  "scope": "Initial finite-model validation, not main novelty evidence",
+  "python": "3.11.5",
+  "numpy": "2.1.3",
+  "numeric_kind": "float64, no Monte Carlo",
+  "rigorous_roundoff_enclosure": false,
+  "rows": [
+    {
+      "p": 5,
+      "a": 1,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "extra_bits": 0,
+      "reference_order": 9,
+      "q": 128,
+      "bound": 10,
+      "one_shot": {
+        "0": 0.39196467200810164,
+        "9": 0.6080353279918985
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.6080353279918985,
+          "no_candidate": 0.39196467200810164,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.39196467200810164,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.6080353279918985,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.8463636958975816,
+          "no_candidate": 0.1536363041024187,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.1536363041024187,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.8463636958975816,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9763958860617499,
+          "no_candidate": 0.02360411393825088,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.02360411393825088,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9763958860617499,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9994428458051916,
+          "no_candidate": 0.0005571541948099295,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 0.0005571541948099295,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9994428458051916,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999996895792062,
+          "no_candidate": 3.104207967943007e-07,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 5.551115123125783e-16,
+          "admission": {
+            "recovery_failure": 3.104207967943007e-07,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999996895792062,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999999999092,
+          "no_candidate": 9.636107108240853e-14,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.5543122344752192e-15,
+          "admission": {
+            "recovery_failure": 9.636107108240853e-14,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999999999999092,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 5,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 10,
+        "m": 7,
+        "q": 128,
+        "per_shot_success_lower_bound": 0.015625,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 295,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    },
+    {
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        3,
+        0
+      ],
+      "extra_bits": 0,
+      "reference_order": 2,
+      "q": 256,
+      "bound": 13,
+      "one_shot": {
+        "0": 0.5,
+        "2": 0.5,
+        "4": 1.687465857562383e-31,
+        "6": 9.179695102356091e-32,
+        "8": 2.552291898224702e-32,
+        "10": 1.506289546323458e-32,
+        "12": 2.4066415797161615e-32
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.5,
+          "no_candidate": 0.5,
+          "nonminimal": 3.251957670224424e-31,
+          "dp_vs_inversion_max_abs_error": 1.687465857562383e-31,
+          "admission": {
+            "recovery_failure": 0.5,
+            "admitted_correct": 0.5,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 3.251957670224424e-31,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.75,
+          "no_candidate": 0.25,
+          "nonminimal": 3.251957670224424e-31,
+          "dp_vs_inversion_max_abs_error": 1.687465857562383e-31,
+          "admission": {
+            "recovery_failure": 0.25,
+            "admitted_correct": 0.75,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 3.251957670224424e-31,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9375,
+          "no_candidate": 0.0625,
+          "nonminimal": 1.625978835112212e-31,
+          "dp_vs_inversion_max_abs_error": 8.437329287811915e-32,
+          "admission": {
+            "recovery_failure": 0.0625,
+            "admitted_correct": 0.9375,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.625978835112212e-31,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.99609375,
+          "no_candidate": 0.00390625,
+          "nonminimal": 2.0324735438902648e-32,
+          "dp_vs_inversion_max_abs_error": 1.0546661609764893e-32,
+          "admission": {
+            "recovery_failure": 0.00390625,
+            "admitted_correct": 0.99609375,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 2.0324735438902648e-32,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999847412109375,
+          "no_candidate": 1.52587890625e-05,
+          "nonminimal": 1.5878699561642694e-34,
+          "dp_vs_inversion_max_abs_error": 8.239579382628823e-35,
+          "admission": {
+            "recovery_failure": 1.52587890625e-05,
+            "admitted_correct": 0.9999847412109375,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.5878699561642694e-34,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999997671694,
+          "no_candidate": 2.3283064365386963e-10,
+          "nonminimal": 4.845794543958344e-39,
+          "dp_vs_inversion_max_abs_error": 2.5145200752651457e-39,
+          "admission": {
+            "recovery_failure": 2.3283064365386963e-10,
+            "admitted_correct": 0.9999999997671694,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 4.845794543958344e-39,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 7,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 13,
+        "m": 8,
+        "q": 256,
+        "per_shot_success_lower_bound": 0.015625,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 295,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    },
+    {
+      "p": 7,
+      "a": 1,
+      "b": 0,
+      "point": [
+        1,
+        3
+      ],
+      "extra_bits": 0,
+      "reference_order": 4,
+      "q": 256,
+      "bound": 13,
+      "one_shot": {
+        "0": 0.5,
+        "4": 0.5,
+        "8": 8.747099086665801e-32,
+        "12": 3.152262917840356e-32
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.5,
+          "no_candidate": 0.5,
+          "nonminimal": 1.1899362004506157e-31,
+          "dp_vs_inversion_max_abs_error": 8.747099086665801e-32,
+          "admission": {
+            "recovery_failure": 0.5,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.5,
+            "rejected_nonminimal_ideal": 1.1899362004506157e-31,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.75,
+          "no_candidate": 0.25,
+          "nonminimal": 1.1899362004506157e-31,
+          "dp_vs_inversion_max_abs_error": 8.747099086665801e-32,
+          "admission": {
+            "recovery_failure": 0.25,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.75,
+            "rejected_nonminimal_ideal": 1.1899362004506157e-31,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9375,
+          "no_candidate": 0.0625,
+          "nonminimal": 5.949681002253078e-32,
+          "dp_vs_inversion_max_abs_error": 4.3735495433329005e-32,
+          "admission": {
+            "recovery_failure": 0.0625,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9375,
+            "rejected_nonminimal_ideal": 5.949681002253078e-32,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.99609375,
+          "no_candidate": 0.00390625,
+          "nonminimal": 7.437101252816348e-33,
+          "dp_vs_inversion_max_abs_error": 5.4669369291661256e-33,
+          "admission": {
+            "recovery_failure": 0.00390625,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.99609375,
+            "rejected_nonminimal_ideal": 7.437101252816348e-33,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999847412109375,
+          "no_candidate": 1.52587890625e-05,
+          "nonminimal": 5.810235353762772e-35,
+          "dp_vs_inversion_max_abs_error": 4.2710444759110356e-35,
+          "admission": {
+            "recovery_failure": 1.52587890625e-05,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999847412109375,
+            "rejected_nonminimal_ideal": 5.810235353762772e-35,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999997671694,
+          "no_candidate": 2.3283064365386963e-10,
+          "nonminimal": 1.7731431133309227e-39,
+          "dp_vs_inversion_max_abs_error": 1.3034193346896461e-39,
+          "admission": {
+            "recovery_failure": 2.3283064365386963e-10,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999999997671694,
+            "rejected_nonminimal_ideal": 1.7731431133309227e-39,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 7,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 13,
+        "m": 8,
+        "q": 256,
+        "per_shot_success_lower_bound": 0.015625,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 295,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    },
+    {
+      "p": 17,
+      "a": 0,
+      "b": 7,
+      "point": [
+        15,
+        13
+      ],
+      "extra_bits": 0,
+      "reference_order": 18,
+      "q": 1024,
+      "bound": 26,
+      "one_shot": {
+        "0": 0.683133164919323,
+        "18": 0.3168668350806764
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.3168668350806764,
+          "no_candidate": 0.683133164919323,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 5.551115123125783e-17,
+          "admission": {
+            "recovery_failure": 0.683133164919323,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.3168668350806764,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.5333290789873079,
+          "no_candidate": 0.4666709210126909,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.4666709210126909,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.5333290789873079,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.7822182514811643,
+          "no_candidate": 0.2177817485188332,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.2177817485188332,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.7822182514811643,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9525711100120746,
+          "no_candidate": 0.04742888998792032,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 0.04742888998792032,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9525711100120746,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.997750500394504,
+          "no_candidate": 0.0022494996054862474,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 8.881784197001252e-16,
+          "admission": {
+            "recovery_failure": 0.0022494996054862474,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.997750500394504,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999949397515056,
+          "no_candidate": 5.060248475082782e-06,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.9984014443252818e-15,
+          "admission": {
+            "recovery_failure": 5.060248475082782e-06,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999949397515056,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 13,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 26,
+        "m": 10,
+        "q": 1024,
+        "per_shot_success_lower_bound": 0.0125,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 369,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    },
+    {
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "extra_bits": 0,
+      "reference_order": 5,
+      "q": 2048,
+      "bound": 40,
+      "one_shot": {
+        "0": 0.20130127981058454,
+        "5": 0.7982253316726102,
+        "10": 7.030463264507482e-05,
+        "15": 8.298445215901103e-05,
+        "20": 5.5442330815073837e-05,
+        "25": 0.00011220647787458505,
+        "30": 4.727383256410946e-05,
+        "35": 6.667587975317363e-05,
+        "40": 3.85009109933736e-05
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.7982253316726102,
+          "no_candidate": 0.20130127981058454,
+          "nonminimal": 0.0004733885168044014,
+          "dp_vs_inversion_max_abs_error": 1.265128410019023e-17,
+          "admission": {
+            "recovery_failure": 0.20130127981058454,
+            "admitted_correct": 0.7982253316726102,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0004733885168044014,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.9592871308082538,
+          "no_candidate": 0.040522205253379254,
+          "nonminimal": 0.00019066393836537207,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.040522205253379254,
+            "admitted_correct": 0.9592871308082538,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.00019066393836537207,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9983424862228325,
+          "no_candidate": 0.001642049118596997,
+          "nonminimal": 1.5464658567234678e-05,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.001642049118596997,
+            "admitted_correct": 0.9983424862228325,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.5464658567234678e-05,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9999972528055622,
+          "no_candidate": 2.696325307885175e-06,
+          "nonminimal": 5.086912360375607e-08,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 2.696325307885175e-06,
+            "admitted_correct": 0.9999972528055622,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 5.086912360375607e-08,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999999999924419,
+          "no_candidate": 7.270170165942085e-12,
+          "nonminimal": 2.752032443185774e-13,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 7.270170165942085e-12,
+            "admitted_correct": 0.9999999999924419,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 2.752032443185774e-13,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999999999749,
+          "no_candidate": 5.285537424175436e-23,
+          "nonminimal": 4.027429552834869e-24,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 5.285537424175436e-23,
+            "admitted_correct": 0.9999999999999749,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 4.027429552834869e-24,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 3,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 40,
+        "m": 11,
+        "q": 2048,
+        "per_shot_success_lower_bound": 0.010416666666666666,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 443,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    },
+    {
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "extra_bits": 1,
+      "reference_order": 5,
+      "q": 4096,
+      "bound": 40,
+      "one_shot": {
+        "0": 0.20065273296708686,
+        "5": 0.7991162602230406,
+        "10": 2.8899479429829047e-05,
+        "15": 3.5133043300396916e-05,
+        "20": 3.492313673814213e-05,
+        "25": 5.3919324608446436e-05,
+        "30": 3.079555264425501e-05,
+        "35": 3.536336304154605e-05,
+        "40": 1.1972910111302734e-05
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.7991162602230406,
+          "no_candidate": 0.20065273296708686,
+          "nonminimal": 0.00023100680987391833,
+          "dp_vs_inversion_max_abs_error": 1.311207002349657e-17,
+          "admission": {
+            "recovery_failure": 0.20065273296708686,
+            "admitted_correct": 0.7991162602230406,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.00023100680987391833,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.9596457575396385,
+          "no_candidate": 0.040261519247161065,
+          "nonminimal": 9.272321320323836e-05,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.040261519247161065,
+            "admitted_correct": 0.9596457575396385,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 9.272321320323836e-05,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9983715406650834,
+          "no_candidate": 0.001620989932089521,
+          "nonminimal": 7.4694028327680405e-06,
+          "dp_vs_inversion_max_abs_error": 3.3306690738754696e-16,
+          "admission": {
+            "recovery_failure": 0.001620989932089521,
+            "admitted_correct": 0.9983715406650834,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 7.4694028327680405e-06,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9999973481562171,
+          "no_candidate": 2.6276083599355894e-06,
+          "nonminimal": 2.42354338661993e-08,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 2.6276083599355894e-06,
+            "admitted_correct": 0.9999973481562171,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 2.42354338661993e-08,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999999999929902,
+          "no_candidate": 6.904325693203398e-12,
+          "nonminimal": 1.275707228238955e-13,
+          "dp_vs_inversion_max_abs_error": 7.771561172376096e-16,
+          "admission": {
+            "recovery_failure": 6.904325693203398e-12,
+            "admitted_correct": 0.9999999999929902,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.275707228238955e-13,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 1.000000000000044,
+          "no_candidate": 4.7669713277828577e-23,
+          "nonminimal": 1.767351664380582e-24,
+          "dp_vs_inversion_max_abs_error": 1.3322676295501878e-15,
+          "admission": {
+            "recovery_failure": 4.7669713277828577e-23,
+            "admitted_correct": 1.000000000000044,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.767351664380582e-24,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 3,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 40,
+        "m": 11,
+        "q": 2048,
+        "per_shot_success_lower_bound": 0.010416666666666666,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 443,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    },
+    {
+      "p": 41,
+      "a": 31,
+      "b": 18,
+      "point": [
+        28,
+        40
+      ],
+      "extra_bits": 0,
+      "reference_order": 53,
+      "q": 4096,
+      "bound": 54,
+      "one_shot": {
+        "0": 0.11323823245200217,
+        "53": 0.8867617675479983
+      },
+      "budget_rows": [
+        {
+          "shots": 0,
+          "exact_order": 0,
+          "no_candidate": 1,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.8867617675479983,
+          "no_candidate": 0.11323823245200217,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 0.11323823245200217,
+            "admitted_correct": 0.8867617675479983,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.9871771027111472,
+          "no_candidate": 0.012822897288853677,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 0.0,
+          "admission": {
+            "recovery_failure": 0.012822897288853677,
+            "admitted_correct": 0.9871771027111472,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9998355733051214,
+          "no_candidate": 0.00016442669488049097,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 1.1102230246251565e-16,
+          "admission": {
+            "recovery_failure": 0.00016442669488049097,
+            "admitted_correct": 0.9998355733051214,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9999999729638658,
+          "no_candidate": 2.7036137989322073e-08,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 2.7036137989322073e-08,
+            "admitted_correct": 0.9999999729638658,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 16,
+          "exact_order": 1.0000000000000067,
+          "no_candidate": 7.309527573776642e-16,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 7.309527573776642e-16,
+            "admitted_correct": 1.0000000000000067,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        },
+        {
+          "shots": 32,
+          "exact_order": 1.0000000000000144,
+          "no_candidate": 5.3429193351801034e-31,
+          "nonminimal": 0,
+          "dp_vs_inversion_max_abs_error": 2.220446049250313e-16,
+          "admission": {
+            "recovery_failure": 5.3429193351801034e-31,
+            "admitted_correct": 1.0000000000000144,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          }
+        }
+      ],
+      "reference_conditioned_budget": 3,
+      "unknown_order_sufficient_budget": {
+        "order_upper_bound": 54,
+        "m": 12,
+        "q": 4096,
+        "per_shot_success_lower_bound": 0.010416666666666666,
+        "target_failure_probability": 0.01,
+        "sufficient_independent_ideal_shots": 443,
+        "scope": "Sufficient conservative bound, not a certificate or empirical rate"
+      }
+    }
+  ],
+  "known_order_used_only_for_analysis": true,
+  "project_source_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+  "reference_curve_sha256": "7506ec3d064c1c4c4ecf25cc9ff7d0acf94bff64aa7a91799810fb73222e368a",
+  "config_sha256": "6d5999cbb905a572999053723c6ce1a5e3406344dd2b7f783d7bbf599f5b07de",
+  "script_sha256": "a52877d9693a8602283e69182637eb16db8d93af79b5d63646cb72c543b165d5",
+  "model_sha256": "d3a58a6147016d5b547cd9513a26af6051dd45a4dce805aa7ecf1c1c4c151709"
+}
