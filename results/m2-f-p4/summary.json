@@ -1,0 +1,2435 @@
+{
+  "phase": "P4_saved_circuit_anchors",
+  "precision_status": "numerical_only",
+  "no_new_circuit_execution": true,
+  "no_new_sampling": true,
+  "historical_scope": "Actual phase-free arithmetic gate propagation for every scalar input; ideal IQFT via FFT; no noise",
+  "config_sha256": "5ff39ebd13cb883526a064b32fdad8f1d6ea43c218f630028c9d9b1e819e1358",
+  "source_report_sha256": "1354d9b337f723b887dd603c6b4ce5d52a1778d0dc3b9b5c56fb3013f8f26bbd",
+  "source_arrays_sha256": "77ae8604d19704c232b28120423a5b15038657a505cea4ff129b5a62c3cdceba",
+  "script_sha256": "3fd5e8ee476b00b0aec6b2ec51921518ee291deada831148a108923c2f71bda3",
+  "model_sha256": "19cb427954745b2d5488179c4b17a60730774c9d3d229ee149d461bfa3940257",
+  "support_model_sha256": "d3a58a6147016d5b547cd9513a26af6051dd45a4dce805aa7ecf1c1c4c151709",
+  "reference_curve_sha256": "7506ec3d064c1c4c4ecf25cc9ff7d0acf94bff64aa7a91799810fb73222e368a",
+  "production_source_manifest": {
+    "algorithm": "sha256 of UTF-8 path + space + raw-file SHA256 records, POSIX lexical order, LF separators, no final LF",
+    "scope": "All src/**/*.py only; not tests, experiments, manuscript, or a Git commit",
+    "line_endings": "File bytes are not normalized; checkout line-ending conversion changes the hash",
+    "source_tree_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+    "files": [
+      {
+        "path": "src/quantum_ec/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/baselines/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/baselines/trial_recovery.py",
+        "sha256": "6b442e7d4a7f418045de162d54321031c98a46695f6d72f4db8ef40174742e13"
+      },
+      {
+        "path": "src/quantum_ec/circuits/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/binary_add_constant.py",
+        "sha256": "0d117e7c40c233cbd1f8cae6942b1611861dd3f1a3b29fd2b60aa275de896950"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/binary_divide.py",
+        "sha256": "c59ff5de7aae2e56d6fecb8e7d8f768aed95c0e29700c11a62d338049e759515"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/binary_quotient.py",
+        "sha256": "964b9836308554deb922fda4f6c775d98a6f855b0bb923ff0eeb5b8c0c02ec71"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/division_reduce_step.py",
+        "sha256": "c55131881248f280389464362f28742a50e45c0f6aba2489194c870824404797"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/equality_constant.py",
+        "sha256": "3f2c62994c0d04b654564391ff4e40435b1c17c090590bdcce5d32bef7deab68"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/euclid_update.py",
+        "sha256": "04e6e255dd6f8454ad0a8092045303c6f8b10fd301a334acf6ba3c313a788290"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/less_than_constant.py",
+        "sha256": "26e470214892650946cb0368160bae72f240241d5bcfa746f7689c1e98f93e66"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/less_than_register.py",
+        "sha256": "6d58e612a64fc13dc4d15a1bb5a22bf3e944eb88a713b94ef3d8a04311cddbae"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_add_constant.py",
+        "sha256": "fcc6951e5a44282dfb02f66870b2cc9f290617a9f55d88c7ede89a2fe438ef14"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_add_register.py",
+        "sha256": "9115f6f3aa946486faca33825c384f42fab339cf1e685d88e8c408781a12ad67"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_cube_accumulate.py",
+        "sha256": "37e2e90ab741d3edd1f5e70d517276e0f2723a386b406b53325d2e2428a64504"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_inverse.py",
+        "sha256": "092d2e82dd78f34d5a9d6e996579b9b83018dd19d8bfc16dfa3103ffc225f520"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_inverse_inplace.py",
+        "sha256": "3197563fd198e4127331f635f6f366b3329c632974c091ab3dd0753d93037407"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_multiply_accumulate.py",
+        "sha256": "fdd3e9e099c0bcc96cee525377a9c509fee170a771c08634c1975c18d597be3a"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_square_accumulate.py",
+        "sha256": "a2bb7d9d36f5735929cecc44646022661a5dba2c571c672ed296a30778a89893"
+      },
+      {
+        "path": "src/quantum_ec/circuits/order_finding/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/order_finding/elliptic_order_finding.py",
+        "sha256": "4acd2f133925d39d36a756d78aca1e992a2e749f13563e55c66b777092fb7d5f"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/controlled_point_add.py",
+        "sha256": "557f85656c0529349b1a2b30b4b80f074a35605a794c3a485e9f1071f338a0f5"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/curve_residual_accumulate.py",
+        "sha256": "3d6357f374d8bf51df5e069efde835d6720edea40cb1f35d34827ed6acf328f5"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/finite_curve_check.py",
+        "sha256": "ffa871a944ab046fc4d5bd58807e322f6eabaa7db8228be2a7f0f17c1b4c6d9d"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_slope.py",
+        "sha256": "42e7124bacd937074873ef24a105eadeb56a45d16edccc0e3aea7337ff328bef"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_sum.py",
+        "sha256": "8235b76f4d745cbe0c64b53bd1bc59f4cf7199b54bd88efc5e4b6d26ed65ecd8"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_sum_shared.py",
+        "sha256": "e833d0d5d899374cbdfc0db824bcc55aed4ed4edb807819e19b59c3c3f1164f0"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_x.py",
+        "sha256": "302767c3216b8d414d3af5b39803d7a7ca8186cd3b758a012cd5f93c10ca280e"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_add_inplace.py",
+        "sha256": "8e3775af78283e85a375d1a33b896044b1432cec6ac18d014724da11a9055ff2"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_addition_cases.py",
+        "sha256": "b0b8bf8d22f181a39ab0b53ac2e361cfcb9b3fed890e87a0dffab71f0687eeb3"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_differences.py",
+        "sha256": "19dd7583f1f5c2f0bf1f7f7ce9fb1415684b964a5e01fbbc2cf492dd4f9f62f9"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_encoding_check.py",
+        "sha256": "cf476423439c416ebc9dd16da1e1829b681646b5052f16e011b1bfee248dddc0"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_sum_evaluator.py",
+        "sha256": "3b32024d71ce87a1f3602ed19ac0f17ef98dc6267d0d193fd952bd1299ae6501"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_sum_evaluator_compact.py",
+        "sha256": "3a7e10210ddfae0e0e450bb1c065ef2febaf799c57230648d74260d2743a4c36"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/special_point_sum.py",
+        "sha256": "bc39f2d0e1aefaaf12c03d3ea6277cc12c994f6df5085e8812c0e0655e5be942"
+      },
+      {
+        "path": "src/quantum_ec/classical/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/classical/curve.py",
+        "sha256": "478b7e29de3e271e4c30d2f245d369ff7ca5b2956c248a8fef0c6ea962e16886"
+      },
+      {
+        "path": "src/quantum_ec/classical/primality.py",
+        "sha256": "ed3b4e434b5c6406f5fdc24515f1296db1f87b1581ff075d21e4726d80beb525"
+      },
+      {
+        "path": "src/quantum_ec/recovery/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/recovery/continued_fractions.py",
+        "sha256": "75d342548b983eaff056b2642eedb41ce3f354dc3779f64fa24a223296fb2c10"
+      },
+      {
+        "path": "src/quantum_ec/recovery/factor_free_recovery.py",
+        "sha256": "b0eb80c7a74a2b8409f40f0f44c3bbebb7c4b7e149bef5abc97e04eb3ef338af"
+      },
+      {
+        "path": "src/quantum_ec/recovery/success_budget.py",
+        "sha256": "ac0597b2c85499a9c8b19a542fa0042ac499e6e64c3b4896152f72444031d4da"
+      },
+      {
+        "path": "src/quantum_ec/resources/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/resources/complete_resources.py",
+        "sha256": "ddf9d3da9ca4510bd475e8b903c7b95a0c70dfc84838c7b0818d37aff3790f4f"
+      },
+      {
+        "path": "src/quantum_ec/resources/mcx_basis.py",
+        "sha256": "4d3df5973c96b95013bc204d23e6e34f7861ff90ef7a093efbd4d488818a28e2"
+      },
+      {
+        "path": "src/quantum_ec/resources/resource_model.py",
+        "sha256": "5136caebb42b159e972e25a16cc5b538bece201c4bf369882929eb96c3d3294d"
+      },
+      {
+        "path": "src/quantum_ec/signing/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/signing/admission.py",
+        "sha256": "70ee4f3b35e9777fd817dcb40c1a710c69dd7fe797f469ee5753745682910e78"
+      },
+      {
+        "path": "src/quantum_ec/signing/signature.py",
+        "sha256": "988ba660cea7966d026e80d7f23acbc21845c938ecffb1ceb9fff8f15018a899"
+      },
+      {
+        "path": "src/quantum_ec/simulation/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/simulation/ideal_distribution.py",
+        "sha256": "2bd114c2be55579b5b8d35dd53feaf0934ed9627109db90b6a239fe722299af0"
+      },
+      {
+        "path": "src/quantum_ec/simulation/real_arithmetic.py",
+        "sha256": "507d7290552191e4ab886e0c7217e819bd828b8ce3275f54a909c724865ec407"
+      },
+      {
+        "path": "src/quantum_ec/simulation/sparse_order_finding.py",
+        "sha256": "cd7c713e39041c7fb667209eac8237f308b6dc1dccb295377e0d7aa4a8bd20da"
+      }
+    ]
+  },
+  "python_version": "3.11.5",
+  "numpy_version": "2.1.3",
+  "commit": "84afc4cc74e54a192af49720abef570ccf2cb2d7",
+  "dirty_status": [
+    "?? experiments/scripts/evaluate_saved_anchors.py",
+    "?? tests/unit/test_saved_anchors.py"
+  ],
+  "cases": [
+    {
+      "index": 0,
+      "p": 5,
+      "a": 1,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "q": 128,
+      "order": 9,
+      "bound": 10,
+      "scalar_outputs_rechecked": 128,
+      "saved_probability_mass_residual": 2.220446049250313e-16,
+      "spectrum_max_abs_differences": {
+        "saved_vs_reconstructed_fft": 0.0,
+        "saved_vs_raw_ideal": 2.7755575615628914e-17,
+        "reconstructed_fft_vs_raw_ideal": 2.7755575615628914e-17
+      },
+      "saved_one_shot_statistic_law": {
+        "0": 0.3919646720081015,
+        "9": 0.6080353279918984
+      },
+      "ideal_one_shot_statistic_law": {
+        "0": 0.39196467200810164,
+        "9": 0.6080353279918985
+      },
+      "one_shot_max_abs_difference": 1.6653345369377348e-16,
+      "budgets": [
+        {
+          "shots": 0,
+          "saved_distribution_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "ideal_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "full_law_max_abs_difference": 0.0,
+          "actual_production_admission": {
+            "recovery_failure": 1.0,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 1,
+          "saved_distribution_recovery": {
+            "shots": 1,
+            "exact_order": 0.6080353279918984,
+            "no_candidate": 0.3919646720081015,
+            "nonminimal": 0.0,
+            "partition_residual": 1.1102230246251565e-16,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.6080353279918984
+          },
+          "ideal_recovery": {
+            "shots": 1,
+            "exact_order": 0.6080353279918985,
+            "no_candidate": 0.39196467200810164,
+            "nonminimal": 0.0,
+            "partition_residual": 2.220446049250313e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.6080353279918985
+          },
+          "full_law_max_abs_difference": 1.6653345369377348e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.3919646720081015,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.6080353279918984,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.3919646720081015,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.6080353279918984,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.1102230246251565e-16
+        },
+        {
+          "shots": 2,
+          "saved_distribution_recovery": {
+            "shots": 2,
+            "exact_order": 0.8463636958975812,
+            "no_candidate": 0.15363630410241857,
+            "nonminimal": 0.0,
+            "partition_residual": 2.220446049250313e-16,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.8463636958975813
+          },
+          "ideal_recovery": {
+            "shots": 2,
+            "exact_order": 0.8463636958975816,
+            "no_candidate": 0.1536363041024187,
+            "nonminimal": 0.0,
+            "partition_residual": 4.440892098500626e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.8463636958975814
+          },
+          "full_law_max_abs_difference": 4.440892098500626e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.15363630410241857,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.8463636958975812,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.15363630410241857,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.8463636958975812,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 2.220446049250313e-16
+        },
+        {
+          "shots": 4,
+          "saved_distribution_recovery": {
+            "shots": 4,
+            "exact_order": 0.9763958860617487,
+            "no_candidate": 0.023604113938250838,
+            "nonminimal": 0.0,
+            "partition_residual": 5.551115123125783e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9763958860617491
+          },
+          "ideal_recovery": {
+            "shots": 4,
+            "exact_order": 0.9763958860617499,
+            "no_candidate": 0.02360411393825088,
+            "nonminimal": 0.0,
+            "partition_residual": 6.661338147750939e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9763958860617492
+          },
+          "full_law_max_abs_difference": 1.2212453270876722e-15,
+          "actual_production_admission": {
+            "recovery_failure": 0.023604113938250838,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.9763958860617487,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.023604113938250838,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9763958860617487,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 5.551115123125783e-16
+        },
+        {
+          "shots": 8,
+          "saved_distribution_recovery": {
+            "shots": 8,
+            "exact_order": 0.9994428458051892,
+            "no_candidate": 0.0005571541948099274,
+            "nonminimal": 0.0,
+            "partition_residual": 8.881784197001252e-16,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.99944284580519
+          },
+          "ideal_recovery": {
+            "shots": 8,
+            "exact_order": 0.9994428458051916,
+            "no_candidate": 0.0005571541948099295,
+            "nonminimal": 0.0,
+            "partition_residual": 1.5543122344752192e-15,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 0.99944284580519
+          },
+          "full_law_max_abs_difference": 2.4424906541753444e-15,
+          "actual_production_admission": {
+            "recovery_failure": 0.0005571541948099274,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.9994428458051892,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.0005571541948099274,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9994428458051892,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 8.881784197001252e-16
+        },
+        {
+          "shots": 16,
+          "saved_distribution_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999996895792014,
+            "no_candidate": 3.1042079679429855e-07,
+            "nonminimal": 0.0,
+            "partition_residual": 1.7763568394002505e-15,
+            "dp_vs_inversion_residual": 5.293955920339377e-23,
+            "single_exact_event_lower_bound": 0.9999996895792032
+          },
+          "ideal_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999996895792062,
+            "no_candidate": 3.104207967943007e-07,
+            "nonminimal": 0.0,
+            "partition_residual": 2.886579864025407e-15,
+            "dp_vs_inversion_residual": 5.551115123125783e-16,
+            "single_exact_event_lower_bound": 0.9999996895792032
+          },
+          "full_law_max_abs_difference": 4.773959005888173e-15,
+          "actual_production_admission": {
+            "recovery_failure": 3.1042079679429855e-07,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.9999996895792014,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 3.1042079679429855e-07,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999996895792014,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.7763568394002505e-15
+        },
+        {
+          "shots": 32,
+          "saved_distribution_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999999999,
+            "no_candidate": 9.63610710824072e-14,
+            "nonminimal": 0.0,
+            "partition_residual": 3.6637359812630166e-15,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9999999999999036
+          },
+          "ideal_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999999999092,
+            "no_candidate": 9.636107108240853e-14,
+            "nonminimal": 0.0,
+            "partition_residual": 5.551115123125783e-15,
+            "dp_vs_inversion_residual": 1.5543122344752192e-15,
+            "single_exact_event_lower_bound": 0.9999999999999036
+          },
+          "full_law_max_abs_difference": 9.2148511043888e-15,
+          "actual_production_admission": {
+            "recovery_failure": 9.63610710824072e-14,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.9999999999999,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 9.63610710824072e-14,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999999999999,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 3.6637359812630166e-15
+        },
+        {
+          "shots": 64,
+          "saved_distribution_recovery": {
+            "shots": 64,
+            "exact_order": 0.9999999999999944,
+            "no_candidate": 9.285456020148739e-27,
+            "nonminimal": 0.0,
+            "partition_residual": 5.551115123125783e-15,
+            "dp_vs_inversion_residual": 1.5543122344752192e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 64,
+            "exact_order": 1.0000000000000075,
+            "no_candidate": 9.28545602014899e-27,
+            "nonminimal": 0.0,
+            "partition_residual": 7.549516567451064e-15,
+            "dp_vs_inversion_residual": 6.661338147750939e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 1.3100631690576847e-14,
+          "actual_production_admission": {
+            "recovery_failure": 9.285456020148739e-27,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.9999999999999944,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 9.285456020148739e-27,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0.9999999999999944,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 5.551115123125783e-15
+        }
+      ],
+      "production_admission_decisions": {
+        "0": {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "9": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      },
+      "historical_coverage": {
+        "basis_inputs_checked": 128,
+        "actual_gate_propagations": 82,
+        "controlled_additions": 7,
+        "distinct_adder_definitions": 6,
+        "logical_resources_arithmetic": {
+          "input_instructions": 1676598,
+          "x_count": 0,
+          "cx_count": 12880,
+          "ccx_count": 10172230,
+          "maximum_controls": 9,
+          "extra_clean_ancillas": 7,
+          "original_qubits": 129,
+          "lowered_qubits": 136,
+          "lowered_instructions": 10185110
+        }
+      },
+      "coverage_limit": "Saved initialized scalar path only; no new gate execution or universal adder-domain proof"
+    },
+    {
+      "index": 1,
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        3,
+        0
+      ],
+      "q": 256,
+      "order": 2,
+      "bound": 13,
+      "scalar_outputs_rechecked": 256,
+      "saved_probability_mass_residual": 0.0,
+      "spectrum_max_abs_differences": {
+        "saved_vs_reconstructed_fft": 0.0,
+        "saved_vs_raw_ideal": 1.5072024305484805e-32,
+        "reconstructed_fft_vs_raw_ideal": 1.5072024305484805e-32
+      },
+      "saved_one_shot_statistic_law": {
+        "0": 0.5,
+        "2": 0.5,
+        "4": 0.0,
+        "6": 0.0,
+        "8": 0.0,
+        "10": 0.0,
+        "12": 0.0
+      },
+      "ideal_one_shot_statistic_law": {
+        "0": 0.5,
+        "2": 0.5,
+        "4": 1.687465857562383e-31,
+        "6": 9.179695102356091e-32,
+        "8": 2.552291898224702e-32,
+        "10": 1.506289546323458e-32,
+        "12": 2.4066415797161615e-32
+      },
+      "one_shot_max_abs_difference": 1.687465857562383e-31,
+      "budgets": [
+        {
+          "shots": 0,
+          "saved_distribution_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "ideal_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "full_law_max_abs_difference": 0.0,
+          "actual_production_admission": {
+            "recovery_failure": 1.0,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 1,
+          "saved_distribution_recovery": {
+            "shots": 1,
+            "exact_order": 0.5,
+            "no_candidate": 0.5,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.5
+          },
+          "ideal_recovery": {
+            "shots": 1,
+            "exact_order": 0.5,
+            "no_candidate": 0.5,
+            "nonminimal": 3.251957670224424e-31,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 1.687465857562383e-31,
+            "single_exact_event_lower_bound": 0.5
+          },
+          "full_law_max_abs_difference": 1.687465857562383e-31,
+          "actual_production_admission": {
+            "recovery_failure": 0.5,
+            "admitted_correct": 0.5,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.5,
+            "admitted_correct": 0.5,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 2,
+          "saved_distribution_recovery": {
+            "shots": 2,
+            "exact_order": 0.75,
+            "no_candidate": 0.25,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.75
+          },
+          "ideal_recovery": {
+            "shots": 2,
+            "exact_order": 0.75,
+            "no_candidate": 0.25,
+            "nonminimal": 3.251957670224424e-31,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 1.687465857562383e-31,
+            "single_exact_event_lower_bound": 0.75
+          },
+          "full_law_max_abs_difference": 1.687465857562383e-31,
+          "actual_production_admission": {
+            "recovery_failure": 0.25,
+            "admitted_correct": 0.75,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.25,
+            "admitted_correct": 0.75,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 4,
+          "saved_distribution_recovery": {
+            "shots": 4,
+            "exact_order": 0.9375,
+            "no_candidate": 0.0625,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.9375
+          },
+          "ideal_recovery": {
+            "shots": 4,
+            "exact_order": 0.9375,
+            "no_candidate": 0.0625,
+            "nonminimal": 1.625978835112212e-31,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 8.437329287811915e-32,
+            "single_exact_event_lower_bound": 0.9375
+          },
+          "full_law_max_abs_difference": 8.437329287811915e-32,
+          "actual_production_admission": {
+            "recovery_failure": 0.0625,
+            "admitted_correct": 0.9375,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.0625,
+            "admitted_correct": 0.9375,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 8,
+          "saved_distribution_recovery": {
+            "shots": 8,
+            "exact_order": 0.99609375,
+            "no_candidate": 0.00390625,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.99609375
+          },
+          "ideal_recovery": {
+            "shots": 8,
+            "exact_order": 0.99609375,
+            "no_candidate": 0.00390625,
+            "nonminimal": 2.0324735438902648e-32,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 1.0546661609764893e-32,
+            "single_exact_event_lower_bound": 0.99609375
+          },
+          "full_law_max_abs_difference": 1.0546661609764893e-32,
+          "actual_production_admission": {
+            "recovery_failure": 0.00390625,
+            "admitted_correct": 0.99609375,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 0.00390625,
+            "admitted_correct": 0.99609375,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 16,
+          "saved_distribution_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999847412109375,
+            "no_candidate": 1.52587890625e-05,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.9999847412109375
+          },
+          "ideal_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999847412109375,
+            "no_candidate": 1.52587890625e-05,
+            "nonminimal": 1.5878699561642694e-34,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 8.239579382628823e-35,
+            "single_exact_event_lower_bound": 0.9999847412109375
+          },
+          "full_law_max_abs_difference": 8.239579382628823e-35,
+          "actual_production_admission": {
+            "recovery_failure": 1.52587890625e-05,
+            "admitted_correct": 0.9999847412109375,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 1.52587890625e-05,
+            "admitted_correct": 0.9999847412109375,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 32,
+          "saved_distribution_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999997671694,
+            "no_candidate": 2.3283064365386963e-10,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.9999999997671694
+          },
+          "ideal_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999997671694,
+            "no_candidate": 2.3283064365386963e-10,
+            "nonminimal": 4.845794543958344e-39,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 2.5145200752651457e-39,
+            "single_exact_event_lower_bound": 0.9999999997671694
+          },
+          "full_law_max_abs_difference": 2.5145200752651457e-39,
+          "actual_production_admission": {
+            "recovery_failure": 2.3283064365386963e-10,
+            "admitted_correct": 0.9999999997671694,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 2.3283064365386963e-10,
+            "admitted_correct": 0.9999999997671694,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 64,
+          "saved_distribution_recovery": {
+            "shots": 64,
+            "exact_order": 1.0,
+            "no_candidate": 5.421010862427522e-20,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 64,
+            "exact_order": 1.0,
+            "no_candidate": 5.421010862427522e-20,
+            "nonminimal": 2.2564989253684625e-48,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 1.1709146552091219e-48,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 1.1709146552091219e-48,
+          "actual_production_admission": {
+            "recovery_failure": 5.421010862427522e-20,
+            "admitted_correct": 1.0,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 5.421010862427522e-20,
+            "admitted_correct": 1.0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        }
+      ],
+      "production_admission_decisions": {
+        "0": {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "2": {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 2,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "4": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 4,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "6": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "8": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 8,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "10": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "12": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 12,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      },
+      "historical_coverage": {
+        "basis_inputs_checked": 256,
+        "actual_gate_propagations": 2,
+        "controlled_additions": 1,
+        "distinct_adder_definitions": 1,
+        "logical_resources_arithmetic": {
+          "input_instructions": 190047,
+          "x_count": 0,
+          "cx_count": 1520,
+          "ccx_count": 1187227,
+          "maximum_controls": 9,
+          "extra_clean_ancillas": 7,
+          "original_qubits": 130,
+          "lowered_qubits": 137,
+          "lowered_instructions": 1188747
+        }
+      },
+      "coverage_limit": "Saved initialized scalar path only; no new gate execution or universal adder-domain proof"
+    },
+    {
+      "index": 2,
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "q": 256,
+      "order": 3,
+      "bound": 13,
+      "scalar_outputs_rechecked": 256,
+      "saved_probability_mass_residual": 0.0,
+      "spectrum_max_abs_differences": {
+        "saved_vs_reconstructed_fft": 0.0,
+        "saved_vs_raw_ideal": 5.551115123125783e-17,
+        "reconstructed_fft_vs_raw_ideal": 5.551115123125783e-17
+      },
+      "saved_one_shot_statistic_law": {
+        "0": 0.33669854002579025,
+        "3": 0.661772630352982,
+        "6": 0.00037049683955954233,
+        "9": 0.0008262393379739821,
+        "12": 0.00033209344369475243
+      },
+      "ideal_one_shot_statistic_law": {
+        "0": 0.33669854002579025,
+        "3": 0.6617726303529821,
+        "6": 0.0003704968395595418,
+        "9": 0.0008262393379739819,
+        "12": 0.000332093443694754
+      },
+      "one_shot_max_abs_difference": 1.1102230246251565e-16,
+      "budgets": [
+        {
+          "shots": 0,
+          "saved_distribution_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "ideal_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "full_law_max_abs_difference": 0.0,
+          "actual_production_admission": {
+            "recovery_failure": 1.0,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 1,
+          "saved_distribution_recovery": {
+            "shots": 1,
+            "exact_order": 0.661772630352982,
+            "no_candidate": 0.33669854002579025,
+            "nonminimal": 0.001528829621228277,
+            "partition_residual": 4.440892098500626e-16,
+            "dp_vs_inversion_residual": 2.7050844203513336e-17,
+            "single_exact_event_lower_bound": 0.661772630352982
+          },
+          "ideal_recovery": {
+            "shots": 1,
+            "exact_order": 0.6617726303529821,
+            "no_candidate": 0.33669854002579025,
+            "nonminimal": 0.0015288296212282778,
+            "partition_residual": 6.661338147750939e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.6617726303529821
+          },
+          "full_law_max_abs_difference": 1.1102230246251565e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.33669854002579025,
+            "admitted_correct": 0.661772630352982,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.001528829621228277
+          },
+          "model_admission": {
+            "recovery_failure": 0.33669854002579025,
+            "admitted_correct": 0.661772630352982,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.001528829621228277,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 4.440892098500626e-16
+        },
+        {
+          "shots": 2,
+          "saved_distribution_recovery": {
+            "shots": 2,
+            "exact_order": 0.8856034074371211,
+            "no_candidate": 0.11336590685549867,
+            "nonminimal": 0.0010306857073812245,
+            "partition_residual": 8.881784197001252e-16,
+            "dp_vs_inversion_residual": 1.5043305143236374e-17,
+            "single_exact_event_lower_bound": 0.8856022464216594
+          },
+          "ideal_recovery": {
+            "shots": 2,
+            "exact_order": 0.8856034074371213,
+            "no_candidate": 0.11336590685549867,
+            "nonminimal": 0.0010306857073812251,
+            "partition_residual": 1.1102230246251565e-15,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 0.8856022464216595
+          },
+          "full_law_max_abs_difference": 2.220446049250313e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.11336590685549867,
+            "admitted_correct": 0.8856034074371211,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0010306857073812245
+          },
+          "model_admission": {
+            "recovery_failure": 0.11336590685549867,
+            "admitted_correct": 0.8856034074371211,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.0010306857073812245,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 8.881784197001252e-16
+        },
+        {
+          "shots": 4,
+          "saved_distribution_recovery": {
+            "shots": 4,
+            "exact_order": 0.9869139472842374,
+            "no_candidate": 0.012851828837169602,
+            "nonminimal": 0.00023422387859519409,
+            "partition_residual": 2.220446049250313e-15,
+            "dp_vs_inversion_residual": 4.440892098500626e-16,
+            "single_exact_event_lower_bound": 0.9869131539762293
+          },
+          "ideal_recovery": {
+            "shots": 4,
+            "exact_order": 0.9869139472842379,
+            "no_candidate": 0.012851828837169602,
+            "nonminimal": 0.00023422387859519422,
+            "partition_residual": 2.6645352591003757e-15,
+            "dp_vs_inversion_residual": 5.285485590866834e-18,
+            "single_exact_event_lower_bound": 0.9869131539762293
+          },
+          "full_law_max_abs_difference": 4.440892098500626e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.012851828837169602,
+            "admitted_correct": 0.9869139472842374,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.00023422387859519409
+          },
+          "model_admission": {
+            "recovery_failure": 0.012851828837169602,
+            "admitted_correct": 0.9869139472842374,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.00023422387859519409,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 2.220446049250313e-15
+        },
+        {
+          "shots": 8,
+          "saved_distribution_recovery": {
+            "shots": 8,
+            "exact_order": 0.9998287824740911,
+            "no_candidate": 0.00016516950445990416,
+            "nonminimal": 6.048021453176153e-06,
+            "partition_residual": 4.218847493575595e-15,
+            "dp_vs_inversion_residual": 6.661338147750939e-16,
+            "single_exact_event_lower_bound": 0.9998287344611502
+          },
+          "ideal_recovery": {
+            "shots": 8,
+            "exact_order": 0.9998287824740919,
+            "no_candidate": 0.00016516950445990416,
+            "nonminimal": 6.048021453176157e-06,
+            "partition_residual": 4.884981308350689e-15,
+            "dp_vs_inversion_residual": 3.3306690738754696e-16,
+            "single_exact_event_lower_bound": 0.9998287344611502
+          },
+          "full_law_max_abs_difference": 7.771561172376096e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.00016516950445990416,
+            "admitted_correct": 0.9998287824740911,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 6.048021453176153e-06
+          },
+          "model_admission": {
+            "recovery_failure": 0.00016516950445990416,
+            "admitted_correct": 0.9998287824740911,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 6.048021453176153e-06,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 4.218847493575595e-15
+        },
+        {
+          "shots": 16,
+          "saved_distribution_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999999707027346,
+            "no_candidate": 2.7280965203530308e-08,
+            "nonminimal": 2.016308228365914e-09,
+            "partition_residual": 7.993605777301127e-15,
+            "dp_vs_inversion_residual": 8.881784197001252e-16,
+            "single_exact_event_lower_bound": 0.9999999706681152
+          },
+          "ideal_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999999707027365,
+            "no_candidate": 2.7280965203530308e-08,
+            "nonminimal": 2.0163082283659144e-09,
+            "partition_residual": 9.769962616701378e-15,
+            "dp_vs_inversion_residual": 7.771561172376096e-16,
+            "single_exact_event_lower_bound": 0.9999999706681152
+          },
+          "full_law_max_abs_difference": 1.887379141862766e-15,
+          "actual_production_admission": {
+            "recovery_failure": 2.7280965203530308e-08,
+            "admitted_correct": 0.9999999707027346,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 2.016308228365914e-09
+          },
+          "model_admission": {
+            "recovery_failure": 2.7280965203530308e-08,
+            "admitted_correct": 0.9999999707027346,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 2.016308228365914e-09,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 7.993605777301127e-15
+        },
+        {
+          "shots": 32,
+          "saved_distribution_recovery": {
+            "shots": 32,
+            "exact_order": 1.0000000000000158,
+            "no_candidate": 7.442510624362313e-16,
+            "nonminimal": 1.1206017098384524e-16,
+            "partition_residual": 1.6653345369377348e-14,
+            "dp_vs_inversion_residual": 2.4424906541753444e-15,
+            "single_exact_event_lower_bound": 0.9999999999999991
+          },
+          "ideal_recovery": {
+            "shots": 32,
+            "exact_order": 1.0000000000000193,
+            "no_candidate": 7.442510624362313e-16,
+            "nonminimal": 1.120601709838453e-16,
+            "partition_residual": 2.020605904817785e-14,
+            "dp_vs_inversion_residual": 1.1102230246251565e-15,
+            "single_exact_event_lower_bound": 0.9999999999999991
+          },
+          "full_law_max_abs_difference": 3.552713678800501e-15,
+          "actual_production_admission": {
+            "recovery_failure": 7.442510624362313e-16,
+            "admitted_correct": 1.0000000000000158,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 1.1206017098384524e-16
+          },
+          "model_admission": {
+            "recovery_failure": 7.442510624362313e-16,
+            "admitted_correct": 1.0000000000000158,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.1206017098384524e-16,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.6653345369377348e-14
+        },
+        {
+          "shots": 64,
+          "saved_distribution_recovery": {
+            "shots": 64,
+            "exact_order": 1.000000000000031,
+            "no_candidate": 5.5390964393745925e-31,
+            "nonminimal": 1.731245660715262e-31,
+            "partition_residual": 3.108624468950438e-14,
+            "dp_vs_inversion_residual": 2.6645352591003757e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 64,
+            "exact_order": 1.000000000000041,
+            "no_candidate": 5.5390964393745925e-31,
+            "nonminimal": 1.7312456607152627e-31,
+            "partition_residual": 4.107825191113079e-14,
+            "dp_vs_inversion_residual": 1.5543122344752192e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 9.992007221626409e-15,
+          "actual_production_admission": {
+            "recovery_failure": 5.5390964393745925e-31,
+            "admitted_correct": 1.000000000000031,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 1.731245660715262e-31
+          },
+          "model_admission": {
+            "recovery_failure": 5.5390964393745925e-31,
+            "admitted_correct": 1.000000000000031,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.731245660715262e-31,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 3.108624468950438e-14
+        }
+      ],
+      "production_admission_decisions": {
+        "0": {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "3": {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 3,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "6": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 6,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "9": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 9,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "12": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 12,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      },
+      "historical_coverage": {
+        "basis_inputs_checked": 256,
+        "actual_gate_propagations": 12,
+        "controlled_additions": 8,
+        "distinct_adder_definitions": 2,
+        "logical_resources_arithmetic": {
+          "input_instructions": 1520456,
+          "x_count": 0,
+          "cx_count": 12288,
+          "ccx_count": 9498696,
+          "maximum_controls": 9,
+          "extra_clean_ancillas": 7,
+          "original_qubits": 130,
+          "lowered_qubits": 137,
+          "lowered_instructions": 9510984
+        }
+      },
+      "coverage_limit": "Saved initialized scalar path only; no new gate execution or universal adder-domain proof"
+    },
+    {
+      "index": 3,
+      "p": 11,
+      "a": 4,
+      "b": 3,
+      "point": [
+        10,
+        3
+      ],
+      "q": 512,
+      "order": 7,
+      "bound": 18,
+      "scalar_outputs_rechecked": 512,
+      "saved_probability_mass_residual": 3.3306690738754696e-16,
+      "spectrum_max_abs_differences": {
+        "saved_vs_reconstructed_fft": 0.0,
+        "saved_vs_raw_ideal": 6.938893903907228e-17,
+        "reconstructed_fft_vs_raw_ideal": 6.938893903907228e-17
+      },
+      "saved_one_shot_statistic_law": {
+        "0": 0.15692451638715496,
+        "7": 0.8428035782366928,
+        "14": 0.00027190537615177923
+      },
+      "ideal_one_shot_statistic_law": {
+        "0": 0.15692451638715504,
+        "7": 0.842803578236693,
+        "14": 0.00027190537615177934
+      },
+      "one_shot_max_abs_difference": 2.220446049250313e-16,
+      "budgets": [
+        {
+          "shots": 0,
+          "saved_distribution_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "ideal_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "full_law_max_abs_difference": 0.0,
+          "actual_production_admission": {
+            "recovery_failure": 1.0,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 1,
+          "saved_distribution_recovery": {
+            "shots": 1,
+            "exact_order": 0.8428035782366928,
+            "no_candidate": 0.15692451638715496,
+            "nonminimal": 0.00027190537615177923,
+            "partition_residual": 4.440892098500626e-16,
+            "dp_vs_inversion_residual": 1.3877787807814457e-17,
+            "single_exact_event_lower_bound": 0.8428035782366928
+          },
+          "ideal_recovery": {
+            "shots": 1,
+            "exact_order": 0.842803578236693,
+            "no_candidate": 0.15692451638715504,
+            "nonminimal": 0.00027190537615177934,
+            "partition_residual": 2.220446049250313e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.842803578236693
+          },
+          "full_law_max_abs_difference": 2.220446049250313e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.15692451638715496,
+            "admitted_correct": 0.8428035782366928,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.00027190537615177923
+          },
+          "model_admission": {
+            "recovery_failure": 0.15692451638715496,
+            "admitted_correct": 0.8428035782366928,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.00027190537615177923,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 4.440892098500626e-16
+        },
+        {
+          "shots": 2,
+          "saved_distribution_recovery": {
+            "shots": 2,
+            "exact_order": 0.9752892849848116,
+            "no_candidate": 0.024625303843342466,
+            "nonminimal": 8.541117184495107e-05,
+            "partition_residual": 9.992007221626409e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9752892849848125
+          },
+          "ideal_recovery": {
+            "shots": 2,
+            "exact_order": 0.9752892849848123,
+            "no_candidate": 0.02462530384334249,
+            "nonminimal": 8.541117184495115e-05,
+            "partition_residual": 3.3306690738754696e-16,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9752892849848125
+          },
+          "full_law_max_abs_difference": 6.661338147750939e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.024625303843342466,
+            "admitted_correct": 0.9752892849848116,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 8.541117184495107e-05
+          },
+          "model_admission": {
+            "recovery_failure": 0.024625303843342466,
+            "admitted_correct": 0.9752892849848116,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 8.541117184495107e-05,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 9.992007221626409e-16
+        },
+        {
+          "shots": 4,
+          "saved_distribution_recovery": {
+            "shots": 4,
+            "exact_order": 0.9993893805634363,
+            "no_candidate": 0.0006064055893769372,
+            "nonminimal": 4.213847184871643e-06,
+            "partition_residual": 1.887379141862766e-15,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9993893805634382
+          },
+          "ideal_recovery": {
+            "shots": 4,
+            "exact_order": 0.9993893805634376,
+            "no_candidate": 0.0006064055893769385,
+            "nonminimal": 4.213847184871651e-06,
+            "partition_residual": 5.551115123125783e-16,
+            "dp_vs_inversion_residual": 3.3306690738754696e-16,
+            "single_exact_event_lower_bound": 0.9993893805634382
+          },
+          "full_law_max_abs_difference": 1.3322676295501878e-15,
+          "actual_production_admission": {
+            "recovery_failure": 0.0006064055893769372,
+            "admitted_correct": 0.9993893805634363,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 4.213847184871643e-06
+          },
+          "model_admission": {
+            "recovery_failure": 0.0006064055893769372,
+            "admitted_correct": 0.9993893805634363,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 4.213847184871643e-06,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.887379141862766e-15
+        },
+        {
+          "shots": 8,
+          "saved_distribution_recovery": {
+            "shots": 8,
+            "exact_order": 0.9999996271439001,
+            "no_candidate": 3.677277388275906e-07,
+            "nonminimal": 5.128357479470322e-09,
+            "partition_residual": 3.552713678800501e-15,
+            "dp_vs_inversion_residual": 2.655249766295219e-22,
+            "single_exact_event_lower_bound": 0.9999996271439037
+          },
+          "ideal_recovery": {
+            "shots": 8,
+            "exact_order": 0.9999996271439027,
+            "no_candidate": 3.677277388275922e-07,
+            "nonminimal": 5.1283574794703445e-09,
+            "partition_residual": 9.992007221626409e-16,
+            "dp_vs_inversion_residual": 7.771561172376096e-16,
+            "single_exact_event_lower_bound": 0.9999996271439037
+          },
+          "full_law_max_abs_difference": 2.55351295663786e-15,
+          "actual_production_admission": {
+            "recovery_failure": 3.677277388275906e-07,
+            "admitted_correct": 0.9999996271439001,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 5.128357479470322e-09
+          },
+          "model_admission": {
+            "recovery_failure": 3.677277388275906e-07,
+            "admitted_correct": 0.9999996271439001,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 5.128357479470322e-09,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 3.552713678800501e-15
+        },
+        {
+          "shots": 16,
+          "saved_distribution_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999999999998539,
+            "no_candidate": 1.352236899032527e-13,
+            "nonminimal": 3.797978650087607e-15,
+            "partition_residual": 7.105427357601002e-15,
+            "dp_vs_inversion_residual": 1.9169319996870587e-28,
+            "single_exact_event_lower_bound": 0.999999999999861
+          },
+          "ideal_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999999999998592,
+            "no_candidate": 1.3522368990325385e-13,
+            "nonminimal": 3.79797865008764e-15,
+            "partition_residual": 1.7763568394002505e-15,
+            "dp_vs_inversion_residual": 1.7763568394002505e-15,
+            "single_exact_event_lower_bound": 0.999999999999861
+          },
+          "full_law_max_abs_difference": 5.329070518200751e-15,
+          "actual_production_admission": {
+            "recovery_failure": 1.352236899032527e-13,
+            "admitted_correct": 0.9999999999998539,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 3.797978650087607e-15
+          },
+          "model_admission": {
+            "recovery_failure": 1.352236899032527e-13,
+            "admitted_correct": 0.9999999999998539,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 3.797978650087607e-15,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 7.105427357601002e-15
+        },
+        {
+          "shots": 32,
+          "saved_distribution_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999999999856,
+            "no_candidate": 1.8285446311051042e-26,
+            "nonminimal": 1.0415780163037627e-27,
+            "partition_residual": 1.4432899320127035e-14,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999999999958,
+            "no_candidate": 1.8285446311051358e-26,
+            "nonminimal": 1.0415780163037801e-27,
+            "partition_residual": 4.218847493575595e-15,
+            "dp_vs_inversion_residual": 2.886579864025407e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 1.021405182655144e-14,
+          "actual_production_admission": {
+            "recovery_failure": 1.8285446311051042e-26,
+            "admitted_correct": 0.9999999999999856,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 1.0415780163037627e-27
+          },
+          "model_admission": {
+            "recovery_failure": 1.8285446311051042e-26,
+            "admitted_correct": 0.9999999999999856,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.0415780163037627e-27,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.4432899320127035e-14
+        },
+        {
+          "shots": 64,
+          "saved_distribution_recovery": {
+            "shots": 64,
+            "exact_order": 0.9999999999999709,
+            "no_candidate": 3.343575467943302e-52,
+            "nonminimal": 3.917632255583428e-53,
+            "partition_residual": 2.90878432451791e-14,
+            "dp_vs_inversion_residual": 6.661338147750939e-16,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 64,
+            "exact_order": 0.9999999999999907,
+            "no_candidate": 3.343575467943415e-52,
+            "nonminimal": 3.917632255583559e-53,
+            "partition_residual": 9.325873406851315e-15,
+            "dp_vs_inversion_residual": 4.884981308350689e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 1.9761969838327786e-14,
+          "actual_production_admission": {
+            "recovery_failure": 3.343575467943302e-52,
+            "admitted_correct": 0.9999999999999709,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 3.917632255583428e-53
+          },
+          "model_admission": {
+            "recovery_failure": 3.343575467943302e-52,
+            "admitted_correct": 0.9999999999999709,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 3.917632255583428e-53,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 2.90878432451791e-14
+        }
+      ],
+      "production_admission_decisions": {
+        "0": {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "7": {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 7,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "14": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 14,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      },
+      "historical_coverage": {
+        "basis_inputs_checked": 512,
+        "actual_gate_propagations": 42,
+        "controlled_additions": 9,
+        "distinct_adder_definitions": 3,
+        "logical_resources_arithmetic": {
+          "input_instructions": 4810791,
+          "x_count": 0,
+          "cx_count": 17952,
+          "ccx_count": 33090651,
+          "maximum_controls": 10,
+          "extra_clean_ancillas": 8,
+          "original_qubits": 175,
+          "lowered_qubits": 183,
+          "lowered_instructions": 33108603
+        }
+      },
+      "coverage_limit": "Saved initialized scalar path only; no new gate execution or universal adder-domain proof"
+    },
+    {
+      "index": 4,
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "q": 2048,
+      "order": 5,
+      "bound": 40,
+      "scalar_outputs_rechecked": 2048,
+      "saved_probability_mass_residual": 4.440892098500626e-16,
+      "spectrum_max_abs_differences": {
+        "saved_vs_reconstructed_fft": 0.0,
+        "saved_vs_raw_ideal": 1.1102230246251565e-16,
+        "reconstructed_fft_vs_raw_ideal": 1.1102230246251565e-16
+      },
+      "saved_one_shot_statistic_law": {
+        "0": 0.20130127981058438,
+        "5": 0.7982253316726098,
+        "10": 7.03046326450751e-05,
+        "15": 8.298445215901064e-05,
+        "20": 5.544233081507405e-05,
+        "25": 0.00011220647787458511,
+        "30": 4.7273832564109566e-05,
+        "35": 6.667587975317367e-05,
+        "40": 3.8500910993373816e-05
+      },
+      "ideal_one_shot_statistic_law": {
+        "0": 0.20130127981058454,
+        "5": 0.7982253316726102,
+        "10": 7.030463264507482e-05,
+        "15": 8.298445215901103e-05,
+        "20": 5.5442330815073837e-05,
+        "25": 0.00011220647787458505,
+        "30": 4.727383256410946e-05,
+        "35": 6.667587975317363e-05,
+        "40": 3.85009109933736e-05
+      },
+      "one_shot_max_abs_difference": 4.440892098500626e-16,
+      "budgets": [
+        {
+          "shots": 0,
+          "saved_distribution_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "ideal_recovery": {
+            "shots": 0,
+            "exact_order": 0.0,
+            "no_candidate": 1.0,
+            "nonminimal": 0.0,
+            "partition_residual": 0.0,
+            "dp_vs_inversion_residual": 0.0,
+            "single_exact_event_lower_bound": 0.0
+          },
+          "full_law_max_abs_difference": 0.0,
+          "actual_production_admission": {
+            "recovery_failure": 1.0,
+            "admitted_correct": 0.0,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.0
+          },
+          "model_admission": {
+            "recovery_failure": 1,
+            "admitted_correct": 0,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 0.0
+        },
+        {
+          "shots": 1,
+          "saved_distribution_recovery": {
+            "shots": 1,
+            "exact_order": 0.7982253316726098,
+            "no_candidate": 0.20130127981058438,
+            "nonminimal": 0.00047338851680440194,
+            "partition_residual": 1.3322676295501878e-15,
+            "dp_vs_inversion_residual": 1.286812453468733e-17,
+            "single_exact_event_lower_bound": 0.7982253316726098
+          },
+          "ideal_recovery": {
+            "shots": 1,
+            "exact_order": 0.7982253316726102,
+            "no_candidate": 0.20130127981058454,
+            "nonminimal": 0.0004733885168044014,
+            "partition_residual": 7.771561172376096e-16,
+            "dp_vs_inversion_residual": 1.265128410019023e-17,
+            "single_exact_event_lower_bound": 0.7982253316726102
+          },
+          "full_law_max_abs_difference": 4.440892098500626e-16,
+          "actual_production_admission": {
+            "recovery_failure": 0.20130127981058438,
+            "admitted_correct": 0.7982253316726098,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.00047338851680440194
+          },
+          "model_admission": {
+            "recovery_failure": 0.20130127981058438,
+            "admitted_correct": 0.7982253316726098,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.00047338851680440194,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.3322676295501878e-15
+        },
+        {
+          "shots": 2,
+          "saved_distribution_recovery": {
+            "shots": 2,
+            "exact_order": 0.9592871308082527,
+            "no_candidate": 0.040522205253379184,
+            "nonminimal": 0.00019066393836537213,
+            "partition_residual": 2.7755575615628914e-15,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 0.9592869832213716
+          },
+          "ideal_recovery": {
+            "shots": 2,
+            "exact_order": 0.9592871308082538,
+            "no_candidate": 0.040522205253379254,
+            "nonminimal": 0.00019066393836537207,
+            "partition_residual": 1.5543122344752192e-15,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9592869832213718
+          },
+          "full_law_max_abs_difference": 1.1102230246251565e-15,
+          "actual_production_admission": {
+            "recovery_failure": 0.040522205253379184,
+            "admitted_correct": 0.9592871308082527,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 0.00019066393836537213
+          },
+          "model_admission": {
+            "recovery_failure": 0.040522205253379184,
+            "admitted_correct": 0.9592871308082527,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 0.00019066393836537213,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 2.7755575615628914e-15
+        },
+        {
+          "shots": 4,
+          "saved_distribution_recovery": {
+            "shots": 4,
+            "exact_order": 0.9983424862228302,
+            "no_candidate": 0.0016420491185969916,
+            "nonminimal": 1.5464658567234657e-05,
+            "partition_residual": 5.551115123125783e-15,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 0.9983424502647831
+          },
+          "ideal_recovery": {
+            "shots": 4,
+            "exact_order": 0.9983424862228325,
+            "no_candidate": 0.001642049118596997,
+            "nonminimal": 1.5464658567234678e-05,
+            "partition_residual": 3.219646771412954e-15,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9983424502647832
+          },
+          "full_law_max_abs_difference": 2.3314683517128287e-15,
+          "actual_production_admission": {
+            "recovery_failure": 0.0016420491185969916,
+            "admitted_correct": 0.9983424862228302,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 1.5464658567234657e-05
+          },
+          "model_admission": {
+            "recovery_failure": 0.0016420491185969916,
+            "admitted_correct": 0.9983424862228302,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 1.5464658567234657e-05,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 5.551115123125783e-15
+        },
+        {
+          "shots": 8,
+          "saved_distribution_recovery": {
+            "shots": 8,
+            "exact_order": 0.9999972528055574,
+            "no_candidate": 2.696325307885157e-06,
+            "nonminimal": 5.086912360375584e-08,
+            "partition_residual": 1.1102230246251565e-14,
+            "dp_vs_inversion_residual": 4.440892098500626e-16,
+            "single_exact_event_lower_bound": 0.9999972525288753
+          },
+          "ideal_recovery": {
+            "shots": 8,
+            "exact_order": 0.9999972528055622,
+            "no_candidate": 2.696325307885175e-06,
+            "nonminimal": 5.086912360375607e-08,
+            "partition_residual": 6.328271240363392e-15,
+            "dp_vs_inversion_residual": 1.1102230246251565e-16,
+            "single_exact_event_lower_bound": 0.9999972525288753
+          },
+          "full_law_max_abs_difference": 4.773959005888173e-15,
+          "actual_production_admission": {
+            "recovery_failure": 2.696325307885157e-06,
+            "admitted_correct": 0.9999972528055574,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 5.086912360375584e-08
+          },
+          "model_admission": {
+            "recovery_failure": 2.696325307885157e-06,
+            "admitted_correct": 0.9999972528055574,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 5.086912360375584e-08,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 1.1102230246251565e-14
+        },
+        {
+          "shots": 16,
+          "saved_distribution_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999999999924325,
+            "no_candidate": 7.270170165941988e-12,
+            "nonminimal": 2.7520324431857427e-13,
+            "partition_residual": 2.2093438190040615e-14,
+            "dp_vs_inversion_residual": 7.771561172376096e-16,
+            "single_exact_event_lower_bound": 0.9999999999924514
+          },
+          "ideal_recovery": {
+            "shots": 16,
+            "exact_order": 0.9999999999924419,
+            "no_candidate": 7.270170165942085e-12,
+            "nonminimal": 2.752032443185774e-13,
+            "partition_residual": 1.2656542480726785e-14,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 0.9999999999924514
+          },
+          "full_law_max_abs_difference": 9.43689570931383e-15,
+          "actual_production_admission": {
+            "recovery_failure": 7.270170165941988e-12,
+            "admitted_correct": 0.9999999999924325,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 2.7520324431857427e-13
+          },
+          "model_admission": {
+            "recovery_failure": 7.270170165941988e-12,
+            "admitted_correct": 0.9999999999924325,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 2.7520324431857427e-13,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 2.2093438190040615e-14
+        },
+        {
+          "shots": 32,
+          "saved_distribution_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999999999554,
+            "no_candidate": 5.285537424175296e-23,
+            "nonminimal": 4.027429552834771e-24,
+            "partition_residual": 4.463096558993129e-14,
+            "dp_vs_inversion_residual": 1.9984014443252818e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 32,
+            "exact_order": 0.9999999999999749,
+            "no_candidate": 5.285537424175436e-23,
+            "nonminimal": 4.027429552834869e-24,
+            "partition_residual": 2.5091040356528538e-14,
+            "dp_vs_inversion_residual": 2.220446049250313e-16,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 1.9539925233402755e-14,
+          "actual_production_admission": {
+            "recovery_failure": 5.285537424175296e-23,
+            "admitted_correct": 0.9999999999999554,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 4.027429552834771e-24
+          },
+          "model_admission": {
+            "recovery_failure": 5.285537424175296e-23,
+            "admitted_correct": 0.9999999999999554,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 4.027429552834771e-24,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 4.463096558993129e-14
+        },
+        {
+          "shots": 64,
+          "saved_distribution_recovery": {
+            "shots": 64,
+            "exact_order": 0.9999999999999118,
+            "no_candidate": 2.7936905862357614e-45,
+            "nonminimal": 4.312906814352412e-46,
+            "partition_residual": 8.815170815523743e-14,
+            "dp_vs_inversion_residual": 2.886579864025407e-15,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "ideal_recovery": {
+            "shots": 64,
+            "exact_order": 0.9999999999999512,
+            "no_candidate": 2.7936905862359102e-45,
+            "nonminimal": 4.312906814352632e-46,
+            "partition_residual": 4.884981308350689e-14,
+            "dp_vs_inversion_residual": 8.881784197001252e-16,
+            "single_exact_event_lower_bound": 1.0
+          },
+          "full_law_max_abs_difference": 3.930189507173054e-14,
+          "actual_production_admission": {
+            "recovery_failure": 2.7936905862357614e-45,
+            "admitted_correct": 0.9999999999999118,
+            "rejected_exact_composite_order": 0.0,
+            "rejected_nonminimal": 4.312906814352412e-46
+          },
+          "model_admission": {
+            "recovery_failure": 2.7936905862357614e-45,
+            "admitted_correct": 0.9999999999999118,
+            "rejected_exact_composite_order_ideal": 0,
+            "rejected_nonminimal_ideal": 4.312906814352412e-46,
+            "incorrect_admission_lower_bound": 0,
+            "incorrect_admission_upper_bound": 0.0,
+            "admission_partition_exact_for_policy": true
+          },
+          "admission_max_abs_difference": 0.0,
+          "admission_partition_residual": 8.815170815523743e-14
+        }
+      ],
+      "production_admission_decisions": {
+        "0": {
+          "status": "recovery_failure",
+          "reason": "no_order_candidate",
+          "order_candidate": null,
+          "primality": null,
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "5": {
+          "status": "admitted",
+          "reason": "accepted_candidate_annihilates_nonidentity_point",
+          "order_candidate": 5,
+          "primality": {
+            "classification": "prime",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": "exact",
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "10": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 10,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "15": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 15,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "20": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 20,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "25": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 25,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "30": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 30,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "35": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 35,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        },
+        "40": {
+          "status": "order_not_admissible_for_signing",
+          "reason": "candidate_not_prime",
+          "order_candidate": 40,
+          "primality": {
+            "classification": "composite",
+            "method": "small_prime_checks",
+            "rounds_requested": 64,
+            "rounds_performed": 0,
+            "fixed_composite_false_acceptance_bound": "0"
+          },
+          "order_assurance": null,
+          "curve_check": "equation_and_nonsingularity"
+        }
+      },
+      "historical_coverage": {
+        "basis_inputs_checked": 2048,
+        "actual_gate_propagations": 40,
+        "controlled_additions": 11,
+        "distinct_adder_definitions": 4,
+        "logical_resources_arithmetic": {
+          "input_instructions": 11735259,
+          "x_count": 0,
+          "cx_count": 24272,
+          "ccx_count": 92752247,
+          "maximum_controls": 12,
+          "extra_clean_ancillas": 10,
+          "original_qubits": 227,
+          "lowered_qubits": 237,
+          "lowered_instructions": 92776519
+        }
+      },
+      "coverage_limit": "Saved initialized scalar path only; no new gate execution or universal adder-domain proof"
+    }
+  ],
+  "elapsed_wall_seconds": 0.10584879999987606,
+  "max_full_law_abs_difference": 3.930189507173054e-14,
+  "max_admission_abs_difference": 0.0
+}

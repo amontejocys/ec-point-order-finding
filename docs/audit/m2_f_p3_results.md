@@ -1,7 +1,8 @@
 # P3: main numerical reliability evaluation
 
-Date: 2026-10-18. Status: main evaluation completed; independent-reader review
-pending. P4 saved-circuit anchors and P5 remain pending. This is supporting
+Date: 2026-10-18. Status: main evaluation completed and independently reviewed;
+recorded in commit 84afc4c. P4 follow-up is in m2_f_p4_anchors.md; P5 remains
+pending. This is supporting
 characterization under the M2 decision, not a component-level novelty claim.
 
 ## Frozen execution and deliverables
@@ -124,9 +125,8 @@ original clean-tree report or count as independent-reader review.
 
 ## Next gate
 
-Independent reader: reproduce the 66 budgets, selected high-precision checks,
-predecessor rows and interpretation, then review the auditor/tests. Ariel
-commits the reviewed P3 delivery. Continue with P4 anchors and P5 assessment;
+The independent review below and author commit 84afc4c complete the P3 gate.
+Continue with P4 anchors and P5 assessment;
 do not transfer claims to Overleaf or close R8 merely from these numbers.
 
 ## Independent reader review (Claude, 2026-10-18)
@@ -145,12 +145,13 @@ do not transfer claims to Overleaf or close R8 merely from these numbers.
 - Auditor design accepted: it imports neither the model nor production code
   and re-derives every exact-order probability through a scalar Mobius sum;
   the six corruption tests cover the failure modes that matter.
-- Observation for P5 (not a claim): from p = 23 on, the worst order is 30, the
-  most composite integer below B, and the budgets stop growing at 8/16/24. The
-  worst case will move to 60 once B >= 60 (p >= 47, outside the grid). Budget
-  growth with p is therefore governed by the most composite admissible order,
-  which the phi(r)/r heuristic anticipates; this should be stated as an
-  observed pattern on the grid, not extrapolated.
+- Observation for P5 (editorially clarified after review): on the frozen
+  baseline-register grid, from p = 23 through 41, the worst order at 99% is
+  30 and the budgets are 8/16/24. This is an observed pattern only. The earlier
+  suggestion that the worst case would move to 60 outside the grid is an
+  untested hypothesis, not a result. Avoid "most composite": divisor count
+  alone does not determine recovery difficulty. No governing law for larger
+  fields is inferred here.
 - Wording check passed: the note never calls the budgets certified, minimal or
   superior to published methods, and keeps composite-order recovery separate
   from signing admission.
