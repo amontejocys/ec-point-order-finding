@@ -1,0 +1,1492 @@
+{
+  "config_sha256": "5ff39ebd13cb883526a064b32fdad8f1d6ea43c218f630028c9d9b1e819e1358",
+  "commit": "8bb346b50f45f3790f80f0499b8de2c388bc4113",
+  "dirty_status": [
+    "?? experiments/reference/bounded_recovery_law.py",
+    "?? experiments/scripts/evaluate_bounded_reliability.py",
+    "?? tests/unit/test_bounded_recovery_law.py"
+  ],
+  "driver_sha256": "b57261f49c7523354d60e2d13cab49626f6d6605f0ca4f2547baaaa87e184927",
+  "model_sha256": "19cb427954745b2d5488179c4b17a60730774c9d3d229ee149d461bfa3940257",
+  "support_model_sha256": "d3a58a6147016d5b547cd9513a26af6051dd45a4dce805aa7ecf1c1c4c151709",
+  "reference_curve_sha256": "7506ec3d064c1c4c4ecf25cc9ff7d0acf94bff64aa7a91799810fb73222e368a",
+  "pilot_config_sha256": "6d5999cbb905a572999053723c6ce1a5e3406344dd2b7f783d7bbf599f5b07de",
+  "production_source_manifest": {
+    "algorithm": "sha256 of UTF-8 path + space + raw-file SHA256 records, POSIX lexical order, LF separators, no final LF",
+    "scope": "All src/**/*.py only; not tests, experiments, manuscript, or a Git commit",
+    "line_endings": "File bytes are not normalized; checkout line-ending conversion changes the hash",
+    "source_tree_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+    "files": [
+      {
+        "path": "src/quantum_ec/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/baselines/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/baselines/trial_recovery.py",
+        "sha256": "6b442e7d4a7f418045de162d54321031c98a46695f6d72f4db8ef40174742e13"
+      },
+      {
+        "path": "src/quantum_ec/circuits/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/binary_add_constant.py",
+        "sha256": "0d117e7c40c233cbd1f8cae6942b1611861dd3f1a3b29fd2b60aa275de896950"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/binary_divide.py",
+        "sha256": "c59ff5de7aae2e56d6fecb8e7d8f768aed95c0e29700c11a62d338049e759515"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/binary_quotient.py",
+        "sha256": "964b9836308554deb922fda4f6c775d98a6f855b0bb923ff0eeb5b8c0c02ec71"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/division_reduce_step.py",
+        "sha256": "c55131881248f280389464362f28742a50e45c0f6aba2489194c870824404797"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/equality_constant.py",
+        "sha256": "3f2c62994c0d04b654564391ff4e40435b1c17c090590bdcce5d32bef7deab68"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/euclid_update.py",
+        "sha256": "04e6e255dd6f8454ad0a8092045303c6f8b10fd301a334acf6ba3c313a788290"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/less_than_constant.py",
+        "sha256": "26e470214892650946cb0368160bae72f240241d5bcfa746f7689c1e98f93e66"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/less_than_register.py",
+        "sha256": "6d58e612a64fc13dc4d15a1bb5a22bf3e944eb88a713b94ef3d8a04311cddbae"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_add_constant.py",
+        "sha256": "fcc6951e5a44282dfb02f66870b2cc9f290617a9f55d88c7ede89a2fe438ef14"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_add_register.py",
+        "sha256": "9115f6f3aa946486faca33825c384f42fab339cf1e685d88e8c408781a12ad67"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_cube_accumulate.py",
+        "sha256": "37e2e90ab741d3edd1f5e70d517276e0f2723a386b406b53325d2e2428a64504"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_inverse.py",
+        "sha256": "092d2e82dd78f34d5a9d6e996579b9b83018dd19d8bfc16dfa3103ffc225f520"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_inverse_inplace.py",
+        "sha256": "3197563fd198e4127331f635f6f366b3329c632974c091ab3dd0753d93037407"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_multiply_accumulate.py",
+        "sha256": "fdd3e9e099c0bcc96cee525377a9c509fee170a771c08634c1975c18d597be3a"
+      },
+      {
+        "path": "src/quantum_ec/circuits/arithmetic/modular_square_accumulate.py",
+        "sha256": "a2bb7d9d36f5735929cecc44646022661a5dba2c571c672ed296a30778a89893"
+      },
+      {
+        "path": "src/quantum_ec/circuits/order_finding/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/order_finding/elliptic_order_finding.py",
+        "sha256": "4acd2f133925d39d36a756d78aca1e992a2e749f13563e55c66b777092fb7d5f"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/controlled_point_add.py",
+        "sha256": "557f85656c0529349b1a2b30b4b80f074a35605a794c3a485e9f1071f338a0f5"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/curve_residual_accumulate.py",
+        "sha256": "3d6357f374d8bf51df5e069efde835d6720edea40cb1f35d34827ed6acf328f5"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/finite_curve_check.py",
+        "sha256": "ffa871a944ab046fc4d5bd58807e322f6eabaa7db8228be2a7f0f17c1b4c6d9d"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_slope.py",
+        "sha256": "42e7124bacd937074873ef24a105eadeb56a45d16edccc0e3aea7337ff328bef"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_sum.py",
+        "sha256": "8235b76f4d745cbe0c64b53bd1bc59f4cf7199b54bd88efc5e4b6d26ed65ecd8"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_sum_shared.py",
+        "sha256": "e833d0d5d899374cbdfc0db824bcc55aed4ed4edb807819e19b59c3c3f1164f0"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/ordinary_point_x.py",
+        "sha256": "302767c3216b8d414d3af5b39803d7a7ca8186cd3b758a012cd5f93c10ca280e"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_add_inplace.py",
+        "sha256": "8e3775af78283e85a375d1a33b896044b1432cec6ac18d014724da11a9055ff2"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_addition_cases.py",
+        "sha256": "b0b8bf8d22f181a39ab0b53ac2e361cfcb9b3fed890e87a0dffab71f0687eeb3"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_differences.py",
+        "sha256": "19dd7583f1f5c2f0bf1f7f7ce9fb1415684b964a5e01fbbc2cf492dd4f9f62f9"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_encoding_check.py",
+        "sha256": "cf476423439c416ebc9dd16da1e1829b681646b5052f16e011b1bfee248dddc0"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_sum_evaluator.py",
+        "sha256": "3b32024d71ce87a1f3602ed19ac0f17ef98dc6267d0d193fd952bd1299ae6501"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/point_sum_evaluator_compact.py",
+        "sha256": "3a7e10210ddfae0e0e450bb1c065ef2febaf799c57230648d74260d2743a4c36"
+      },
+      {
+        "path": "src/quantum_ec/circuits/points/special_point_sum.py",
+        "sha256": "bc39f2d0e1aefaaf12c03d3ea6277cc12c994f6df5085e8812c0e0655e5be942"
+      },
+      {
+        "path": "src/quantum_ec/classical/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/classical/curve.py",
+        "sha256": "478b7e29de3e271e4c30d2f245d369ff7ca5b2956c248a8fef0c6ea962e16886"
+      },
+      {
+        "path": "src/quantum_ec/classical/primality.py",
+        "sha256": "ed3b4e434b5c6406f5fdc24515f1296db1f87b1581ff075d21e4726d80beb525"
+      },
+      {
+        "path": "src/quantum_ec/recovery/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/recovery/continued_fractions.py",
+        "sha256": "75d342548b983eaff056b2642eedb41ce3f354dc3779f64fa24a223296fb2c10"
+      },
+      {
+        "path": "src/quantum_ec/recovery/factor_free_recovery.py",
+        "sha256": "b0eb80c7a74a2b8409f40f0f44c3bbebb7c4b7e149bef5abc97e04eb3ef338af"
+      },
+      {
+        "path": "src/quantum_ec/recovery/success_budget.py",
+        "sha256": "ac0597b2c85499a9c8b19a542fa0042ac499e6e64c3b4896152f72444031d4da"
+      },
+      {
+        "path": "src/quantum_ec/resources/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/resources/complete_resources.py",
+        "sha256": "ddf9d3da9ca4510bd475e8b903c7b95a0c70dfc84838c7b0818d37aff3790f4f"
+      },
+      {
+        "path": "src/quantum_ec/resources/mcx_basis.py",
+        "sha256": "4d3df5973c96b95013bc204d23e6e34f7861ff90ef7a093efbd4d488818a28e2"
+      },
+      {
+        "path": "src/quantum_ec/resources/resource_model.py",
+        "sha256": "5136caebb42b159e972e25a16cc5b538bece201c4bf369882929eb96c3d3294d"
+      },
+      {
+        "path": "src/quantum_ec/signing/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/signing/admission.py",
+        "sha256": "70ee4f3b35e9777fd817dcb40c1a710c69dd7fe797f469ee5753745682910e78"
+      },
+      {
+        "path": "src/quantum_ec/signing/signature.py",
+        "sha256": "988ba660cea7966d026e80d7f23acbc21845c938ecffb1ceb9fff8f15018a899"
+      },
+      {
+        "path": "src/quantum_ec/simulation/__init__.py",
+        "sha256": "7d57172326e191ee5b58b5423988d2d314b06e394c9fea06e59165b1868f5a15"
+      },
+      {
+        "path": "src/quantum_ec/simulation/ideal_distribution.py",
+        "sha256": "2bd114c2be55579b5b8d35dd53feaf0934ed9627109db90b6a239fe722299af0"
+      },
+      {
+        "path": "src/quantum_ec/simulation/real_arithmetic.py",
+        "sha256": "507d7290552191e4ab886e0c7217e819bd828b8ce3275f54a909c724865ec407"
+      },
+      {
+        "path": "src/quantum_ec/simulation/sparse_order_finding.py",
+        "sha256": "cd7c713e39041c7fb667209eac8237f308b6dc1dccb295377e0d7aa4a8bd20da"
+      }
+    ]
+  },
+  "python_version": "3.11.5",
+  "numpy_version": "2.1.3",
+  "high_precision_backend_and_version": "mpmath 1.3.0",
+  "precision_status": "numerical_only",
+  "random_seed": null,
+  "operation_count_definition": {
+    "cf_denominators_generated": "Every yielded convergent denominator, including repeats, over all Q outcomes",
+    "bounded_denominators_tested": "Yielded denominators in [1,B], including repeats; matches production verification attempts",
+    "divisibility_checks": "One offline r-divides-v check per bounded denominator; not a scalar multiplication",
+    "statistic_gcd_updates": "One gcd update per distinct accepted denominator per outcome, starting at zero",
+    "dp_gcd_updates": "One gcd update per (current state, one-shot statistic) pair per DP step",
+    "scope": "Offline model operations only, not gates or scalable online costs"
+  },
+  "phase": "P2_validation_only",
+  "main_grid_evaluated": false,
+  "rows": [
+    {
+      "p": 5,
+      "a": 1,
+      "b": 1,
+      "point": [
+        0,
+        1
+      ],
+      "extra_bits": 0,
+      "reference_order": 9,
+      "q": 128,
+      "bound": 10,
+      "production_predicate_outcomes_checked": 128,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 642,
+        "bounded_denominators_tested": 384,
+        "divisibility_checks": 384,
+        "statistic_gcd_updates": 14,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.6080353279918985,
+          "no_candidate": 0.39196467200810164,
+          "nonminimal": 0.0,
+          "partition_residual": 2.220446049250313e-16,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.6080353279918985
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.8463636958975816,
+          "no_candidate": 0.1536363041024187,
+          "nonminimal": 0.0,
+          "partition_residual": 4.440892098500626e-16,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.8463636958975814
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9763958860617499,
+          "no_candidate": 0.02360411393825088,
+          "nonminimal": 0.0,
+          "partition_residual": 6.661338147750939e-16,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.9763958860617492
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9994428458051916,
+          "no_candidate": 0.0005571541948099295,
+          "nonminimal": 0.0,
+          "partition_residual": 1.5543122344752192e-15,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 0.99944284580519
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999996895792062,
+          "no_candidate": 3.104207967943007e-07,
+          "nonminimal": 0.0,
+          "partition_residual": 2.886579864025407e-15,
+          "dp_vs_inversion_residual": 5.551115123125783e-16,
+          "single_exact_event_lower_bound": 0.9999996895792032
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999999999092,
+          "no_candidate": 9.636107108240853e-14,
+          "nonminimal": 0.0,
+          "partition_residual": 5.551115123125783e-15,
+          "dp_vs_inversion_residual": 1.5543122344752192e-15,
+          "single_exact_event_lower_bound": 0.9999999999999036
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 2.220446049250313e-16,
+        "reference_mass": "0.99999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 2.220446049250313e-16,
+            "reference_exact_order": "0.60803532799189856306711112192989267759872419436141665672212786632239755152079596",
+            "diagnostic_exact_order_interval": [
+              "0.6080353279918985630671111219298926775987241943614166567221278663223975515207959",
+              "0.60803532799189856306711112192989267759872419436141665672212786632239755152079605"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 2.220446049250313e-16,
+            "reference_exact_order": "0.8463636958975814618596774165092272047884961381246396874254561035220487768221433",
+            "diagnostic_exact_order_interval": [
+              "0.84636369589758146185967741650922720478849613812463968742545610352204877682214316",
+              "0.84636369589758146185967741650922720478849613812463968742545610352204877682214354"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 6.661338147750939e-16,
+            "reference_exact_order": "0.97639588606174917266758605285469178756120509697049011136499357669915803520040196",
+            "diagnostic_exact_order_interval": [
+              "0.97639588606174917266758605285469178756120509697049011136499357669915803520040166",
+              "0.97639588606174917266758605285469178756120509697049011136499357669915803520040251"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 1.5543122344752192e-15,
+            "reference_exact_order": "0.99944284580519007301828981026765298432619488781222904132873577254321560201701259",
+            "diagnostic_exact_order_interval": [
+              "0.99944284580519007301828981026765298432619488781222904132873577254321560201701197",
+              "0.99944284580519007301828981026765298432619488781222904132873577254321560201701372"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 2.9976021664879227e-15,
+            "reference_exact_order": "0.9999996895792032057019339568312804720674946930892578653533757143374607872257678",
+            "diagnostic_exact_order_interval": [
+              "0.99999968957920320570193395683128047206749469308925786535337571433746078722576657",
+              "0.99999968957920320570193395683128047206749469308925786535337571433746078722577006"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 5.551115123125783e-15,
+            "reference_exact_order": "0.99999999999990363892891759310752432857372375887806937910401791533237288154852266",
+            "diagnostic_exact_order_interval": [
+              "0.9999999999999036389289175931075243285737237588780693791040179153323728815485202",
+              "0.99999999999990363892891759310752432857372375887806937910401791533237288154852719"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "0.99999999999999999999999999999999999999999999999999999999999999999999999999999991",
+          "1.0000000000000000000000000000000000000000000000000000000000000000000000000000001"
+        ]
+      }
+    },
+    {
+      "p": 7,
+      "a": 0,
+      "b": 1,
+      "point": [
+        3,
+        0
+      ],
+      "extra_bits": 0,
+      "reference_order": 2,
+      "q": 256,
+      "bound": 13,
+      "production_predicate_outcomes_checked": 256,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 1410,
+        "bounded_denominators_tested": 828,
+        "divisibility_checks": 828,
+        "statistic_gcd_updates": 193,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.5,
+          "no_candidate": 0.5,
+          "nonminimal": 3.251957670224424e-31,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 1.687465857562383e-31,
+          "single_exact_event_lower_bound": 0.5
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.75,
+          "no_candidate": 0.25,
+          "nonminimal": 3.251957670224424e-31,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 1.687465857562383e-31,
+          "single_exact_event_lower_bound": 0.75
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9375,
+          "no_candidate": 0.0625,
+          "nonminimal": 1.625978835112212e-31,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 8.437329287811915e-32,
+          "single_exact_event_lower_bound": 0.9375
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.99609375,
+          "no_candidate": 0.00390625,
+          "nonminimal": 2.0324735438902648e-32,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 1.0546661609764893e-32,
+          "single_exact_event_lower_bound": 0.99609375
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999847412109375,
+          "no_candidate": 1.52587890625e-05,
+          "nonminimal": 1.5878699561642694e-34,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 8.239579382628823e-35,
+          "single_exact_event_lower_bound": 0.9999847412109375
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999997671694,
+          "no_candidate": 2.3283064365386963e-10,
+          "nonminimal": 4.845794543958344e-39,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 2.5145200752651457e-39,
+          "single_exact_event_lower_bound": 0.9999999997671694
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 1.687465857562383e-31,
+        "reference_mass": "1.0",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 1.687465857562383e-31,
+            "reference_exact_order": "0.5",
+            "diagnostic_exact_order_interval": [
+              "0.5",
+              "0.5"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 1.687465857562383e-31,
+            "reference_exact_order": "0.75",
+            "diagnostic_exact_order_interval": [
+              "0.75",
+              "0.75"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 8.437329287811915e-32,
+            "reference_exact_order": "0.9375",
+            "diagnostic_exact_order_interval": [
+              "0.9375",
+              "0.9375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 1.0546661609764893e-32,
+            "reference_exact_order": "0.99609375",
+            "diagnostic_exact_order_interval": [
+              "0.99609375",
+              "0.99609375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 8.239579382628823e-35,
+            "reference_exact_order": "0.9999847412109375",
+            "diagnostic_exact_order_interval": [
+              "0.9999847412109375",
+              "0.9999847412109375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 2.5145200752651457e-39,
+            "reference_exact_order": "0.99999999976716935634613037109375",
+            "diagnostic_exact_order_interval": [
+              "0.99999999976716935634613037109375",
+              "0.99999999976716935634613037109375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "1.0",
+          "1.0"
+        ]
+      }
+    },
+    {
+      "p": 7,
+      "a": 1,
+      "b": 0,
+      "point": [
+        1,
+        3
+      ],
+      "extra_bits": 0,
+      "reference_order": 4,
+      "q": 256,
+      "bound": 13,
+      "production_predicate_outcomes_checked": 256,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 1410,
+        "bounded_denominators_tested": 828,
+        "divisibility_checks": 828,
+        "statistic_gcd_updates": 76,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.5,
+          "no_candidate": 0.5,
+          "nonminimal": 1.1899362004506157e-31,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 8.747099086665801e-32,
+          "single_exact_event_lower_bound": 0.5
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.75,
+          "no_candidate": 0.25,
+          "nonminimal": 1.1899362004506157e-31,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 8.747099086665801e-32,
+          "single_exact_event_lower_bound": 0.75
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9375,
+          "no_candidate": 0.0625,
+          "nonminimal": 5.949681002253078e-32,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 4.3735495433329005e-32,
+          "single_exact_event_lower_bound": 0.9375
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.99609375,
+          "no_candidate": 0.00390625,
+          "nonminimal": 7.437101252816348e-33,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 5.4669369291661256e-33,
+          "single_exact_event_lower_bound": 0.99609375
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999847412109375,
+          "no_candidate": 1.52587890625e-05,
+          "nonminimal": 5.810235353762772e-35,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 4.2710444759110356e-35,
+          "single_exact_event_lower_bound": 0.9999847412109375
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999997671694,
+          "no_candidate": 2.3283064365386963e-10,
+          "nonminimal": 1.7731431133309227e-39,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 1.3034193346896461e-39,
+          "single_exact_event_lower_bound": 0.9999999997671694
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 8.747099086665801e-32,
+        "reference_mass": "1.0",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 8.747099086665801e-32,
+            "reference_exact_order": "0.5",
+            "diagnostic_exact_order_interval": [
+              "0.5",
+              "0.5"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 8.747099086665801e-32,
+            "reference_exact_order": "0.75",
+            "diagnostic_exact_order_interval": [
+              "0.75",
+              "0.75"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 4.3735495433329005e-32,
+            "reference_exact_order": "0.9375",
+            "diagnostic_exact_order_interval": [
+              "0.9375",
+              "0.9375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 5.4669369291661256e-33,
+            "reference_exact_order": "0.99609375",
+            "diagnostic_exact_order_interval": [
+              "0.99609375",
+              "0.99609375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 4.2710444759110356e-35,
+            "reference_exact_order": "0.9999847412109375",
+            "diagnostic_exact_order_interval": [
+              "0.9999847412109375",
+              "0.9999847412109375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 1.3034193346896461e-39,
+            "reference_exact_order": "0.99999999976716935634613037109375",
+            "diagnostic_exact_order_interval": [
+              "0.99999999976716935634613037109375",
+              "0.99999999976716935634613037109375"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "1.0",
+          "1.0"
+        ]
+      }
+    },
+    {
+      "p": 17,
+      "a": 0,
+      "b": 7,
+      "point": [
+        15,
+        13
+      ],
+      "extra_bits": 0,
+      "reference_order": 18,
+      "q": 1024,
+      "bound": 26,
+      "production_predicate_outcomes_checked": 1024,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 6898,
+        "bounded_denominators_tested": 3896,
+        "divisibility_checks": 3896,
+        "statistic_gcd_updates": 26,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.3168668350806764,
+          "no_candidate": 0.683133164919323,
+          "nonminimal": 0.0,
+          "partition_residual": 6.661338147750939e-16,
+          "dp_vs_inversion_residual": 5.551115123125783e-17,
+          "single_exact_event_lower_bound": 0.3168668350806765
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.5333290789873079,
+          "no_candidate": 0.4666709210126909,
+          "nonminimal": 0.0,
+          "partition_residual": 1.2212453270876722e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.5333290789873084
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.7822182514811643,
+          "no_candidate": 0.2177817485188332,
+          "nonminimal": 0.0,
+          "partition_residual": 2.4424906541753444e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.7822182514811661
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9525711100120746,
+          "no_candidate": 0.04742888998792032,
+          "nonminimal": 0.0,
+          "partition_residual": 5.10702591327572e-15,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 0.9525711100120794
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.997750500394504,
+          "no_candidate": 0.0022494996054862474,
+          "nonminimal": 0.0,
+          "partition_residual": 9.769962616701378e-15,
+          "dp_vs_inversion_residual": 8.881784197001252e-16,
+          "single_exact_event_lower_bound": 0.9977505003945137
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999949397515056,
+          "no_candidate": 5.060248475082782e-06,
+          "nonminimal": 0.0,
+          "partition_residual": 1.9317880628477724e-14,
+          "dp_vs_inversion_residual": 1.9984014443252818e-15,
+          "single_exact_event_lower_bound": 0.9999949397515249
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 7.771561172376096e-16,
+        "reference_mass": "0.99999999999999999999999999999999999999999999999999999999999999999999999999999996",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 7.771561172376096e-16,
+            "reference_exact_order": "0.31686683508067628352300651282860848807302832760332241445947316050237037396451991",
+            "diagnostic_exact_order_interval": [
+              "0.31686683508067628352300651282860848807302832760332241445947316050237037396451978",
+              "0.31686683508067628352300651282860848807302832760332241445947316050237037396452004"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 9.992007221626409e-16,
+            "reference_exact_order": "0.53332907898730806480050891612535630585324147491952407995287030673403915024786155",
+            "diagnostic_exact_order_interval": [
+              "0.53332907898730806480050891612535630585324147491952407995287030673403915024786101",
+              "0.53332907898730806480050891612535630585324147491952407995287030673403915024786212"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 1.5543122344752192e-15,
+            "reference_exact_order": "0.78221825148116584482220126909475547663235003549816420189061587505538429066790785",
+            "diagnostic_exact_order_interval": [
+              "0.78221825148116584482220126909475547663235003549816420189061587505538429066790613",
+              "0.7822182514811658448222012690947554766323500354981642018906158750553842906679097"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 4.6629367034256575e-15,
+            "reference_exact_order": "0.95257111001207927725736260260348831701693044474612410001343189497748981742188682",
+            "diagnostic_exact_order_interval": [
+              "0.95257111001207927725736260260348831701693044474612410001343189497748981742188248",
+              "0.9525711100120792772573626026034883170169304447461241000134318949774898174218915"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 9.769962616701378e-15,
+            "reference_exact_order": "0.99775050039451371342449199619892888460934982208916631121577452097619534309229232",
+            "diagnostic_exact_order_interval": [
+              "0.99775050039451371342449199619892888460934982208916631121577452097619534309228318",
+              "0.99775050039451371342449199619892888460934982208916631121577452097619534309230222"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 1.9317880628477724e-14,
+            "reference_exact_order": "0.99999493975152491704105571941091678475322136823226139895826105893170419059955802",
+            "diagnostic_exact_order_interval": [
+              "0.99999493975152491704105571941091678475322136823226139895826105893170419059953969",
+              "0.99999493975152491704105571941091678475322136823226139895826105893170419059957787"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "0.99999999999999999999999999999999999999999999999999999999999999999999999999999939",
+          "1.0000000000000000000000000000000000000000000000000000000000000000000000000000006"
+        ]
+      }
+    },
+    {
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "extra_bits": 0,
+      "reference_order": 5,
+      "q": 2048,
+      "bound": 40,
+      "production_predicate_outcomes_checked": 2048,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 15002,
+        "bounded_denominators_tested": 8534,
+        "divisibility_checks": 8534,
+        "statistic_gcd_updates": 928,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.7982253316726102,
+          "no_candidate": 0.20130127981058454,
+          "nonminimal": 0.0004733885168044014,
+          "partition_residual": 7.771561172376096e-16,
+          "dp_vs_inversion_residual": 1.265128410019023e-17,
+          "single_exact_event_lower_bound": 0.7982253316726102
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.9592871308082538,
+          "no_candidate": 0.040522205253379254,
+          "nonminimal": 0.00019066393836537207,
+          "partition_residual": 1.5543122344752192e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.9592869832213718
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9983424862228325,
+          "no_candidate": 0.001642049118596997,
+          "nonminimal": 1.5464658567234678e-05,
+          "partition_residual": 3.219646771412954e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.9983424502647832
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9999972528055622,
+          "no_candidate": 2.696325307885175e-06,
+          "nonminimal": 5.086912360375607e-08,
+          "partition_residual": 6.328271240363392e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.9999972525288753
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999999999924419,
+          "no_candidate": 7.270170165942085e-12,
+          "nonminimal": 2.752032443185774e-13,
+          "partition_residual": 1.2656542480726785e-14,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 0.9999999999924514
+        },
+        {
+          "shots": 32,
+          "exact_order": 0.9999999999999749,
+          "no_candidate": 5.285537424175436e-23,
+          "nonminimal": 4.027429552834869e-24,
+          "partition_residual": 2.5091040356528538e-14,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 1.0
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 9.71445146547012e-16,
+        "reference_mass": "0.99999999999999999999999999999999999999999999999999999999999999999999999999999974",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 9.71445146547012e-16,
+            "reference_exact_order": "0.79822533167261007857289604875627702723671857777579312713395010267962770240966083",
+            "diagnostic_exact_order_interval": [
+              "0.79822533167261007857289604875627702723671857777579312713395010267962770240965971",
+              "0.7982253316726100785728960487562770272367185777757931271339501026796277024096628"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 1.2212453270876722e-15,
+            "reference_exact_order": "0.95928713080825498151679854560905408496567918202882053060638699332381882081353822",
+            "diagnostic_exact_order_interval": [
+              "0.95928713080825498151679854560905408496567918202882053060638699332381882081353571",
+              "0.95928713080825498151679854560905408496567918202882053060638699332381882081354243"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 3.219646771412954e-15,
+            "reference_exact_order": "0.99834248622283573615773288725999960988737847388448110215738925770316482372103064",
+            "diagnostic_exact_order_interval": [
+              "0.99834248622283573615773288725999960988737847388448110215738925770316482372102549",
+              "0.9983424862228357361577328872599996098873784738844811021573892577031648237210392"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 6.328271240363392e-15,
+            "reference_exact_order": "0.99999725280556851096259537436688247741592785502582429447865320465558862043368755",
+            "diagnostic_exact_order_interval": [
+              "0.99999725280556851096259537436688247741592785502582429447865320465558862043367721",
+              "0.99999725280556851096259537436688247741592785502582429447865320465558862043370471"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 1.2656542480726785e-14,
+            "reference_exact_order": "0.9999999999924546265897387546963963156412831789914033544491151359691390436095328",
+            "diagnostic_exact_order_interval": [
+              "0.99999999999245462658973875469639631564128317899140335444911513596913904360951209",
+              "0.99999999999245462658973875469639631564128317899140335444911513596913904360956712"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 2.5091040356528538e-14,
+            "reference_exact_order": "0.99999999999999999999994311719620540197662322647336487574266367974122309736082285",
+            "diagnostic_exact_order_interval": [
+              "0.99999999999999999999994311719620540197662322647336487574266367974122309736078144",
+              "0.99999999999999999999994311719620540197662322647336487574266367974122309736089156"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "0.99999999999999999999999999999999999999999999999999999999999999999999999999999847",
+          "1.0000000000000000000000000000000000000000000000000000000000000000000000000000019"
+        ]
+      }
+    },
+    {
+      "p": 29,
+      "a": 0,
+      "b": 7,
+      "point": [
+        6,
+        7
+      ],
+      "extra_bits": 1,
+      "reference_order": 5,
+      "q": 4096,
+      "bound": 40,
+      "production_predicate_outcomes_checked": 4096,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 32290,
+        "bounded_denominators_tested": 17040,
+        "divisibility_checks": 17040,
+        "statistic_gcd_updates": 1842,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.7991162602230406,
+          "no_candidate": 0.20065273296708686,
+          "nonminimal": 0.00023100680987391833,
+          "partition_residual": 1.3322676295501878e-15,
+          "dp_vs_inversion_residual": 1.311207002349657e-17,
+          "single_exact_event_lower_bound": 0.7991162602230406
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.9596457575396385,
+          "no_candidate": 0.040261519247161065,
+          "nonminimal": 9.272321320323836e-05,
+          "partition_residual": 2.886579864025407e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.9596457230932228
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9983715406650834,
+          "no_candidate": 0.001620989932089521,
+          "nonminimal": 7.4694028327680405e-06,
+          "partition_residual": 5.551115123125783e-15,
+          "dp_vs_inversion_residual": 3.3306690738754696e-16,
+          "single_exact_event_lower_bound": 0.9983715323353312
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9999973481562171,
+          "no_candidate": 2.6276083599355894e-06,
+          "nonminimal": 2.42354338661993e-08,
+          "partition_residual": 1.0880185641326534e-14,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 0.9999973480930652
+        },
+        {
+          "shots": 16,
+          "exact_order": 0.9999999999929902,
+          "no_candidate": 6.904325693203398e-12,
+          "nonminimal": 1.275707228238955e-13,
+          "partition_residual": 2.220446049250313e-14,
+          "dp_vs_inversion_residual": 7.771561172376096e-16,
+          "single_exact_event_lower_bound": 0.9999999999929674
+        },
+        {
+          "shots": 32,
+          "exact_order": 1.000000000000044,
+          "no_candidate": 4.7669713277828577e-23,
+          "nonminimal": 1.767351664380582e-24,
+          "partition_residual": 4.39648317751562e-14,
+          "dp_vs_inversion_residual": 1.3322676295501878e-15,
+          "single_exact_event_lower_bound": 1.0
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 6.661338147750939e-16,
+        "reference_mass": "0.99999999999999999999999999999999999999999999999999999999999999999999999999999873",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 6.661338147750939e-16,
+            "reference_exact_order": "0.7991162602230399001948037490017059523985658989546099596842788148440605175928942",
+            "diagnostic_exact_order_interval": [
+              "0.79911626022303990019480374900170595239856589895460995968427881484406051759289326",
+              "0.79911626022303990019480374900170595239856589895460995968427881484406051759289944"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 2.55351295663786e-15,
+            "reference_exact_order": "0.9596457575396359682262524765903756665579953560313814806376668192704936872777336",
+            "diagnostic_exact_order_interval": [
+              "0.95964575753963596822625247659037566655799535603138148063766681927049368727773123",
+              "0.9596457575396359682262524765903756665579953560313814806376668192704936872777446"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 5.662137425588298e-15,
+            "reference_exact_order": "0.99837154066507773298946189119927494607545650925485362546266683945845987933737234",
+            "diagnostic_exact_order_interval": [
+              "0.99837154066507773298946189119927494607545650925485362546266683945845987933736736",
+              "0.9983715406650777329894618911992749460754565092548536254626668394584598793373946"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 1.0880185641326534e-14,
+            "reference_exact_order": "0.99999734815620619828254321240462868924207051163868969311487990295618111814924057",
+            "diagnostic_exact_order_interval": [
+              "0.99999734815620619828254321240462868924207051163868969311487990295618111814923056",
+              "0.99999734815620619828254321240462868924207051163868969311487990295618111814928515"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 2.2093438190040615e-14,
+            "reference_exact_order": "0.99999999999296810358397308437732552442901110985765304513933484250068027605927844",
+            "diagnostic_exact_order_interval": [
+              "0.9999999999929681035839730843773255244290111098576530451393348425006802760592584",
+              "0.99999999999296810358397308437732552442901110985765304513933484250068027605936762"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 4.39648317751562e-14,
+            "reference_exact_order": "0.99999999999999999999995056293505779614951691000707987710163042205240680077137427",
+            "diagnostic_exact_order_interval": [
+              "0.99999999999999999999995056293505779614951691000707987710163042205240680077133415",
+              "0.99999999999999999999995056293505779614951691000707987710163042205240680077155265"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "0.9999999999999999999999999999999999999999999999999999999999999999999999999999975",
+          "1.0000000000000000000000000000000000000000000000000000000000000000000000000000043"
+        ]
+      }
+    },
+    {
+      "p": 41,
+      "a": 31,
+      "b": 18,
+      "point": [
+        28,
+        40
+      ],
+      "extra_bits": 0,
+      "reference_order": 53,
+      "q": 4096,
+      "bound": 54,
+      "production_predicate_outcomes_checked": 4096,
+      "raw_mass_residual": 0.0,
+      "raw_vs_normalized_production_max_abs_difference": 0.0,
+      "operation_counts": {
+        "cf_denominators_generated": 32290,
+        "bounded_denominators_tested": 18074,
+        "divisibility_checks": 18074,
+        "statistic_gcd_updates": 108,
+        "dp_gcd_updates": 0
+      },
+      "outcomes": [
+        {
+          "shots": 0,
+          "exact_order": 0.0,
+          "no_candidate": 1.0,
+          "nonminimal": 0.0,
+          "partition_residual": 0.0,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.0
+        },
+        {
+          "shots": 1,
+          "exact_order": 0.8867617675479983,
+          "no_candidate": 0.11323823245200217,
+          "nonminimal": 0.0,
+          "partition_residual": 4.440892098500626e-16,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.8867617675479983
+        },
+        {
+          "shots": 2,
+          "exact_order": 0.9871771027111472,
+          "no_candidate": 0.012822897288853677,
+          "nonminimal": 0.0,
+          "partition_residual": 8.881784197001252e-16,
+          "dp_vs_inversion_residual": 0.0,
+          "single_exact_event_lower_bound": 0.9871771027111464
+        },
+        {
+          "shots": 4,
+          "exact_order": 0.9998355733051214,
+          "no_candidate": 0.00016442669488049097,
+          "nonminimal": 0.0,
+          "partition_residual": 1.9984014443252818e-15,
+          "dp_vs_inversion_residual": 1.1102230246251565e-16,
+          "single_exact_event_lower_bound": 0.9998355733051195
+        },
+        {
+          "shots": 8,
+          "exact_order": 0.9999999729638658,
+          "no_candidate": 2.7036137989322073e-08,
+          "nonminimal": 0.0,
+          "partition_residual": 3.774758283725532e-15,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 0.999999972963862
+        },
+        {
+          "shots": 16,
+          "exact_order": 1.0000000000000067,
+          "no_candidate": 7.309527573776642e-16,
+          "nonminimal": 0.0,
+          "partition_residual": 7.327471962526033e-15,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 0.9999999999999992
+        },
+        {
+          "shots": 32,
+          "exact_order": 1.0000000000000144,
+          "no_candidate": 5.3429193351801034e-31,
+          "nonminimal": 0.0,
+          "partition_residual": 1.4432899320127035e-14,
+          "dp_vs_inversion_residual": 2.220446049250313e-16,
+          "single_exact_event_lower_bound": 1.0
+        }
+      ],
+      "precision_check": {
+        "digits": 80,
+        "one_shot_max_abs_difference": 4.0245584642661925e-16,
+        "reference_mass": "0.99999999999999999999999999999999999999999999999999999999999999999999999999999974",
+        "budgets": [
+          {
+            "shots": 0,
+            "max_abs_difference": 0.0,
+            "reference_exact_order": "0.0",
+            "diagnostic_exact_order_interval": [
+              "0.0",
+              "0.0"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 1,
+            "max_abs_difference": 4.0245584642661925e-16,
+            "reference_exact_order": "0.88676176754799823239612433690267285679102877812932945129324093097573384097530487",
+            "diagnostic_exact_order_interval": [
+              "0.88676176754799823239612433690267285679102877812932945129324093097573384097530454",
+              "0.88676176754799823239612433690267285679102877812932945129324093097573384097530613"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 2,
+            "max_abs_difference": 7.771561172376096e-16,
+            "reference_exact_order": "0.98717710271114641374701888920903403785356764469670042846866970505146079328355057",
+            "diagnostic_exact_order_interval": [
+              "0.98717710271114641374701888920903403785356764469670042846866970505146079328354957",
+              "0.98717710271114641374701888920903403785356764469670042846866970505146079328355348"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 4,
+            "max_abs_difference": 1.887379141862766e-15,
+            "reference_exact_order": "0.99983557330511951134735842025555531172531372642405129101897880812829630269169562",
+            "diagnostic_exact_order_interval": [
+              "0.99983557330511951134735842025555531172531372642405129101897880812829630269169353",
+              "0.99983557330511951134735842025555531172531372642405129101897880812829630269170152"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 8,
+            "max_abs_difference": 3.774758283725532e-15,
+            "reference_exact_order": "0.99999997296386201067868670800108393660560918070359389523473472076674552716294607",
+            "diagnostic_exact_order_interval": [
+              "0.9999999729638620106786867080010839366056091807035938952347347207667455271629419",
+              "0.99999997296386201067868670800108393660560918070359389523473472076674552716295789"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 16,
+            "max_abs_difference": 7.438494264988549e-15,
+            "reference_exact_order": "0.99999999999999926904724262237689487853166911166597546429333532768461919478362645",
+            "diagnostic_exact_order_interval": [
+              "0.99999999999999926904724262237689487853166911166597546429333532768461919478361809",
+              "0.99999999999999926904724262237689487853166911166597546429333532768461919478365008"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          },
+          {
+            "shots": 32,
+            "max_abs_difference": 1.4432899320127035e-14,
+            "reference_exact_order": "0.99999999999999999999999999999946570806648204965126652459777638844970424437636722",
+            "diagnostic_exact_order_interval": [
+              "0.9999999999999999999999999999994657080664820496512665245977763884497042443763505",
+              "0.99999999999999999999999999999946570806648204965126652459777638844970424437641447"
+            ],
+            "contains_high_precision_diagnostic_point": true,
+            "interval_is_not_a_field_budget_certificate": true
+          }
+        ],
+        "diagnostic_mass_interval": [
+          "0.99999999999999999999999999999999999999999999999999999999999999999999999999999922",
+          "1.0000000000000000000000000000000000000000000000000000000000000000000000000000012"
+        ]
+      }
+    }
+  ],
+  "elapsed_wall_seconds": 2.7459603999996034
+}
