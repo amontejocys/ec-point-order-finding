@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "experiment_id": "m2-f-main",
+  "scope": "Bounded-field numerical characterization of the implemented verified-convergents gcd policy; supporting evidence, not component novelty",
+  "decision_commit": "98f4a3e0ebab25c8f83da62db3c0b28aa3dee4a1",
+  "model": {
+    "executions": "ideal_independent",
+    "recovery_policy": "all_verified_convergent_denominators_accumulated_by_gcd",
+    "empty_candidate_statistic": 0,
+    "true_order_is_offline_analysis_only": true,
+    "monte_carlo": false,
+    "new_circuit_runs": false
+  },
+  "grid": {
+    "primes": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41
+    ],
+    "order_bound": "p + 1 + isqrt(4*p)",
+    "orders": {
+      "minimum": 2,
+      "maximum": "order_bound",
+      "step": 1
+    },
+    "orders_are_conservative_superset": true,
+    "extra_bits": [
+      0,
+      1
+    ],
+    "register_bits": "(order_bound**2).bit_length() + extra_bits",
+    "register_size": "1 << register_bits",
+    "failure_targets": [
+      0.1,
+      0.01,
+      0.001
+    ]
+  },
+  "budget_search": {
+    "minimum_shots": 1,
+    "maximum_shots": 2048,
+    "include_zero_shot_diagnostic": true,
+    "criterion": "min_r P_T(exact_order) >= 1 - epsilon",
+    "label": "numerically_estimated_first_crossing",
+    "no_crossing": "report_not_reached_without_extending_search",
+    "near_threshold": "flag_unresolved_if_absolute_gap_is_at_most_threshold_tolerance",
+    "report_previous_budget": true,
+    "report_all_worst_order_ties": true
+  },
+  "precision": {
+    "status": "numerical_only",
+    "primary_arithmetic": "float64",
+    "interval_certificate": false,
+    "probability_mass_absolute_tolerance": 1e-10,
+    "dp_vs_inversion_absolute_tolerance": 1e-10,
+    "monotonicity_absolute_tolerance": 1e-10,
+    "threshold_absolute_tolerance": 1e-10,
+    "worst_order_tie_absolute_tolerance": 1e-10,
+    "high_precision_check": {
+      "decimal_digits": 80,
+      "absolute_tolerance": 1e-10,
+      "selection": "seven_frozen_pilot_rows_and_each_reported_worst_order_threshold_pair",
+      "implementation_gate": "P2_before_main_evaluation",
+      "agreement_is_not_certification": true
+    },
+    "on_check_failure": "stop_and_record_without_silent_clipping_or_renormalization"
+  },
+  "metrics": [
+    "one_shot_statistic_distribution",
+    "one_shot_exact_order_mass",
+    "exact_order_probability_by_budget",
+    "no_candidate_probability_by_budget",
+    "nonminimal_multiple_probability_by_budget",
+    "dp_vs_divisor_inversion_residual",
+    "one_minus_one_minus_w_r_power_T_lower_bound",
+    "field_worst_order_probability_and_all_ties",
+    "field_budget_by_failure_target",
+    "existing_sufficient_budget_and_ratio_to_estimated_field_budget",
+    "high_precision_absolute_difference",
+    "separate_signing_admission_partition_and_miller_rabin_bound",
+    "offline_operation_counts_and_wall_time"
+  ],
+  "comparisons": {
+    "existing_bound": "quantum_ec.recovery.success_budget.sufficient_budget",
+    "bound_ratio_is_not_literature_superiority": true,
+    "published_policies": "documentary_only_with_success_event_and_classical_work_explicit",
+    "new_ekeraa_or_lcm_baseline": false
+  },
+  "admission": {
+    "report_prime_and_composite_true_orders_separately": true,
+    "miller_rabin_rounds": 64,
+    "match_existing_small_prime_checks": true,
+    "security_claim": false
+  },
+  "provenance": {
+    "output_directory": "results/m2-f",
+    "required": [
+      "config_sha256",
+      "commit",
+      "dirty_status",
+      "driver_sha256",
+      "model_sha256",
+      "production_source_manifest",
+      "python_version",
+      "numpy_version",
+      "high_precision_backend_and_version",
+      "precision_status",
+      "elapsed_wall_seconds",
+      "operation_count_definition"
+    ],
+    "random_seed": null,
+    "seed_reason": "Deterministic finite-distribution evaluation; no sampling",
+    "main_run_requires_configuration_commit": true
+  },
+  "anchors": {
+    "use": "P4 only: evaluate the law from the saved real-circuit output distributions at their recorded coverage; no new circuit runs",
+    "source_report": "results/legacy/r6/real_circuit_recovery.json",
+    "source_report_sha256": "1354d9b337f723b887dd603c6b4ce5d52a1778d0dc3b9b5c56fb3013f8f26bbd",
+    "source_arrays": "results/legacy/r6/raw/real_circuit_recovery.npz",
+    "source_arrays_sha256": "77ae8604d19704c232b28120423a5b15038657a505cea4ff129b5a62c3cdceba",
+    "arrays_ignored_by_git": true,
+    "agreement_absolute_tolerance": 1e-10,
+    "cases": [
+      {
+        "index": 0,
+        "p": 5,
+        "a": 1,
+        "b": 1,
+        "point": [
+          0,
+          1
+        ],
+        "q": 128,
+        "probabilities_array": "probabilities_0"
+      },
+      {
+        "index": 1,
+        "p": 7,
+        "a": 0,
+        "b": 1,
+        "point": [
+          3,
+          0
+        ],
+        "q": 256,
+        "probabilities_array": "probabilities_1"
+      },
+      {
+        "index": 2,
+        "p": 7,
+        "a": 0,
+        "b": 1,
+        "point": [
+          0,
+          1
+        ],
+        "q": 256,
+        "probabilities_array": "probabilities_2"
+      },
+      {
+        "index": 3,
+        "p": 11,
+        "a": 4,
+        "b": 3,
+        "point": [
+          10,
+          3
+        ],
+        "q": 512,
+        "probabilities_array": "probabilities_3"
+      },
+      {
+        "index": 4,
+        "p": 29,
+        "a": 0,
+        "b": 7,
+        "point": [
+          6,
+          7
+        ],
+        "q": 2048,
+        "probabilities_array": "probabilities_4"
+      }
+    ]
+  }
+}

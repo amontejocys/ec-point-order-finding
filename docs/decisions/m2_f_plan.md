@@ -1,11 +1,16 @@
-# M2 decision: pursue F (finite reliability of order recovery) as the main evidence
+# M2 execution plan: F as supporting reliability evidence
 
 Version 2, 2026-10-18. Status: AGREED between the author and both reviewers;
-pending advisor approval. Version 1 (same date) was revised by merging the six
+The scope and start gates are superseded by the committed final author decision
+in m2_decision.md (98f4a3e); the author confirmed that the advisor is informed.
+Version 1 (same date) was revised by merging the six
 adjustments of m2_f_plan_review.md, which is now adopted. Supersedes the
 recommendation section of m2_candidate_options.md. No experiment beyond the
-frozen pilot has run; no manuscript text has been written. Until the advisor
-approves, only stage P0 (antecedents and claim) may proceed.
+frozen pilot has run; no manuscript text has been written. P0 is complete;
+P1 configuration is prepared for author review and commit. F is supporting
+characterization, not a claim of new components. See m2_f_p1_freeze.md for
+precision and configuration gates; historical progress entries below remain
+as recorded at their respective stages.
 
 ## 1. Progress to date (what is established)
 
@@ -177,5 +182,6 @@ recorded in m2_decision.md the same day (F continues as supporting evidence unde
 the narrow claim; R8 answered by framing E).
 Second reviewer: adjustments proposed and adopted, 2026-10-18.
 Second reader (Claude): validated the six adjustments and merged them, 2026-10-18.
-Advisor: to be informed at the stage-5 meeting. P0 is complete; P1 may start once
-m2_decision.md is committed.
+Advisor: informed, as confirmed by the author on 2026-10-18; this is not a
+claim of additional endorsement. P0 is complete and m2_decision.md is committed.
+P1 configuration is prepared; the author must commit it before the main run.

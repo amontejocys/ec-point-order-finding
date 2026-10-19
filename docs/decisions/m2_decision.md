@@ -95,4 +95,6 @@ advisor on this basis.
 Author: final, 2026-10-18.
 Second reviewer: P0 assessment and decision rule 2 (recorded).
 Second reader (Claude): concurs (recorded in p0_f_assessment.md).
-Advisor: to be informed at the stage-5 meeting; changes, if any, recorded here.
+Advisor: author confirmed in this chat on 2026-10-18 that the advisor is
+informed. This records notification, not additional endorsement. Changes,
+if any, requested at the stage-5 meeting will be recorded here.
