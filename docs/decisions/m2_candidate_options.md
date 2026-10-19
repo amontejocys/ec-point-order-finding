@@ -173,6 +173,12 @@ anchor map and draft fragments in private notes. Blue marks only the new text.
   if it is immaterial, record the candidate as closed and keep the limitation text.
 - Effort budget: two weeks for A, one for B; a third week only for a named issue.
 
+## Status update (2026-10-18, later)
+
+The author selected F as the main evidence; plan, narrative, allowed claims,
+stages, acceptance criteria and roles are in docs/decisions/m2_f_plan.md,
+pending second-reviewer check and advisor approval.
+
 ## Approval
 
 Advisor: pending. Author authorized the F model and bounded evaluation, not
