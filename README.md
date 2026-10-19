@@ -8,7 +8,9 @@ finding, classical recovery, and an experimental signing application.
 R5/R6 code is migrated into src/quantum_ec/, tests/, and experiments/.
 Existing r5/ and r6/ remain unchanged, ignored local backups, not import paths.
 M1 order admission is implemented, tested, and integrated in the manuscript
-snapshot of 2026-10-18 (paper/manuscript/). R8 novelty remains open. See
+snapshot of 2026-10-18 (paper/manuscript/). R8 (novelty) is answered by positioning as an explicit, verified integration
+with an exact reliability characterization (docs/decisions/m2_decision.md);
+supporting evidence F is in progress and the reviewer response is pending. See
 docs/decisions/m1_signing_admission.md for the API, assumptions and error bound.
 
 Do not use the signing example as a production cryptographic library.

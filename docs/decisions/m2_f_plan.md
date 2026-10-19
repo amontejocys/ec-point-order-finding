@@ -172,7 +172,10 @@ compared quantities, that is stated.
 
 ## 9. Approval
 
-Author: selected F and accepted the six adjustments, 2026-10-18.
+Author: selected F and accepted the six adjustments, 2026-10-18; final decision
+recorded in m2_decision.md the same day (F continues as supporting evidence under
+the narrow claim; R8 answered by framing E).
 Second reviewer: adjustments proposed and adopted, 2026-10-18.
 Second reader (Claude): validated the six adjustments and merged them, 2026-10-18.
-Advisor: pending. Until recorded, only P0 may proceed.
+Advisor: to be informed at the stage-5 meeting. P0 is complete; P1 may start once
+m2_decision.md is committed.

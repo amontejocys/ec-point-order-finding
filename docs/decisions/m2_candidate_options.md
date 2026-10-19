@@ -173,6 +173,12 @@ anchor map and draft fragments in private notes. Blue marks only the new text.
   if it is immaterial, record the candidate as closed and keep the limitation text.
 - Effort budget: two weeks for A, one for B; a third week only for a named issue.
 
+## Final status (2026-10-18)
+
+See m2_decision.md: framing E answers R8 by positioning; F continues as
+supporting characterization under the narrow claim; A parked; B as existing;
+C and D out.
+
 ## Status update (2026-10-18, later)
 
 The author selected F as the main evidence; plan, narrative, allowed claims,
