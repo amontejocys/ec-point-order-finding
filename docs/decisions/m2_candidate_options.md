@@ -85,12 +85,52 @@ Estimated feasibility/runtime below is unbenchmarked, not a measured result.
 - Would reproduce Litinski/Haener-style or Luo et al. inversion circuits; no
   identifiable advance is in reach. Not recommended.
 
+### F. Exact reliability characterization of order recovery (author proposal, 2026-10-18)
+
+- Question. For curves and points across parameter ranges (p, r prime or
+  composite, r size, register size m, budget T), what is the probability that
+  the pipeline returns the correct order, and how does M1 admission change the
+  outcome? Measured by simulation and compared with theory.
+- What exists. The 1000-instance pilot (results/expanded-pilot) estimates
+  exact-order rates by sampling 100 trials per instance from the ideal
+  distribution (T=1: 0.59; T=4: 0.93; T=16: 0.9995), with Wilson intervals.
+  The finite bound 1/(16 nu_B) and T=443 for p=29 exist (success_budget.py).
+  The real-circuit distribution equals the ideal one on the five validated
+  instances, so ideal postprocessing is justified there and stated as such.
+- What would be new. (i) Exact probabilities instead of sampling: per shot,
+  P(accept r), P(any candidate); over T shots, the exact law of the gcd
+  accumulator by a Markov chain on the multiples of r up to B, giving
+  P(exact), P(no candidate), P(nonminimal) without Monte Carlo error.
+  (ii) Comparison of the exact values with the conservative bound, which is
+  loose by a large factor (p=29, r=5, Q=2048: exact per-shot probability of
+  accepting r is 0.798, versus the bound 0.0104; the exact T-shot law gives
+  P(exact) = 0.959, 0.998 and 0.9997 for T = 2, 4, 5). (iii) Parameter dependence: r, primality of r, p, m above the
+  minimum, T. (iv) Admission outcomes: P(admitted and correct), P(rejected:
+  composite true order), P(rejected: nonminimal), P(recovery failure).
+- Conditions. Difference: exact finite analysis of gcd accumulation plus
+  primality admission for EC point order finding; no antecedent found for this
+  specific pipeline, but Shor-type success analyses and Ekeraa's post-processing
+  theory are the antecedents and must be cited; this is characterization of the
+  paper's object, not a new algorithm. Check: existing tooling suffices
+  (ideal_distribution, verified_candidates, gcd chain); exact enumeration of all
+  y for p up to about 41 is cheap, larger p sampled or vectorized. Relevance:
+  direct, it quantifies the reliability the paper claims and supports the
+  measurement-budget discussion; it also documents how conservative the
+  published bound is.
+- Fit. Compatible with E and with the title; text goes into the probabilistic
+  recovery subsection, the appendix and one figure. Effort: one to two weeks.
+- Caveats. Noiseless ideal distribution; results for small fields; the exact
+  Markov analysis assumes independent ideal shots.
+
 ## Recommendation for the advisor meeting
 
 The original recommendation of A as the main claim is not adopted. A and B
 remain possible evidence about the hybrid process, subject to a defensible
 difference and relevance. They do not replace the paper's object. Keep C and D
-as alternatives rather than declaring them impossible without evidence. Decide
+as alternatives rather than declaring them impossible without evidence. F,
+proposed by the author, characterizes the pipeline's reliability exactly and is
+the evidence most directly aligned with the paper's object and title; it can be
+combined with B at low cost. Decide
 the target venue and admissible effort with the advisor before the main run.
 
 ## Manuscript impact if A+B are chosen (planning only)
