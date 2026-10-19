@@ -118,10 +118,11 @@ Do not feed the same raw bit strings to incompatible encodings.
   the same gate basis; do not subtract published ECDLP/amortized costs from
   local single-addition costs. No such counts were measured in this pass.
 
-Next bounded check: identify which pinned reference decompositions can be run
-on this shared domain. Freeze parameters and acceptance criteria before the main run.
-Do not install Qualtran into the locked project environment. No reference suite,
-reference resource counts or external quantum phases were executed in this pass.
+Subsequent bounded execution is recorded in m2_feasibility.md; the statements
+above describe the original source-inspection pass. Freeze parameters and
+acceptance criteria before the main evidence run. Do not install Qualtran into
+the locked project environment. No full reference suite, reference resource
+benchmark or external quantum phase validation was executed in this source pass.
 R8 remains open; no manuscript change follows from this note alone.
 
 ## Second-reader verification (2026-10-18)
@@ -144,8 +145,9 @@ R8 remains open; no manuscript change follows from this note alone.
   step actions; they are not gate-level reversible propagation. The verification
   levels listed in the common interface therefore matter for any comparison.
 - The downgrade of candidate A in docs/decisions/m2_candidate_options.md is
-  accepted by the second reader: with the Proos-Zalka random offset the first
-  addition is no longer exceptional even when the order is unknown, so the fair
-  baseline must include that offset. Exceptional inputs R_j = +-P_j still occur
-  at roughly one scalar in r per stage, so the hypothesis survives for small or
-  composite r, but only as a hypothesis to be measured against a fair baseline.
+  accepted by the second reader. Clarification: an offset avoids the forced
+  identity initialization, but does not guarantee an exception-free first sum;
+  the shifted accumulator can equal the added point or its inverse. A fair
+  baseline must account for the offset and its selection cost. Frequencies
+  depend on the stage, offset distribution and control; do not assume 1/r at
+  every stage. The small/composite-order hypothesis remains to be measured.

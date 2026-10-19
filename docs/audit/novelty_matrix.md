@@ -6,6 +6,9 @@ Source-level corrections and narrower contract comparison are recorded in
 docs/audit/m2_contract_comparison.md. That note supersedes paper-only coverage
 descriptions below: the inspected software includes order-two and second-curve
 tests. No general priority claim follows from the differences listed here.
+The later bounded execution is in docs/audit/m2_feasibility.md: seven shared
+cases pass at reference block levels and local gate level. No common-depth
+resource comparison or main evidence experiment has been performed.
 Local comparison baseline: m1-complete, commit
 6e5a775e57f380d4650dd247bf39ed95fed3dcfb.
 No circuit, recovery policy or manuscript changes are authorized by this audit.

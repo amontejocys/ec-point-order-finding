@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-18",
+  "status": "bounded feasibility check; not main novelty evidence",
+  "baseline_commit": "0f407c85d79793c9cd9f2203dacfab0d4cc27c76",
+  "reference_revision": "dc144806e9654e49398974fe2ccc7a24813a80f3",
+  "project_source_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+  "config": "experiments/configs/m2_shared_domain.json",
+  "script": "experiments/scripts/m2_shared_domain_probe.py",
+  "curve": {"p": 17, "a": 0, "b": 7},
+  "selected_cases": 7,
+  "qualtran_case_level_checks_passed": 21,
+  "local_case_control_checks_passed": 14,
+  "adapter_unit_tests_passed": 6,
+  "project_quick_suite": {"passed": 61, "wall_seconds": 1.36},
+  "reference_environment": "Isolated Python 3.12.10; partial dependency installation, not full Qualtran environment",
+  "verification_levels": {
+    "reference": "Classical oracle, six step actions, and step decompositions with atomic arithmetic blocks remaining",
+    "local": "Actual X-family gate propagation, both controls, zero work checked"
+  },
+  "config_sha256": "77a9872466e7ad68e810e809da63f1902406f72722e9672cfc5391e8832ed273",
+  "script_sha256": "3f595251ffca31c4c7267f75e0935a91cc910f585484a983913fb21c8b430fc0",
+  "project_dependency_hashes_unchanged": {
+    "pyproject.toml": "6f714b1b8097d1e521720f9749d21e9aa4df86a1dfb0a56445171853148497c1",
+    "requirements-lock.txt": "2200f10a8e9541ce63dd7fa741619d26fe8627c12ab75444fb6367f7f3ce208c"
+  },
+  "reports": ["results/m2-feasibility/qualtran.json", "results/m2-feasibility/local.json"],
+  "interpretation": "Matching expected sums in selected shared-domain cases; unequal verification depths",
+  "run_times_are_not_a_performance_comparison": true,
+  "not_established": ["novelty", "resource advantage", "full reference gate cleanup or phases", "exhaustive coverage", "full recovery"],
+  "manuscript_changed": false,
+  "production_code_changed": false,
+  "R8": "Open"
+}

@@ -1,0 +1,346 @@
+{
+  "backend": "qualtran",
+  "scope": "Bounded M2 interface feasibility, not a novelty or resource experiment",
+  "python": "3.12.10",
+  "platform": "Windows",
+  "project_source_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+  "cases": [
+    {
+      "id": "ordinary",
+      "expected": [
+        10,
+        15
+      ],
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": [
+            10,
+            15
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": [
+            10,
+            15
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": [
+            10,
+            15
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "doubling",
+      "expected": [
+        2,
+        10
+      ],
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": [
+            2,
+            10
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": [
+            2,
+            10
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": [
+            2,
+            10
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "opposite",
+      "expected": null,
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": null,
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": null,
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": null,
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "expected": [
+        15,
+        13
+      ],
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": [
+            15,
+            13
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": [
+            15,
+            13
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": [
+            15,
+            13
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "order_two_double",
+      "expected": null,
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": null,
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": null,
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": null,
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "order_two_identity",
+      "expected": [
+        3,
+        0
+      ],
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": [
+            3,
+            0
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": [
+            3,
+            0
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": [
+            3,
+            0
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "order_two_ordinary",
+      "expected": [
+        1,
+        5
+      ],
+      "checks": [
+        {
+          "level": "classical_oracle",
+          "point": [
+            1,
+            5
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "six_step_actions",
+          "point": [
+            1,
+            5
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        },
+        {
+          "level": "step_decompositions",
+          "point": [
+            1,
+            5
+          ],
+          "preserved_inputs": true,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "packages": {
+    "Pygments": "2.21.0",
+    "asttokens": "3.0.2",
+    "attrs": "26.1.0",
+    "autoray": "0.11.0",
+    "cachetools": "7.2.3",
+    "cirq-core": "1.7.0",
+    "colorama": "0.4.6",
+    "contourpy": "1.4.0",
+    "cotengra": "0.8.2",
+    "cycler": "0.12.1",
+    "cytoolz": "1.2.0",
+    "duet": "0.2.9",
+    "executing": "2.3.0",
+    "fonttools": "4.67.0",
+    "fxpmath": "0.4.10",
+    "galois": "0.4.11",
+    "iniconfig": "2.3.1",
+    "ipython": "9.17.1",
+    "ipython_pygments_lexers": "1.1.1",
+    "jedi": "0.20.1",
+    "kiwisolver": "1.5.1",
+    "llvmlite": "0.50.0",
+    "matplotlib": "3.11.2",
+    "matplotlib-inline": "0.2.2",
+    "mpmath": "1.3.0",
+    "networkx": "3.7",
+    "numba": "0.68.0",
+    "numpy": "2.1.3",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "parso": "0.8.7",
+    "pillow": "13.0.0",
+    "pip": "25.0.1",
+    "pluggy": "1.7.0",
+    "prompt_toolkit": "3.0.53",
+    "psutil": "7.2.2",
+    "pure_eval": "0.2.4",
+    "pydot": "4.0.1",
+    "pyparsing": "3.3.3",
+    "pytest": "9.1.1",
+    "python-dateutil": "2.9.0.post0",
+    "qualtran": "0.8.0.dev0",
+    "quimb": "1.15.0",
+    "scipy": "1.18.1",
+    "six": "1.17.0",
+    "stack-data": "0.6.3",
+    "sympy": "1.14.0",
+    "toolz": "1.2.0",
+    "tqdm": "4.70.1",
+    "traitlets": "5.16.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.5",
+    "wcwidth": "0.9.2"
+  },
+  "reference_revision": "dc144806e9654e49398974fe2ccc7a24813a80f3",
+  "reference_hashes": {
+    "ec_add.py": "faa6b44f15f6a7aa16c9392fd360ad73431fb5eff4330ad06a0dcd24657ea8c1",
+    "ec_point.py": "bae414df2950c34204d265741288ebcd14ce6525edf2f8211b29a0098fa51ae3"
+  },
+  "leaf_types": {
+    "six_step_actions": {
+      "_ECAddStepFive": 1,
+      "_ECAddStepFour": 1,
+      "_ECAddStepOne": 1,
+      "_ECAddStepSix": 1,
+      "_ECAddStepThree": 1,
+      "_ECAddStepTwo": 1
+    },
+    "step_decompositions": {
+      "Adjoint": 3,
+      "Allocate": 1,
+      "CModAdd": 2,
+      "CModNeg": 1,
+      "CModSub": 4,
+      "CNOT": 35,
+      "ControlledViaAnd": 6,
+      "DirtyOutOfPlaceMontgomeryModMul": 10,
+      "Equals": 5,
+      "Free": 11,
+      "IntState": 3,
+      "Join": 34,
+      "KaliskiModInverse": 4,
+      "ModAdd": 2,
+      "ModDbl": 1,
+      "ModNeg": 2,
+      "ModSub": 2,
+      "MultiAnd": 1,
+      "MultiControlX": 26,
+      "MultiTargetCNOT": 1,
+      "Split": 34,
+      "Toffoli": 18,
+      "ZeroState": 7
+    }
+  },
+  "verification_level": "Classical actions of blocks; not full gate propagation",
+  "phases_verified": false,
+  "external_control_verified": false,
+  "passed": true,
+  "not_established": [
+    "novelty",
+    "resource advantage",
+    "exhaustive coverage",
+    "reference gate-level cleanup or phases",
+    "full order recovery"
+  ],
+  "wall_seconds": 3.523165799997514,
+  "config_sha256": "77a9872466e7ad68e810e809da63f1902406f72722e9672cfc5391e8832ed273",
+  "script_sha256": "3f595251ffca31c4c7267f75e0935a91cc910f585484a983913fb21c8b430fc0"
+}

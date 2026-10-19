@@ -1,0 +1,21 @@
+{
+  "purpose": "Bounded M2 interface feasibility, not a novelty or resource experiment",
+  "reference_revision": "dc144806e9654e49398974fe2ccc7a24813a80f3",
+  "reference_hashes": {
+    "ec_add.py": "faa6b44f15f6a7aa16c9392fd360ad73431fb5eff4330ad06a0dcd24657ea8c1",
+    "ec_point.py": "bae414df2950c34204d265741288ebcd14ce6525edf2f8211b29a0098fa51ae3"
+  },
+  "curve": {"p": 17, "a": 0, "b": 7},
+  "local_width": 5,
+  "qualtran_width": 7,
+  "qualtran_window": 1,
+  "cases": [
+    {"id": "ordinary", "constant": [15, 13], "point": [5, 8]},
+    {"id": "doubling", "constant": [15, 13], "point": [15, 13]},
+    {"id": "opposite", "constant": [15, 13], "point": [15, 4]},
+    {"id": "identity", "constant": [15, 13], "point": null},
+    {"id": "order_two_double", "constant": [3, 0], "point": [3, 0]},
+    {"id": "order_two_identity", "constant": [3, 0], "point": null},
+    {"id": "order_two_ordinary", "constant": [3, 0], "point": [15, 13]}
+  ]
+}
