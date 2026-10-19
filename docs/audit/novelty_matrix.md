@@ -91,8 +91,10 @@ establish an advance over a complete corrected reference.
 3. Done 2026-10-18: see docs/audit/references_audit.md. [27] Bhatia2020 does not
    resolve (DOI points to another article; no Crossref record); [28] Bittel2021
    exists but is not pertinent; [30] Endo2021 exists, weak pertinence.
-4. Record candidate, comparator, testable claim, resource model and motivation.
-   Agree measurable acceptance criteria before producing outcome data.
+4. Candidates evaluated in docs/decisions/m2_candidate_options.md (proposed
+   2026-10-18): A exception impact in unknown-order finding (main), B exhaustive
+   domain verification (support), C and D not recommended. Acceptance criteria
+   proposed there; to be fixed with the advisor before any run.
 5. Decide continue/reframe with the advisor; record scope and evidence deadline.
 
 R8 remains OPEN. No performance improvement, secure-domain guarantee, first
