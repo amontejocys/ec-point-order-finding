@@ -1,0 +1,25 @@
+{
+  "scope": "P5 figure generated from existing numerical P3 tables; no scientific rerun",
+  "figure_sha256": "3ab0ccb808d40e0f6a5b4bbf47be2e157c132ee9238cdcb23a284ef19189cf12",
+  "script_sha256": "1e9adf32b69b17342cfce0266a0b303583af4ad5c97217ea98ef060470cb1de3",
+  "budgets_csv_sha256": "88db715dafd26fcdaed0e5e9b0ddcb0569742cdfd78bf0fe8daee4efd44398b7",
+  "summary_sha256": "0f0d5d9c459f249955c96e661513de9146673e6ec64e666481abac56d27896f4",
+  "config_sha256": "5ff39ebd13cb883526a064b32fdad8f1d6ea43c218f630028c9d9b1e819e1358",
+  "scientific_source_commit": "af324c647e705651759f3b8e33632ee9b9c03d3b",
+  "production_source_sha256": "3d2206e4b04e1b2f36687d43a32307ce490d21ca4567c9238cf401f12c4b884c",
+  "python_version": "3.12.14",
+  "plotting_packages": {
+    "matplotlib": "3.10.7",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0"
+  },
+  "plotting_environment_is_separate_from_scientific_environment": true,
+  "dpi": 500,
+  "size_inches": [
+    3.5,
+    2.65
+  ],
+  "data_rows": 66,
+  "precision_status": "numerical_only",
+  "caption": "Numerically estimated budgets over every integer order 2 <= r <= B for ideal independent executions. Q0 is the frozen baseline register, with Q0 > B^2; dashed squares double Q0. Lines connect evaluated primes only. These are offline small-field calibrations, not certified guarantees."
+}
