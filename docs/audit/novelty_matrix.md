@@ -1,7 +1,11 @@
 # M2 novelty audit
 
-Status: first source pass and second-reader verification on 2026-10-18. NOT a
-novelty decision.
+Status: first source pass, second-reader verification and pinned Qualtran source
+inspection on 2026-10-18. NOT a novelty decision.
+Source-level corrections and narrower contract comparison are recorded in
+docs/audit/m2_contract_comparison.md. That note supersedes paper-only coverage
+descriptions below: the inspected software includes order-two and second-curve
+tests. No general priority claim follows from the differences listed here.
 Local comparison baseline: m1-complete, commit
 6e5a775e57f380d4650dd247bf39ed95fed3dcfb.
 No circuit, recovery policy or manuscript changes are authorized by this audit.
@@ -27,9 +31,9 @@ Pending means not yet established, not absent from the source.
 | PZ, quant-ph/0301141v2 | Unique affine points, Sec. 3.1 | Sec. 4.2 uses generic addition with random-offset initialization; loss about 4 log q / q | Not defined; states stay on the curve | Sec. 4.3 reverses slope arithmetic and names the standard compute/swap/uncompute-with-minus-A procedure | Code/coverage audit pending | Sec. 6; model comparison pending | Controlled constant additions and unknown-order finding are antecedents, not local inventions |
 | RNSL, 1706.06752v3 | Affine, Secs. 4.1-4.2 | Generic law with offset initialization and exceptional-scalar analysis, Sec. 4.2 (fraction about n/2^n for large prime r) | Not defined; states stay on the curve | Reversible arithmetic; full contract audit pending | Paper reports simulated Toffoli networks; exact test coverage pending | Concrete counts exist; no local-model comparison yet | Exception frequency analysis already has an antecedent |
 | HJNR S, 2001.09580v1 | Affine, Sec. 5; uniqueness discussed in App. A.4 | Complete-domain contract pending | Pending | App. A.4, Fig. 11 already describes out-of-place to in-place conversion | Paper reports Q# implementation; repository revision/tests pending | Optimized arithmetic, different accounting | Compute/swap/inverse cleanup is not itself novel |
-| Litinski, 2306.08585v1 | Two affine quantum inputs, second one lookup-selected (window 16); O as the sentinel (0,0); Sec. II | Explicit exact-addition construction with flags for identity, inverse and doubling, Figs. 5, 10-12 (verified) | Not defined: domain is curve points plus (0,0); no claim for arbitrary bit strings or order-two constants | Explicit flag/slope reset construction; see Papa below | Diagram-level contract checked; code not audited | Do not equate amortized per-key counts with our per-addition counts | Handling these exceptional cases alone cannot support a first-construction claim |
+| Litinski, 2306.08585v1 | Affine quantum inputs; O uses sentinel (0,0), Sec. II | Identity, inverse and doubling branches, Figs. 5, 10-12; corrected reference also tests order-two inputs | No local-style fixed-invalid extension identified | See corrected Qualtran source comparison | Pinned source inspected; external tests not run | Amortized ECDLP and per-addition models differ | Complete addition alone is not new |
 | Cheung-Mosca, cs/0101004v1 | Unique recognizable encodings and efficient group action, Sec. 5 | Abstract group operation assumed | Recognition assumption, not our chosen fixed-point extension | Implementation details abstracted | Not a concrete EC circuit audit | Corollary 8 gives randomized quantum polynomial-time element-order finding | General group order finding is established |
-| Papa, 2506.03318v2 | Qualtran implementation following Litinski, Sec. II | Four cleanup defects, all in exceptional paths (steps 2, 5, 6), repaired, Sec. III | Not tested: 12 selected curve points of one small curve | Reports four cleanup inconsistencies and repairs, Sec. III | Computational-basis and resource tests, Sec. II; code revision pending | Reports unchanged leading gate order, one extra ancilla | Validation and cleanup repair are also established research directions |
+| Papa, 2506.03318v2; Qualtran dc144806 | Montgomery coordinate/slope interface with sentinel infinity | Corrected exceptional branches; source tests include order-two point (3,0) mod 17 | No fixed-invalid extension identified in inspected interface | Composed-step comparisons present | Source inspection: selected pair grids and second-curve cases; not executed here | No same-model benchmark yet | Verification itself is established; compare actual contracts/coverage |
 | Later works/software | Search leads recorded in source notes | Pending | Pending | Pending | Pending | Pending | No absence or priority claim permitted |
 
 ## Local evidence and limits
@@ -47,14 +51,15 @@ Pending means not yet established, not absent from the source.
 
 ## Verified differences of the local artifact (not yet relevance-weighted)
 
-Established by the second-reader pass; each needs condition 3 (measured or
-formal relevance) before it can appear as a contribution.
+Initial observations refined by the pinned source pass; none establishes
+priority or technical relevance on its own.
 
 1. Domain totality. H_A is a total function on all 2^(2l+1) encodings (invalid
    strings map to themselves), verified exhaustively for width 3 and on all 30
-   points of p=29 for one constant (docs/audit/coverage.md). Litinski/Papa are
-   exact on curve points plus (0,0) and are tested on 12 selected points; Long et
-   al. test random inputs. No antecedent claims or tests off-curve behaviour. In
+   points of p=29 for one constant (docs/audit/coverage.md). The inspected Qualtran
+   interface uses (0,0) for infinity and selected tests, not the same explicit
+   invalid-encoding contract. No fixed-invalid contract was identified there;
+   this is not an absence claim about all antecedents. In
    ideal execution such states never occur, so relevance must be argued (robust
    verification contract, reusable component), not assumed.
 2. Representation. Identity as a flag qubit with canonical (1,0,0) versus the
@@ -64,11 +69,13 @@ formal relevance) before it can appear as a contribution.
    PZ/RNSL show exceptions are negligible. Order finding from the identity with an
    unknown, possibly small or composite order is the setting where that argument
    is weakest (the first addition O + P is exceptional for every odd k). No
-   antecedent quantifies the exact effect of generic-only addition there.
+   such quantitative effect was identified in the inspected passages; novelty
+   and fair-initialization conditions remain to be checked.
 4. Verification method. Exhaustive basis propagation of the real circuit over
    complete small domains with clean-ancilla checks, plus FFT of the permutation,
-   is a reproducible artifact pattern; Papa and Long et al. use selected or random
-   inputs. Comparable in kind to Polimeni-Seidel's sparse-simulator checks.
+   is a reproducible artifact pattern. Common-domain, common-depth comparison
+   remains necessary; source test coverage must not be inferred solely from
+   paper descriptions.
 
 ## First-pass decision impact
 
@@ -92,9 +99,9 @@ establish an advance over a complete corrected reference.
    resolve (DOI points to another article; no Crossref record); [28] Bittel2021
    exists but is not pertinent; [30] Endo2021 exists, weak pertinence.
 4. Candidates evaluated in docs/decisions/m2_candidate_options.md (proposed
-   2026-10-18): A exception impact in unknown-order finding (main), B exhaustive
-   domain verification (support), C and D not recommended. Acceptance criteria
-   proposed there; to be fixed with the advisor before any run.
+   2026-10-18). Author clarification retains the hybrid pipeline as the paper's
+   object; A and B are conditional evidence, not an approved reframe. Acceptance
+   criteria and effort remain to be fixed before the main run.
 5. Decide continue/reframe with the advisor; record scope and evidence deadline.
 
 R8 remains OPEN. No performance improvement, secure-domain guarantee, first
