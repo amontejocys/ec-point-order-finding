@@ -13,7 +13,7 @@ The pipeline factors order finding into three components: a reversible point-ari
 
 \subsubsection{Problem statement}
 
-Let $P \in E(\Fp)$ be a non-identity point of unknown order $r = \ord(P)$. The function \ref{eq:f_periodic}
+Let $P \in E(\Fp)$ be a non-identity point of unknown order $r = \ord(P)$. The function in Equation \ref{eq:f_periodic}
 
 \begin{equation}\label{eq:f_periodic}
     f_P : \Z_{\geq 0} \to E(\Fp), \quad f_P(k) = kP
@@ -327,7 +327,7 @@ The finite law of Appendix~\ref{app:complexity} was evaluated for the 11 primes 
 \begin{revision}
 Proos and Zalka describe Shor's algorithm for ECDLP, including reversible elliptic-curve arithmetic \cite{ProosZalka2003}. Subsequent studies develop concrete resource estimates and optimized arithmetic circuits \cite{Roetteler2017,Haner2020,Litinski2023}. At the group-algorithmic level, Cheung and Mosca describe element-order finding and finite Abelian group decomposition \cite{CheungMosca2001}. The present work builds on these foundations to develop and evaluate an integrated hybrid process connecting reversible point arithmetic, probabilistic order recovery, and classical signature generation.
 
-Its contribution lies in the explicit implementation of these interfaces, the analysis of their combined computational requirements, and a reproducible characterization of recovery and admission reliability. Validation of point addition circuits and finite-spectrum analyses of order finding have precedents \cite{Papa2025Validation,Ekera2022OrderFinding}; here they are applied to the gcd-based recovery rule and the admission test of Algorithm~\ref{alg:hybrid}. The aim is the reliability of the integrated process. Quantum order finding is studied here as the quantum step of the signing pipeline, not as a faster route to the point order: point counting followed by classical order reduction is already polynomial in $\ell$ \cite{Schoof1985}, and the comparison of Section~\ref{sec:complexity} is restricted to the cost model stated there.
+Its contribution lies in the explicit implementation of these interfaces, the analysis of their combined computational requirements, and a reproducible characterization of recovery and admission reliability. Validation of point addition circuits and finite-spectrum analyses of order finding have precedents \cite{Papa2025Validation,Ekera2022OrderFinding}; here they are applied to the gcd-based recovery rule and the admission test of Algorithm~\ref{alg:hybrid}. The aim is the reliability of the integrated process. Quantum order finding is studied here as the quantum step of the signing pipeline, without claiming a speedup over classical point-order methods. Point counting is polynomial in $\ell$ \cite{Schoof1985}; given the factorization of the group cardinality, subsequent point-order reduction also has polynomial cost. The cost of obtaining that factorization is accounted for separately in Section~\ref{sec:complexity}.
 \end{revision}
 
 

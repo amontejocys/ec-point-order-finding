@@ -77,3 +77,12 @@ by this audit. R8 stays a supported positioning with acknowledged acceptance ris
 - Snapshot record: paper/README.md, section "Post_P final", ZIP SHA-256
   `581e6c9d4feecf1dc8e64495c8f7830aa648775e67b0c476ca2a43fefb87aa1f`. Items 2 to 5 (reference [30] wording, data release, anonymity,
   compile) are unchanged: author or venue decisions, not text defects.
+
+## Second update (15:09 export)
+
+The motivation sentence was reworded by the author: no speedup claim over
+classical point-order methods, point counting polynomial in l, order reduction
+polynomial given the factorization of the group cardinality, factorization cost
+accounted for separately (C_fact(M) in the complexity section; verified). ZIP
+SHA-256 `cb6e627ee168bffd612c7d72edbdcd87c913cb6b90e6336dd1dd31bd100f6630`. Tag stage8-text-final points to the 14:12 text; see the
+revision log for the tagging decision.
