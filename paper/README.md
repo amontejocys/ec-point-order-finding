@@ -15,7 +15,39 @@ Preserve the original structure and correct prose; blue marks real changes.
 
 ## Snapshots
 
-### 2026-10-26, Post_P final (15:09 export): motivation wording (current)
+### 2026-10-26, Post_P final (15:15 export): bibliography clean-up (current)
+
+- Source: Overleaf export `Shor_s_Algorithm_Adapted_for_Determining_the_Order_of_Elliptic_Curves__1_ (6).zip` (the export was saved under that name), downloaded 2026-10-26 15:15.
+- ZIP SHA-256: `901548859a987b02b58e05e9e841fa593eb2011554bb575b4e85de9223758393`.
+- Changed since the 15:09 export (commit addedb6): `main.bib` only. The `Qiskit2023`
+  entry lost its redundant `note = {Accessed 2024}` line; no citation is affected.
+  All section files are identical to the 15:09 snapshot.
+- Checks by the independent reader: keys, labels, `revision` blocks, no textcolor,
+  repeated-word and spacing scan, no first-person plural.
+- Files are stored byte-for-byte; compile confirmed in Overleaf by the author.
+
+File digests:
+
+| File | SHA-256 |
+| --- | --- |
+| circuit_1.png | `bab7e049982a5bb1111d2f9fe039a9a22b225953d078e7090201f9766293af3b` |
+| circuit_2.png | `9cbd099eeef2009e2cec39efb6c6894e157d9ac18dddb48ac9bc3997824c3a1d` |
+| classical_points.png | `1b8203677ecbf518c3f324b0d4ac981efca3342e43a44199f7e4437db7124600` |
+| final_result.png | `8f9a6b496ab8afa08c13b27eb8986e19ddc47302873ee156674a69f1153ae75a` |
+| main.bib | `de184702a3795f309b0c4783436fa0e488b74eca6c99b05e352c1e229e7d1c07` |
+| main.tex | `351fed1fc11aa28acd4ec853cbde0f6ae77807b906f992e286c9530f24f8438d` |
+| quantum_results.png | `6cd159588aede3ffadede422983e43b7dc4d19a8c786730e6b280e57b1e953f0` |
+| sec/00-authors.tex | `d462fee34a0f83cadf64dc6de9febfdee9fea0e5a4bbfe599a0b289f139824f4` |
+| sec/01-abstract.tex | `d0ddeb3b286a323c61a124d14df50fa1795edc8fd2bebbe79ee63278ad771424` |
+| sec/02-introduction.tex | `77c063fb6938d7899d525a7a73c66887ce26caccd0d458bc475e1b56e279ed74` |
+| sec/03-methods.tex | `f63032c06708b849b6e17b85f7125ec569d594fb646497ccb6b463b7bd1277bd` |
+| sec/04-results_discussions.tex | `68db92d96d36c8499bed3761dc9088af39930fe0873cf05944f88cf0fe480192` |
+| sec/05-acknowledgements.tex | `5d8df6aa9b0d0c1510254614cefc07989d4fd620835c31f5d9c21cde09fe670c` |
+| sec/06-data_availability.tex | `7e3c99208818972c56d9fee74ed5d0285699c5ac6278e2defda051380dbaf245` |
+| sec/07-author_contributions.tex | `a5a79ae019aeed3e568061a925c1d3a7d02d8bff4e4186dad6f4a8b374edbf9f` |
+| sec/08-appendix.tex | `fa6099e17ecd07c709723cd561c857935ec57f089acb7b460f45bb62a1041aeb` |
+
+### 2026-10-26, Post_P final (15:09 export): motivation wording (superseded)
 
 - Source: Overleaf export `Shor_s_Algorithm_Adapted_for_Determining_the_Order_of_Elliptic_Curves__Post_P.zip`, downloaded 2026-10-26 15:09.
 - ZIP SHA-256: `cb6e627ee168bffd612c7d72edbdcd87c913cb6b90e6336dd1dd31bd100f6630`.
