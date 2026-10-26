@@ -177,7 +177,7 @@ The compact inverter retains $O(\ell)$ quotient registers of width $\ell$ and $O
     N_{\mathrm q}=O(m+\ell^2)=O(\ell^2).
 \end{equation}
 
-These arguments establish the quantum bounds in Theorem~\ref{thm:speedup} under the stated ideal gate model.
+These arguments establish the quantum bounds in Theorem~\ref{thm:resource_bound} under the stated ideal gate model.
 
 \subsection{Classical processing}
 
@@ -324,5 +324,5 @@ For this instance the finite law of Appendix~\ref{app:complexity}, evaluated wit
 
 For the fixed signing test, the message representative is $z=2$, the private key is $d=2$, and the nonce is $k=1$. The recovered candidate $\hat r=5$ is accepted exactly by the small-prime check, without sampling Miller--Rabin bases. Using the recovered estimate $\hat r=5$, classical multiplication gives $R=(6,7)$, and the signature components are $r_{\sigma}=6\bmod5=1$ and $s=1^{-1}(2+1\cdot2)\bmod5=4$. Thus $(r_{\sigma},s)=(1,4)$. For each of the $100$ recovery trials with $T=4$, the signature generated using the recovered estimate matched the independent classical reference and passed classical arithmetic verification.
 
-This instance provides reproducible noiseless validation of reversible point arithmetic, probabilistic order recovery, and its integration with classical signature generation for the stated test parameters. The resource bounds of Theorem~\ref{thm:speedup} follow from the circuit analysis in Appendix~\ref{app:complexity}, rather than from this individual numerical instance.
+This instance provides reproducible noiseless validation of reversible point arithmetic, probabilistic order recovery, and its integration with classical signature generation for the stated test parameters. The resource bounds of Theorem~\ref{thm:resource_bound} follow from the circuit analysis in Appendix~\ref{app:complexity}, rather than from this individual numerical instance.
 \end{revision}

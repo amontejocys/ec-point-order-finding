@@ -65,3 +65,15 @@ on the REVTeX build in Overleaf.
 No new circuit execution, certified numerics, component priority, resource
 benchmark against the literature, or security statement is introduced or implied
 by this audit. R8 stays a supported positioning with acknowledged acceptance risk.
+
+## Update after the final export (2026-10-26 14:12)
+
+- Open item 1 (implicit motivation) is closed in the text: the Discussion now
+  states that quantum order finding is studied as the quantum step of the signing
+  pipeline, not as a faster route to the point order, citing the polynomial-time
+  point-counting route.
+- The theorem label `thm:speedup` was renamed `thm:resource_bound` in all
+  occurrences (cosmetic); no unresolved references remain.
+- Snapshot record: paper/README.md, section "Post_P final", ZIP SHA-256
+  `581e6c9d4feecf1dc8e64495c8f7830aa648775e67b0c476ca2a43fefb87aa1f`. Items 2 to 5 (reference [30] wording, data release, anonymity,
+  compile) are unchanged: author or venue decisions, not text defects.
