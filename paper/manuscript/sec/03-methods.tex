@@ -1,8 +1,6 @@
 \section{Methods}
 \label{sec:methods} 
-
 \subsection{Elliptic curves over finite fields}
-
 Let $p>3$ be a prime and let $E/\Fp$ be an elliptic curve given in short Weierstrass form \cite{Silverman2009, Washington2008}
 
 \begin{equation}
@@ -12,22 +10,25 @@ Let $p>3$ be a prime and let $E/\Fp$ be an elliptic curve given in short Weierst
 together with the chord and tangent group law on the set of affine points augmented with the identity $\mathcal{O}$ \cite{Silverman2009,Washington2008}. The order $\#E(\Fp)$ is bounded by the Hasse interval $|\#E(\Fp) - (p+1)| \leq 2\sqrt{p}$ \cite{Hasse1936}. The curve \texttt{secp256k1} is specified by the sextuple $(p, a, b, G, n, h) = (p, 0, 7, G, n, 1)$ with $p$ a 256-bit prime and $G$ a generator of prime order $n$ \cite{SEC2_2010}.
 
 \begin{revision}
+
 \subsection{Point representation for reversible arithmetic}
 
 Following the affine-coordinate approach to reversible elliptic-curve arithmetic \cite{ProosZalka2003,Roetteler2017}, let $\ell=\lceil\log_2 p\rceil$ denote the number of qubits required to represent a field element. Canonical coordinate representatives $x,y\in\{0,\ldots,p-1\}$ are used together with an explicit identity flag:
 \begin{equation}
-\label{eq:point_encoding}
-\begin{aligned}
-\lvert\mathrm{enc}(R)\rangle
-  &=\lvert0\rangle\lvert x\rangle_{\ell}
-    \lvert y\rangle_{\ell},
-    &&R=(x,y),\\
-\lvert\mathrm{enc}(\mathcal{O})\rangle
-  &=\lvert1\rangle\lvert0\rangle_{\ell}
-    \lvert0\rangle_{\ell}.
-\end{aligned}
+    \label{eq:point_encoding}
+    \begin{aligned}
+        \lvert\mathrm{enc}(R)\rangle
+          &=\lvert0\rangle\lvert x\rangle_{\ell}
+            \lvert y\rangle_{\ell},
+            &&R=(x,y),\\
+        \lvert\mathrm{enc}(\mathcal{O})\rangle
+          &=\lvert1\rangle\lvert0\rangle_{\ell}
+            \lvert0\rangle_{\ell}.
+    \end{aligned}
 \end{equation}
-This encoding distinguishes all curve points, including the identity, and requires $2\ell+1$ qubits. Auxiliary registers used by reversible arithmetic are counted separately.
+
+This encoding distinguishes all curve points, including the identity, and requires $2\ell+1$ qubits. Auxiliary registers used by reversible arithmetic are counted separately. 
+
 \end{revision}
 
 \subsection{ECDSA Signature}
@@ -37,29 +38,17 @@ Given a private key $d \in [1, n-1]$ and the public key $Q = dG$, the ECDSA sign
 \subsection{Shor's order-finding subroutine}
 
 \begin{revision}
-Shor's quantum algorithms for factoring
-and discrete logarithms use Fourier
-sampling \cite{Shor1994,Shor1997}.
-For point-order recovery, the relevant
-subroutine is order finding for an
-efficiently computable periodic function $f$.
-\end{revision} Given $f: \Z \to S$ with $f(x+r) = f(x)$ and $r$ unknown, the algorithm prepares the state
+Shor's quantum algorithms for factoring and discrete logarithms use Fourier sampling \cite{Shor1994,Shor1997}. For point-order recovery, the relevant subroutine is order finding for an efficiently computable periodic function $f$. \end{revision}
+
+Given $f: \Z \to S$ with $f(x+r) = f(x)$ and $r$ unknown, the algorithm prepares the state
 
 \begin{equation}
-\frac{1}{\sqrt{Q}}\sum_{x=0}^{Q-1} \lvert x\rangle \lvert 0\rangle \longmapsto
-\frac{1}{\sqrt{Q}}\sum_{x=0}^{Q-1} \lvert x\rangle \lvert f(x)\rangle,
+    \frac{1}{\sqrt{Q}}\sum_{x=0}^{Q-1} \lvert x\rangle \lvert 0\rangle \longmapsto
+    \frac{1}{\sqrt{Q}}\sum_{x=0}^{Q-1} \lvert x\rangle \lvert f(x)\rangle,
 \end{equation}
 
 \begin{revision}
-The inverse QFT is applied to the first register
-\cite{Coppersmith1994,NielsenChuang2010},
-producing a measurement distribution with peaks
-near multiples of $Q/r$. Continued fractions
-\cite{HardyWright2008} provide candidate
-denominators for probabilistic order recovery,
-with the measurement budget analysed in
-Section~\ref{sec:complexity}.
-\end{revision}Phase estimator \cite{Kitaev1995, Cleve1998} provides an equivalent and often more circuit-efficient formulation. Concrete resource estimates for Shor on factoring and ECDLP are given in \cite{Beauregard2003, Roetteler2017, Gidney2021, Haner2020}.
+The inverse QFT is applied to the first register \cite{Coppersmith1994,NielsenChuang2010}, producing a measurement distribution with peaks near multiples of $Q/r$. Continued fractions \cite{HardyWright2008} provide candidate denominators for probabilistic order recovery, with the measurement budget analysed in Section~\ref{sec:complexity}. \end{revision}Phase estimation \cite{Kitaev1995, Cleve1998} provides an equivalent and often more circuit-efficient formulation. Concrete resource estimates for Shor on factoring and ECDLP are given in \cite{Beauregard2003, Roetteler2017, Gidney2021, Haner2020}.
 
 \begin{revision}
 \subsection{Reversible evaluation of the periodic function}
@@ -70,16 +59,17 @@ The point encoding is defined in Equation~\eqref{eq:point_encoding}.
 
 For a classically known point $A$, the required controlled operation is:
 \begin{equation}
-\label{eq:controlled_point_addition}
-\begin{aligned}
-V_A:\quad
-&\lvert c\rangle\lvert\mathrm{enc}(R)\rangle
- \lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto
- \lvert c\rangle\lvert\mathrm{enc}(R+cA)\rangle
- \lvert0\rangle_{\mathrm{aux}},
-\end{aligned}
+    \label{eq:controlled_point_addition}
+    \begin{aligned}
+        V_A:\quad
+        &\lvert c\rangle\lvert\mathrm{enc}(R)\rangle
+         \lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto
+         \lvert c\rangle\lvert\mathrm{enc}(R+cA)\rangle
+         \lvert0\rangle_{\mathrm{aux}},
+    \end{aligned}
 \end{equation}
+
 where $c\in\{0,1\}$ and $R\in E(\Fp)$.
 
 The operation preserves the control and returns all auxiliary registers to their initial state. Its inverse subtracts $A$ under the same control.
@@ -88,25 +78,27 @@ Let $m$ denote the number of qubits in the scalar input register, so that $0\leq
 
 Writing $k_j\in\{0,1\}$ for the bits of $k$ gives:
 \begin{equation}
-k=\sum_{j=0}^{m-1}k_j2^j,
-\qquad
-kP=\sum_{j=0}^{m-1}k_jP_j,
-\qquad P_j=2^jP.
+    k=\sum_{j=0}^{m-1}k_j2^j,
+    \qquad
+    kP=\sum_{j=0}^{m-1}k_jP_j,
+    \qquad P_j=2^jP.
 \end{equation}
+
 The constant points $P_j$ are obtained classically by successive doublings, without requiring the order of $P$. Starting from an accumulator representing $\mathcal{O}$, the controlled operations $V_{P_j}$ are applied with controls $k_j$.
 
 The resulting evaluation has the required action
 \begin{equation}
-\label{eq:oracle}
-\begin{aligned}
-U_{f_P}:\quad
-&\lvert k\rangle\lvert\mathrm{enc}(\mathcal{O})\rangle
- \lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto
- \lvert k\rangle\lvert\mathrm{enc}(kP)\rangle
- \lvert0\rangle_{\mathrm{aux}}.
-\end{aligned}
+    \label{eq:oracle}
+    \begin{aligned}
+        U_{f_P}:\quad
+        &\lvert k\rangle\lvert\mathrm{enc}(\mathcal{O})\rangle
+         \lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto
+         \lvert k\rangle\lvert\mathrm{enc}(kP)\rangle
+         \lvert0\rangle_{\mathrm{aux}}.
+    \end{aligned}
 \end{equation}
+
 Thus, the evaluation does not require a table listing the output for every scalar in the input domain. 
 
 For each finite constant point $A$, the reference implementation uses mutually exclusive reversible branch indicators to distinguish $R=\mathcal{O}$, $R=-A$, $R=A$ with $A\neq -A$, and the remaining valid inputs. These branches produce $A$, $\mathcal{O}$, $2A$, and the ordinary affine sum, respectively, according to the elliptic-curve group law \cite{Silverman2009,Washington2008}.
@@ -134,13 +126,11 @@ The in-place point update is assembled from a reversible XOR evaluator, a regist
 \end{equation}
 
 
-The final step applies the XOR evaluator for $-A$: since $(R+A)-A=R$, its output cancels the old point encoding in the work register. Additional arithmetic scratch registers, omitted from the expression, start and finish
-in the zero state. Controlling every stage, including the swap and cleanup, gives the operation $V_A$ while preserving the control qubit and restoring all auxiliary registers.
+The final step applies the XOR evaluator for $-A$: since $(R+A)-A=R$, its output cancels the old point encoding in the work register. Additional arithmetic scratch registers, omitted from the expression, start and finish in the zero state. Controlling every stage, including the swap and cleanup, gives the operation $V_A$ while preserving the control qubit and restoring all auxiliary registers.
 
-To define the update on the entire point register, bit strings that do not encode a valid curve point are left unchanged. On valid encodings, translation by $A$ is a bijection whose inverse is translation by $-A$; on invalid encodings, the update is the identity. These two disjoint sets are therefore preserved, and the combined map is a permutation of the computational basis. This extension is an implementation choice that makes the reversible update well-defined beyond the valid-point subspace. The order-finding circuit initializes the accumulator in $\mathrm{enc}(\mathcal{O})$, so its subsequent point updates remain within the valid- point subspace.
-
+To define the update on the entire point register, bit strings that do not encode a valid curve point are left unchanged. On valid encodings, translation by $A$ is a bijection whose inverse is translation by $-A$; on invalid encodings, the update is the identity. These two disjoint sets are therefore preserved, and the combined map is a permutation of the computational basis. This extension is an implementation choice that makes the reversible update well-defined beyond the valid point subspace. The order-finding circuit initializes the accumulator in $\mathrm{enc}(\mathcal{O})$, so its subsequent point updates remain within the valid point subspace.
 \end{revision}
 
 \subsection{Hybrid classical-quantum design pattern}
 
-Variational and hybrid algorithms have become a standard tool for near-term quantum hardware, with examples ranging from Variational Quantum Eigensolver (VQE) \cite{Peruzzo2014, McClean2016}, to Quantum Approximate Optimization Algorithm (QAOA) \cite{Farhi2014} and pipelines for quantum-classical machine learning \cite{Schuld2019, Cerezo2021}. The pattern relevant to this paper, however, is a different one: rather than replacing a full classical algorithm by a variational ansatz, it replaces one well-defined subroutine---a periodicity-finding step---by a coherent quantum circuit that is called once or a small number of times by an otherwise classical protocol.
+Variational and hybrid algorithms have become a standard tool for near-term quantum hardware, with examples ranging from Variational Quantum Eigensolver (VQE) \cite{Peruzzo2014, McClean2016}, to Quantum Approximate Optimization Algorithm (QAOA) \cite{Farhi2014} and pipelines for quantum-classical machine learning \cite{Schuld2019, Cerezo2021}. The pattern relevant to this paper, however, is a different one: rather than replacing a full classical algorithm by a variational ansatz, it replaces one well-defined subroutine (a periodicity-finding step) by a coherent quantum circuit that is called once or a small number of times by an otherwise classical protocol.

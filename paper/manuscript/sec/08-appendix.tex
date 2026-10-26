@@ -1,437 +1,328 @@
 \appendix
-
-\section{\textcolor{blue}{Reversible construction of the point-arithmetic circuit}}
+\begin{revision}
+\section{Reversible construction of the point-arithmetic circuit}    
 \label{app:oracle}
 
-\begin{revision}
-The construction uses the controlled-addition framework of
-\cite{ProosZalka2003,Roetteler2017} and the standard elliptic-curve
-group law \cite{Silverman2009,Washington2008}. The encoding in
-Equation~\eqref{eq:point_encoding}, branch organisation, and cleanup
-below specify the reference implementation. For valid point encodings,
-\begin{equation}
-\label{eq:reversible_circuit}
-\begin{aligned}
-U_{f_P}:\quad
-&\lvert k\rangle\lvert\mathrm{enc}(R)\rangle
- \lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto
- \lvert k\rangle\lvert\mathrm{enc}(R+kP)\rangle
- \lvert0\rangle_{\mathrm{aux}}.
-\end{aligned}
-\end{equation}
-Initializing $R=\mathcal O$ yields Equation~\eqref{eq:oracle}.
-\end{revision}
+The construction uses the controlled-addition framework of \cite{ProosZalka2003,Roetteler2017} and the standard elliptic-curve group law \cite{Silverman2009,Washington2008}. The encoding in Equation~\eqref{eq:point_encoding}, branch organisation, and cleanup below specify the reference implementation. For valid point encodings,
 
-\subsection{\textcolor{blue}{Modular arithmetic blocks}}
-\begin{revision}
-Let $\ell=\lceil\log_2p\rceil$. Comparisons write predicates into
-flags by XOR, preserve their inputs, and reverse temporary subtraction
-work. For a classical constant $a\in\{0,\ldots,p-1\}$, modular addition
-implements
 \begin{equation}
-\label{eq:app_r5_constant_addition}
-\begin{aligned}
-&\lvert x\rangle\lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto\lvert(x+a)\bmod p\rangle
- \lvert0\rangle_{\mathrm{aux}},\quad x<p.
-\end{aligned}
+    \label{eq:reversible_circuit}
+    \begin{aligned}
+        U_{f_P}:\quad
+        &\lvert k\rangle\lvert\mathrm{enc}(R)\rangle
+         \lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto
+         \lvert k\rangle\lvert\mathrm{enc}(R+kP)\rangle
+         \lvert0\rangle_{\mathrm{aux}}.
+    \end{aligned}
 \end{equation}
-Inputs $x\geq p$ are fixed. On valid inputs, an extended register
-holds $x+a$, and $p$ is subtracted when required. For the output
-$u=(x+a)\bmod p$, reduction occurred exactly when $u<a$; this
-predicate clears the reduction flag. Repeating the range test clears
-the validity flag. Addition of a quantum register is assembled by
-letting its bit $y_j$ control addition of $2^j\bmod p$, preserving $y$.
-Circuit reversal gives subtraction.
+
+Initializing $R=\mathcal O$ yields Equation~\eqref{eq:oracle}.
+
+\subsection{Modular arithmetic blocks}
+
+Let $\ell=\lceil\log_2p\rceil$. Comparisons write predicates into flags by XOR, preserve their inputs, and reverse temporary subtraction work. For a classical constant $a\in\{0,\ldots,p-1\}$, modular addition implements
+
+\begin{equation}
+    \label{eq:app_r5_constant_addition}
+    \begin{aligned}
+        &\lvert x\rangle\lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto\lvert(x+a)\bmod p\rangle
+         \lvert0\rangle_{\mathrm{aux}},\quad x<p.
+    \end{aligned}
+\end{equation}
+
+Inputs $x\geq p$ are fixed. On valid inputs, an extended register holds $x+a$, and $p$ is subtracted when required. For the output $u=(x+a)\bmod p$, reduction occurred exactly when $u<a$; this predicate clears the reduction flag. Repeating the range test clears the validity flag. Addition of a quantum register is assembled by letting its bit $y_j$ control addition of $2^j\bmod p$, preserving $y$. Circuit reversal gives subtraction.
 
 Multiplication preserves both operands and uses a modular accumulator:
+
 \begin{equation}
-\label{eq:app_r5_multiply_accumulate}
-\begin{aligned}
-&\lvert x\rangle\lvert y\rangle\lvert t\rangle
- \lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto\lvert x\rangle\lvert y\rangle
- \lvert(t+xy)\bmod p\rangle
- \lvert0\rangle_{\mathrm{aux}},\quad t<p.
-\end{aligned}
+    \label{eq:app_r5_multiply_accumulate}
+        \begin{aligned}
+        &\lvert x\rangle\lvert y\rangle\lvert t\rangle
+         \lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto\lvert x\rangle\lvert y\rangle
+         \lvert(t+xy)\bmod p\rangle
+         \lvert0\rangle_{\mathrm{aux}},\quad t<p.
+    \end{aligned}
 \end{equation}
-Using $xy=\sum_{i,j}x_i y_j2^{i+j}$, each pair of operand bits
-controls addition of $2^{i+j}\bmod p$. Invalid accumulator encodings
-are fixed. Squaring follows the corresponding expansion of $x^2$.
+
+Using $xy=\sum_{i,j}x_i y_j2^{i+j}$, each pair of operand bits controls addition of $2^{i+j}\bmod p$. Invalid accumulator encodings are fixed. Squaring follows the corresponding expansion of $x^2$.
 
 Inversion is a clean XOR evaluator:
-\begin{equation}
-\label{eq:app_r5_inverse_evaluator}
-\begin{aligned}
-&\lvert w\rangle\lvert t\rangle\lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto\lvert w\rangle\lvert t\oplus I_p(w)\rangle
- \lvert0\rangle_{\mathrm{aux}},
-\end{aligned}
-\end{equation}
-where $I_p(w)=w^{-1}\bmod p$ for $0<w<p$, and zero otherwise.
-Here $\oplus$ is bitwise XOR. The reference circuit initializes
-$(r_0,r_1,c_0,c_1)=(p,w,0,1)$ and uses active Euclidean rounds:
-\begin{equation}
-\label{eq:app_r5_euclidean_update}
-\begin{aligned}
-q&=\lfloor r_0/r_1\rfloor,\\
-(r_0,r_1)&\longmapsto(r_1,r_0-qr_1),\\
-(c_0,c_1)&\longmapsto(c_1,c_0-qc_1\bmod p).
-\end{aligned}
-\end{equation}
-The invariant $r_i\equiv c_iw\pmod p$ yields the inverse in $c_0$
-when $(r_0,r_1)=(1,0)$. There are $2\ell+1$ scheduled rounds,
-disabled after $r_1=0$. The compact variant reuses one state quartet
-while retaining quotient and activation history. After XORing the
-valid inverse into the target, reversal clears all state and history.
-This is a local quotient-based implementation, not the optimized
-inverter of \cite{Roetteler2017}.
-\end{revision}
 
-\subsection{\textcolor{blue}{Point translation and scalar evaluation}}
-\begin{revision}
-For a finite classical constant $A=(x_A,y_A)$ and ordinary input
-$R=(x_R,y_R)$ with $x_R\neq x_A$, evaluate
 \begin{equation}
-\label{eq:affine_translation}
-\begin{aligned}
-\lambda&=(y_R-y_A)(x_R-x_A)^{-1}\pmod p,\\
-x_{R+A}&=\lambda^2-x_R-x_A\pmod p,\\
-y_{R+A}&=\lambda(x_R-x_{R+A})-y_R\pmod p.
-\end{aligned}
+    \label{eq:app_r5_inverse_evaluator}
+    \begin{aligned}
+        &\lvert w\rangle\lvert t\rangle\lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto\lvert w\rangle\lvert t\oplus I_p(w)\rangle
+         \lvert0\rangle_{\mathrm{aux}},
+    \end{aligned}
 \end{equation}
+
+where $I_p(w)=w^{-1}\bmod p$ for $0<w<p$, and zero otherwise. Here $\oplus$ is bitwise XOR. The reference circuit initializes $(r_0,r_1,c_0,c_1)=(p,w,0,1)$ and uses active Euclidean rounds: 
+
+\begin{equation}
+    \label{eq:app_r5_euclidean_update}
+    \begin{aligned}
+        q&=\lfloor r_0/r_1\rfloor,\\
+        (r_0,r_1)&\longmapsto(r_1,r_0-qr_1),\\
+        (c_0,c_1)&\longmapsto(c_1,c_0-qc_1\bmod p).
+    \end{aligned}
+\end{equation}
+
+The invariant $r_i\equiv c_iw\pmod p$ yields the inverse in $c_0$ when $(r_0,r_1)=(1,0)$. There are $2\ell+1$ scheduled rounds, disabled after $r_1=0$. The compact variant reuses one state quartet while retaining quotient and activation history. After XORing the valid inverse into the target, reversal clears all state and history. This is a local quotient-based implementation, not the optimized inverter of \cite{Roetteler2017}.
+
+\subsection{Point translation and scalar evaluation}
+
+For a finite classical constant $A=(x_A,y_A)$ and ordinary input $R=(x_R,y_R)$ with $x_R\neq x_A$, evaluate 
+
+\begin{equation}
+    \label{eq:affine_translation}
+    \begin{aligned}
+        \lambda&=(y_R-y_A)(x_R-x_A)^{-1}\pmod p,\\
+        x_{R+A}&=\lambda^2-x_R-x_A\pmod p,\\
+        y_{R+A}&=\lambda(x_R-x_{R+A})-y_R\pmod p.
+    \end{aligned}
+\end{equation}
+
 Shared differences, inverse, and slope are retained until both coordinates have been XORed into their targets, then uncomputed. Mutually exclusive flags handle $R=\mathcal O$, $R=-A$, and $R=A$ with $A\neq-A$, producing the constants $A$, $\mathcal O$, and $2A$. When $A=-A$, the opposite-point branch takes precedence. Thus only the ordinary branch uses the nonzero-denominator formula. Validity checks use canonical coordinates, the curve equation, and the identity flag, rather than a list of points.
 
-Let $H_A$ translate valid point encodings and fix invalid ones. Its
-inverse is $H_{-A}$. The total point evaluator implements
-\begin{equation}
-\label{eq:app_r5_total_point_evaluator}
-\begin{aligned}
-&\lvert z\rangle\lvert t\rangle\lvert0\rangle_{\mathrm{aux}}\\
-&\longmapsto\lvert z\rangle\lvert t\oplus H_A(z)\rangle
- \lvert0\rangle_{\mathrm{aux}}.
-\end{aligned}
-\end{equation}
-An invalid input is therefore copied by XOR into the target. Starting
-with a zero target, evaluate $H_A$, exchange registers, and evaluate
-$H_{-A}$ to cancel the old encoding. This is
-Equation~\eqref{eq:point_update_cleanup}; the zero target is workspace,
-not the identity encoding. Controlling every stage gives $V_A$ and
-fixes invalid encodings under the completed in-place update. Branch
-flags are uncomputed after use, and non-overlapping arithmetic scratch
-allocations share a pool.
+Let $H_A$ translate valid point encodings and fix invalid ones. Its inverse is $H_{-A}$. The total point evaluator implements
 
-Precompute $P_0=P$, $P_{j+1}=2P_j$ using at most $m-1$ classical
-doublings, without knowing $r$ or enumerating scalar outputs. Initialize
-the accumulator at $\mathrm{enc}(\mathcal O)$ and apply $V_{P_j}$
-with control $k_j$, omitting $P_j=\mathcal O$. After $j$ bits,
 \begin{equation}
-\label{eq:partial_scalar_accumulation}
+    \label{eq:app_r5_total_point_evaluator}
+    \begin{aligned}
+        &\lvert z\rangle\lvert t\rangle\lvert0\rangle_{\mathrm{aux}}\\
+        &\longmapsto\lvert z\rangle\lvert t\oplus H_A(z)\rangle
+         \lvert0\rangle_{\mathrm{aux}}.
+    \end{aligned}
+\end{equation}
+
+An invalid input is therefore copied by XOR into the target. Starting with a zero target, evaluate $H_A$, exchange registers, and evaluate $H_{-A}$ to cancel the old encoding. This is Equation~\eqref{eq:point_update_cleanup}; the zero target is workspace, not the identity encoding. Controlling every stage gives $V_A$ and fixes invalid encodings under the completed in-place update. Branch flags are uncomputed after use, and non-overlapping arithmetic scratch allocations share a pool.
+
+Precompute $P_0=P$, $P_{j+1}=2P_j$ using at most $m-1$ classical doublings, without knowing $r$ or enumerating scalar outputs. Initialize the accumulator at $\mathrm{enc}(\mathcal O)$ and apply $V_{P_j}$ with control $k_j$, omitting $P_j=\mathcal O$. After $j$ bits,
+
+\begin{equation}
+    \label{eq:partial_scalar_accumulation}
 R_j=\sum_{i=0}^{j-1}k_iP_i,\qquad R_0=\mathcal O.
 \end{equation}
-Hence $R_m=kP$. Each update preserves the scalar bits and cleans its
-workspace for reuse. Linearity extends this action to superpositions.
-\end{revision}
 
-\subsection{\textcolor{blue}{Code correspondence and validation}}
-\begin{revision}
-The modular blocks correspond to
-\texttt{modular\_add\_constant},
-\texttt{modular\_add\_register},
-\texttt{modular\_multiply\_accumulate}, and
-\texttt{modular\_square\_accumulate}.
-The inverter is \texttt{modular\_inverse\_inplace}, using
-\texttt{binary\_quotient}; its external interface remains the clean
-XOR evaluator despite the in-place internal Euclidean updates.
-The point blocks are \texttt{point\_encoding\_check},
-\texttt{point\_addition\_cases},
-\texttt{ordinary\_point\_sum\_shared}, and
-\texttt{point\_sum\_evaluator\_compact}.
-The in-place and controlled translations are
-\texttt{point\_add\_inplace} and \texttt{controlled\_point\_add},
-using \texttt{evaluator\_variant="compact"}.
-\texttt{EllipticOrderFinding} assembles the complete order-finding
-circuit. Standard reversible gates underlie these local assemblies
-\cite{Barenco1995,NielsenChuang2010}.
+Hence $R_m=kP$. Each update preserves the scalar bits and cleans its workspace for reuse. Linearity extends this action to superpositions.
 
-Tests compare outputs with independent arithmetic references and check
-exceptional inputs, invalid encodings, input preservation, and zero
-auxiliary outputs. The arithmetic gates are positive-phase basis
-permutations, so their verified basis action determines their action
-on the tested initialized subspace. Complete noiseless validation
-propagates the actual arithmetic gates and derives the Fourier
-distribution from their outputs; it is not a hardware experiment.
-Recovery and signature statistics are reported separately.
-Gate, classical-processing, and workspace bounds are derived in
-Appendix~\ref{app:complexity}.
-\end{revision}
+\subsection{Code correspondence and validation}
 
+The modular blocks correspond to \texttt{modular\_add\_constant}, \texttt{modular\_add\_register}, \texttt{modular\_multiply\_accumulate}, and \texttt{modular\_square\_accumulate}. The inverter is \texttt{modular\_inverse\_inplace}, using \texttt{binary\_quotient}; its external interface remains the clean XOR evaluator despite the in-place internal Euclidean updates. The point blocks are \texttt{point\_encoding\_check}, \texttt{point\_addition\_cases}, \texttt{ordinary\_point\_sum\_shared}, and \texttt{point\_sum\_evaluator\_compact}. The in-place and controlled translations are \texttt{point\_add\_inplace} and \texttt{controlled\_point\_add}, using \texttt{evaluator\_variant="compact"}. \texttt{EllipticOrderFinding} assembles the complete order-finding circuit. Standard reversible gates underlie these local assemblies \cite{Barenco1995,NielsenChuang2010}.
 
+Tests compare outputs with independent arithmetic references and check exceptional inputs, invalid encodings, input preservation, and zero auxiliary outputs. The arithmetic gates are positive-phase basis permutations, so their verified basis action determines their action on the tested initialized subspace. Complete noiseless validation propagates the actual arithmetic gates and derives the Fourier distribution from their outputs; it is not a hardware experiment. Recovery and signature statistics are reported separately. Gate, classical-processing, and workspace bounds are derived in Appendix~\ref{app:complexity}.
 
-\section{\textcolor{blue}{Detailed complexity derivations}}
+\section{Detailed complexity derivations}
 \label{app:complexity}
 
-\subsection{\textcolor{blue}{Parameters and arithmetic costs}}
-\begin{revision}
-Assume a nonsingular curve over prime $p>3$ and a valid non-identity
-point of order $r\geq2$. With $\ell=\lceil\log_2p\rceil$,
-Hasse's bound \cite{Hasse1936} gives
-\[
-r\leq B=p+1+\lfloor2\sqrt p\rfloor.
-\]
-Algorithm~\ref{alg:hybrid} selects
-$m=\lceil\log_2(B^2+1)\rceil$, so $Q=2^m>B^2$ and
-$m=\Theta(\ell)$ without assuming that $r$ has $\Theta(\ell)$ bits.
+\subsection{Parameters and arithmetic costs}
 
-First count each $X$-family instruction, including MCX, as one unit.
-A binary constant adder contains at most $\ell(\ell+1)/2$
-instructions; comparisons compute and reverse a subtraction.
-Modular constant addition therefore costs $O(\ell^2)$.
-Register addition uses at most $\ell$ such blocks, and multiplication
-at most $\ell^2$. Register comparison and subtraction cost
-$O(\ell^3)$; long division uses $O(\ell)$ stages. Each of the
-$2\ell+1$ inversion rounds contains quotient and product operations
-costing $O(\ell^4)$. Thus, including cleanup,
+Assume a nonsingular curve over prime $p>3$ and a valid non-identity point of order $r\geq2$. With $\ell=\lceil\log_2p\rceil$, Hasse's bound \cite{Hasse1936} gives 
+
+\[
+    r\leq B=p+1+\lfloor2\sqrt p\rfloor.
+\]
+
+Algorithm~\ref{alg:hybrid} selects $m=\lceil\log_2(B^2+1)\rceil$, so $Q=2^m>B^2$ and $m=\Theta(\ell)$ without assuming that $r$ has $\Theta(\ell)$ bits.
+
+First count each $X$-family instruction, including MCX, as one unit. A binary constant adder contains at most $\ell(\ell+1)/2$ instructions; comparisons compute and reverse a subtraction. Modular constant addition therefore costs $O(\ell^2)$. Register addition uses at most $\ell$ such blocks, and multiplication at most $\ell^2$. Register comparison and subtraction cost $O(\ell^3)$; long division uses $O(\ell)$ stages. Each of the $2\ell+1$ inversion rounds contains quotient and product operations costing $O(\ell^4)$. Thus, including cleanup,
+
 \begin{center}
-\begin{tabular}{lc}
-\hline
-Reference block & Instructions\\
-\hline
-Modular constant addition & $O(\ell^2)$\\
-Modular register addition & $O(\ell^3)$\\
-Product or square accumulation & $O(\ell^4)$\\
-Quotient evaluation & $O(\ell^4)$\\
-Modular inversion & $O(\ell^5)$\\
-Controlled point translation & $O(\ell^5)$\\
-\hline
-\end{tabular}
+    \begin{tabular}{lc}
+        \hline
+        Reference block & Instructions\\
+        \hline
+        Modular constant addition & $O(\ell^2)$\\
+        Modular register addition & $O(\ell^3)$\\
+        Product or square accumulation & $O(\ell^4)$\\
+        Quotient evaluation & $O(\ell^4)$\\
+        Modular inversion & $O(\ell^5)$\\
+        Controlled point translation & $O(\ell^5)$\\
+        \hline
+    \end{tabular}
 \end{center}
-The final row uses a constant number of arithmetic blocks, exceptional
-branches, and evaluations for in-place cleanup. These are conservative
-code-derived bounds, not optimized published resource estimates.
-\end{revision}
 
-\subsection{\textcolor{blue}{Quantum gates and workspace}}
-\begin{revision}
-The final basis is
-$\{X,\mathrm{CX},\mathrm{CCX},H,\mathrm{CP}(\theta)\}$,
-with ideal controlled phase rotations. An MCX with $k\geq2$ controls
-is expanded into $2k-3$ Toffoli gates using $k-2$ clean ancillas;
-the partial-conjunction chain is reversed after acting on the target.
-A separate ancilla pool is reused between gates. Since the reference
-instructions have $O(\ell)$ controls, the expansion gives
+The final row uses a constant number of arithmetic blocks, exceptional branches, and evaluations for in-place cleanup. These are conservative code-derived bounds, not optimized published resource estimates.
+
+\subsection{Quantum gates and workspace}
+
+The final basis is $\{X,\mathrm{CX},\mathrm{CCX},H,\mathrm{CP}(\theta)\}$, with ideal controlled phase rotations. An MCX with $k\geq2$ controls is expanded into $2k-3$ Toffoli gates using $k-2$ clean ancillas; the partial-conjunction chain is reversed after acting on the target. A separate ancilla pool is reused between gates. Since the reference instructions have $O(\ell)$ controls, the expansion gives
+
 \begin{equation}
-\label{eq:app_r6_addition_bound}
-C_{\mathrm{add}}(\ell)=O(\ell^6).
+    \label{eq:app_r6_addition_bound}
+    C_{\mathrm{add}}(\ell)=O(\ell^6).
 \end{equation}
-At most $m$ controlled additions evaluate $kP$. Preparation and the
-inverse QFT then give
+
+At most $m$ controlled additions evaluate $kP$. Preparation and the inverse QFT then give 
 \[
-G_{\mathrm{one}}=O(m\ell^6+m^2+m+\ell).
+    G_{\mathrm{one}}=O(m\ell^6+m^2+m+\ell).
 \]
-Consequently,
+Consequently, 
+
 \begin{equation}
-\label{eq:app_r6_quantum_total}
-G_{\mathrm q}=O(T\ell^7),\qquad m=\Theta(\ell).
+    \label{eq:app_r6_quantum_total}
+    G_{\mathrm q}=O(T\ell^7),\qquad m=\Theta(\ell).
 \end{equation}
-This counts the complete evaluation once per execution, not once per
-scalar bit. Measurement counts are separate. Rotation synthesis,
-depth, routing, and physical error correction are excluded.
 
-The compact inverter retains $O(\ell)$ quotient registers of width
-$\ell$ and $O(\ell^2)$ division workspace, despite reusing its
-remainder/coefficient quartet. Other arithmetic allocations have no
-larger order; the MCX pool adds $O(\ell)$ qubits. Clean workspace is
-reused across updates and sequential executions, giving
+This counts the complete evaluation once per execution, not once per scalar bit. Measurement counts are separate. Rotation synthesis, depth, routing, and physical error correction are excluded. 
+
+The compact inverter retains $O(\ell)$ quotient registers of width $\ell$ and $O(\ell^2)$ division workspace, despite reusing its remainder/coefficient quartet. Other arithmetic allocations have no larger order; the MCX pool adds $O(\ell)$ qubits. Clean workspace is reused across updates and sequential executions, giving 
+
 \begin{equation}
-\label{eq:app_r6_workspace}
-N_{\mathrm q}=O(m+\ell^2)=O(\ell^2).
+    \label{eq:app_r6_workspace}
+    N_{\mathrm q}=O(m+\ell^2)=O(\ell^2).
 \end{equation}
-These arguments establish the quantum bounds in
-Theorem~\ref{thm:speedup} under the stated ideal gate model.
-\end{revision}
 
-\subsection{\textcolor{blue}{Classical processing}}
-\begin{revision}
-Schoolbook multiplication and division on $\ell$-bit integers cost
-$O(\ell^2)$. Allowing $O(\ell)$ Euclidean steps gives conservative
-$O(\ell^3)$ bounds for inversion and greatest common divisors.
-A classical affine point operation therefore costs $O(\ell^3)$.
-Precomputing the constant points takes $O(m)$ point operations,
-or $O(m\ell^3)$ bit operations, for valid curve and point inputs.
-Offline gate-list construction and synthesis are separate from this
-arithmetic precomputation and are not included in the online bounds.
+These arguments establish the quantum bounds in Theorem~\ref{thm:speedup} under the stated ideal gate model.
 
-Each measured outcome produces $O(m)$ convergents. Their generation
-costs $O(m^3)$ using schoolbook arithmetic. A denominator $v\leq B$
-has $O(\ell)$ bits, so checking $vP=\mathcal O$ requires
-$O(\ell)$ point operations, or $O(\ell^4)$ bit operations.
-Greatest common divisor updates contribute at most $O(m\ell^3)$.
+\subsection{Classical processing}
+
+Schoolbook multiplication and division on $\ell$-bit integers cost $O(\ell^2)$. Allowing $O(\ell)$ Euclidean steps gives conservative $O(\ell^3)$ bounds for inversion and greatest common divisors. A classical affine point operation therefore costs $O(\ell^3)$. Precomputing the constant points takes $O(m)$ point operations, or $O(m\ell^3)$ bit operations, for valid curve and point inputs. Offline gate-list construction and synthesis are separate from this arithmetic precomputation and are not included in the online bounds.
+
+Each measured outcome produces $O(m)$ convergents. Their generation costs $O(m^3)$ using schoolbook arithmetic. A denominator $v\leq B$ has $O(\ell)$ bits, so checking $vP=\mathcal O$ requires $O(\ell)$ point operations, or $O(\ell^4)$ bit operations. Greatest common divisor updates contribute at most $O(m\ell^3)$. 
+
 Hence
 \begin{equation}
-\label{eq:app_r6_postprocessing}
-C_{\mathrm{post}}=O(m^3+m\ell^4).
+    \label{eq:app_r6_postprocessing}
+    C_{\mathrm{post}}=O(m^3+m\ell^4).
 \end{equation}
+
 No subgroup enumeration or trial factorization is performed.
 
-A nonzero estimate $\hat r$ is bounded by $B$. One signing attempt
-therefore costs $O(\ell^4)$, dominated by scalar multiplication,
-for an $O(\ell)$-bit representative $z$ supplied as input. Hashing
-and initial key generation are excluded; nonce retries do not repeat
-order recovery. For $m=\Theta(\ell)$,
+A nonzero estimate $\hat r$ is bounded by $B$. One signing attempt therefore costs $O(\ell^4)$, dominated by scalar multiplication, for an $O(\ell)$-bit representative $z$ supplied as input. Hashing and initial key generation are excluded; nonce retries do not repeat order recovery. For $m=\Theta(\ell)$,
+
 \begin{equation}
-\label{eq:app_r6_classical_total}
-\begin{aligned}
-C_{\mathrm{hyb,cl}}
-&=O\bigl(m\ell^3+T(m^3+m\ell^4)+\ell^4\bigr)\\
-&=O(\ell^4+T\ell^5).
-\end{aligned}
+    \label{eq:app_r6_classical_total}
+    \begin{aligned}
+        C_{\mathrm{hyb,cl}}
+        &=O\bigl(m\ell^3+T(m^3+m\ell^4)+\ell^4\bigr)\\
+        &=O(\ell^4+T\ell^5).
+    \end{aligned}
 \end{equation}
-Classical bit operations and quantum gate counts remain separate;
-this is not a competing classical order-finding algorithm's cost.
-\end{revision}
 
-\subsection{\textcolor{blue}{Recovery probability and resulting bounds}}
-\begin{revision}
-Assume ideal arithmetic, an injective point encoding, an exact inverse
-QFT, and independent executions. Following the standard order-finding
-argument \cite{Shor1997}, let $y_s$ be nearest to $Qs/r$ for
-$\gcd(s,r)=1$. Since $Q>B^2\geq r^2$,
+Classical bit operations and quantum gate counts remain separate; this is not a competing classical order-finding algorithm's cost.
+
+\subsection{Recovery probability and resulting bounds}
+
+Assume ideal arithmetic, an injective point encoding, an exact inverse QFT, and independent executions. Following the standard order-finding argument \cite{Shor1997}, let $y_s$ be nearest to $Qs/r$ for $\gcd(s,r)=1$. Since $Q>B^2\geq r^2$,
 \[
-\left|\frac{y_s}{Q}-\frac{s}{r}\right|
-\leq\frac{1}{2Q}<\frac{1}{2r^2}.
+    \left|\frac{y_s}{Q}-\frac{s}{r}\right|
+    \leq\frac{1}{2Q}<\frac{1}{2r^2}.
 \]
-The convergent criterion \cite{HardyWright2008} therefore yields
-the denominator $r$, which passes the group-identity test.
 
-For completeness, a conservative probability bound follows by
-partitioning the $Q$ inputs into $r$ residue classes of lengths $N_a$.
-Their point outputs are orthogonal and $\sum_aN_a=Q$. At $y_s$,
-the geometric-sum step satisfies $|\theta|\leq\pi r/Q$ and
-$N_a|\theta|/2\leq3\pi/4$. Thus each sum has magnitude at least
-$N_a/4$, using
-$\sin(u)/u\geq2\sqrt2/(3\pi)>1/4$ for $|u|\leq3\pi/4$,
-with the continuous value at zero.
+The convergent criterion \cite{HardyWright2008} therefore yields the denominator $r$, which passes the group-identity test.
+
+For completeness, a conservative probability bound follows by partitioning the $Q$ inputs into $r$ residue classes of lengths $N_a$. Their point outputs are orthogonal and $\sum_aN_a=Q$. At $y_s$, the geometric-sum step satisfies $|\theta|\leq\pi r/Q$ and $N_a|\theta|/2\leq3\pi/4$. Thus each sum has magnitude at least $N_a/4$, using $\sin(u)/u\geq2\sqrt2/(3\pi)>1/4$ for $|u|\leq3\pi/4$, with the continuous value at zero. 
+
 Consequently,
-\begin{equation}
-\label{eq:app_r6_success_lower_bound}
-\begin{aligned}
-\Pr(y_s)&\geq\frac{\sum_aN_a^2}{16Q^2}
-\geq\frac{1}{16r},\\
-\alpha&\geq\frac{\varphi(r)}{16r},
-\end{aligned}
-\end{equation}
-where $\alpha$ is the probability of including $r$ in one execution
-and $\varphi$ is Euler's totient function. The selected outcomes are
-distinct. All accepted denominators are multiples of $r$, so including
-$r$ fixes their accumulated greatest common divisor at $r$.
 
-The standard estimate
-$\varphi(r)/r=\Omega(1/\log\log r)$ used in \cite{Shor1997},
-together with $r\leq B=\Theta(p)$, gives
-$\alpha\geq c/(1+\log\ell)$ for some $c>0$, adjusting for small
-orders. Therefore
-\[
-\Pr(\hat r\neq r)
-\leq e^{-cT/(1+\log\ell)},
-\]
-including both absent and nonminimal candidates as failures.
-For $0<\varepsilon<1/2$, a sufficient budget scales as
 \begin{equation}
-\label{eq:app_r6_measurement_budget}
-T=O\!\left((1+\log\ell)\ln\frac{1}{\varepsilon}\right).
+    \label{eq:app_r6_success_lower_bound}
+    \begin{aligned}
+        \Pr(y_s)&\geq\frac{\sum_aN_a^2}{16Q^2}
+        \geq\frac{1}{16r},\\
+        \alpha&\geq\frac{\varphi(r)}{16r},
+    \end{aligned}
 \end{equation}
-This is an asymptotic sufficient budget, not an empirical success
-rate or a minimality certificate supplied to signing.
+
+where $\alpha$ is the probability of including $r$ in one execution and $\varphi$ is Euler's totient function. The selected outcomes are distinct. All accepted denominators are multiples of $r$, so including $r$ fixes their accumulated greatest common divisor at $r$.
+
+The standard estimate $\varphi(r)/r=\Omega(1/\log\log r)$ used in \cite{Shor1997}, together with $r\leq B=\Theta(p)$, gives $\alpha\geq c/(1+\log\ell)$ for some $c>0$, adjusting for small orders. Therefore
+\[
+        \Pr(\hat r\neq r)
+    \leq e^{-cT/(1+\log\ell)},
+\]
+including both absent and nonminimal candidates as failures. For $0<\varepsilon<1/2$, a sufficient budget scales as 
+
+\begin{equation}
+    \label{eq:app_r6_measurement_budget}
+    T=O\!\left((1+\log\ell)\ln\frac{1}{\varepsilon}\right).
+\end{equation}
+
+This is an asymptotic sufficient budget, not an empirical success rate or a minimality certificate supplied to signing.
 
 For fixed $\varepsilon$, substitution gives
+
 \begin{equation}
-\label{eq:app_r6_total_confidence_bounds}
-\begin{aligned}
-G_{\mathrm q}&=\bigOt(\ell^7),\\
-C_{\mathrm{hyb,cl}}&=\bigOt(\ell^5),\\
-N_{\mathrm q}&=O(\ell^2).
-\end{aligned}
+    \label{eq:app_r6_total_confidence_bounds}
+    \begin{aligned}
+        G_{\mathrm q}&=\bigOt(\ell^7),\\
+        C_{\mathrm{hyb,cl}}&=\bigOt(\ell^5),\\
+        N_{\mathrm q}&=O(\ell^2).
+    \end{aligned}
 \end{equation}
-Here $\bigOt$ hides polylogarithmic factors in $\ell$. These bounds
-describe the reference implementation, not optimality, hardware
-noise, or cryptographic security. Comparisons with alternative
-classical methods require their own cost assumptions.
+
+Here $\bigOt$ hides polylogarithmic factors in $\ell$. These bounds describe the reference implementation, not optimality, hardware noise, or cryptographic security. Comparisons with alternative classical methods require their own cost assumptions.
+
+\textbf{Finite reliability of the implemented recovery policy.} Assume ideal independent executions, canonical injective point outputs, and clean arithmetic workspace. For the standard finite order-finding spectrum \cite{Shor1997,Ekera2022OrderFinding}, write 
+
+\begin{equation}
+     p_y=\frac{1}{Q^2}\sum_{u=0}^{r-1}
+     \left|\sum_{\substack{0\leq k<Q\\ k\equiv u\pmod r}}
+     e^{2\pi i k y/Q}\right|^2.
+\end{equation}
+
+Let $C(y)$ contain all continued-fraction denominators retained by the implemented test $1\leq v\leq B$, $vP=\mathcal O$. Define $d(y)=\gcd C(y)$, with $\gcd\varnothing=0$, and $w_d=\sum_{y:d(y)=d}p_y$. Associativity of the greatest common divisor identifies the accumulated gcd of Algorithm~\ref{alg:hybrid} with $G_0=0$ and $G_{t+1}=\gcd(G_t,d(Y_{t+1}))$. Independence therefore gives
+
+\begin{equation}
+    \label{eq:finite_gcd_recurrence}
+    \begin{aligned}
+        \pi_0(0)&=1,\\
+        \pi_{t+1}(h)&=\sum_{\substack{g,d\\\gcd(g,d)=h}}
+                    \pi_t(g)w_d.
+    \end{aligned}
+\end{equation}
+
+Every nonzero state is a multiple of $r$, and $r$ is absorbing.
+
+Exact recovery, no candidate, and a nonminimal multiple have probabilities $\pi_T(r)$, $\pi_T(0)$, and $1-\pi_T(r)-\pi_T(0)$, respectively. The recurrence describes the recovery rule of Algorithm~\ref{alg:hybrid}.
+
+Writing $\pi_T^{(r,Q,B)}$ to expose the model parameters defines the field-level target budget by
+
+\begin{equation}
+    \begin{aligned}
+        T_\varepsilon^*(Q,B)=\min\{T\geq1:\quad\\
+        \min_{2\leq r\leq B}\pi_T^{(r,Q,B)}(r)\geq1-\varepsilon\}.
+    \end{aligned}
+\end{equation}
+
+Since $2\leq r\leq B$ for every non-identity point, taking the minimum over $2,\ldots,B$ makes $T_\varepsilon^*$ independent of the unknown order. The minimum is attained over integers that need not all occur on a given curve, so $T_\varepsilon^*$ is a safe, possibly conservative value, and its enumeration is practical only for small fields. The probabilities are computed in floating point, with selected checks performed using 80-digit arithmetic; the thresholds reported below are therefore numerical estimates.
+
+For a concrete conservative comparison, let $\nu_B=1+\lfloor\log_2B\rfloor$. If $r$ has $s$ distinct prime factors $q_1<\cdots<q_s$, then $q_i\geq i+1$ and $2^s\leq r\leq B$, so 
+\[
+    \frac{\varphi(r)}{r}\geq\prod_{i=1}^s\frac{i}{i+1}
+    =\frac{1}{s+1}\geq\frac{1}{\nu_B}.
+\]
+
+Combined with Equation~\eqref{eq:app_r6_success_lower_bound}, this yields the explicit sufficient rule 
+\[
+    T_{\mathrm{coarse}}=
+    \left\lceil16\nu_B\ln\frac{1}{\varepsilon}\right\rceil.
+\]
+
+This rule is used as the finite baseline for the numerical comparison; the asymptotic budget above is unchanged.
 \end{revision}
-
-
-
 
 \section{Worked instance over \texorpdfstring{$E(\mathbb{F}_{29})$}{E(F29)}}\label{app:instance}
 
 \begin{revision}
-For reproducibility, the numerical instance uses $p=29$, $a=0$, $b=7$, and $G=P=(6,7)$. Direct enumeration gives $\#E(\mathbb{F}_{29})=30$, including the identity $\mathcal{O}$. The point $P$ has order $r=5$, since $5P=\mathcal{O}$ and $kP\neq\mathcal{O}$ for $1\leq k<5$. The corresponding cofactor is
-$h=\#E(\mathbb{F}_{29})/r=30/5=6$. \end{revision}  \begin{revision}
-For $p=29$, the coordinate width is $\ell=5$,
-and the point register uses $2\ell+1=11$
-qubits, including the identity flag.
-The Hasse bound gives $B=40$.
-Following Algorithm~\ref{alg:hybrid},
-$m=\lceil\log_2(B^2+1)\rceil=11$,
-so the scalar register has dimension
-$Q=2^{11}=2048$.
+For reproducibility, the numerical instance uses $p=29$, $a=0$, $b=7$, and $G=P=(6,7)$. Direct enumeration gives $\#E(\mathbb{F}_{29})=30$, including the identity $\mathcal{O}$. The point $P$ has order $r=5$, since $5P=\mathcal{O}$ and $kP\neq\mathcal{O}$ for $1\leq k<5$. The corresponding cofactor is $h=\#E(\mathbb{F}_{29})/r=30/5=6$. 
 
-The periodic function is evaluated through
-controlled additions of the precomputed
-points $P_j=2^jP$. All scalar inputs are
-retained, and outputs equal to $\mathcal O$
-are explicitly encoded. No scalar-output
-lookup table or domain compression is used.
-\end{revision} \begin{revision}
-Noiseless validation propagated the reversible
-arithmetic gates generated with Qiskit
-\cite{Qiskit2023}. All $2048$ scalar inputs
-were checked against independent group
-arithmetic, including auxiliary cleanup.
-The inverse-QFT measurement distribution
-was obtained by FFT from the circuit outputs,
-without a dense statevector over the full
-arithmetic workspace.
+The curve and point are selected as a small-field test instance for arithmetic validation and reproducibility; it is not a set of cryptographic signing parameters. The implementation is parameterized by the field and curve inputs rather than specialized to $p=29$. For $p=29$, the coordinate width is $\ell=5$, and the point register uses $2\ell+1=11$ qubits, including the identity flag. The Hasse bound gives $B=40$. Following Algorithm~\ref{alg:hybrid}, $m=\lceil\log_2(B^2+1)\rceil=11$, so the scalar register has dimension $Q=2^{11}=2048$.
 
-The distribution has its largest peaks at
-$y\in\{0,410,819,1229,1638\}$, near the
-multiples of $Q/5$. Measurement samples
-were drawn using random seed $20261012$.
-Across $100$ independent recovery trials,
-prefix budgets of $T=1,2,4$ measurements
-gave empirical exact-order recovery counts
-of $77$, $96$, and $100$, respectively.
-No parity correction was used.
-\end{revision} \begin{revision}
-For the fixed signing test, the message
-representative is $z=2$, the private key
-is $d=2$, and the nonce is $k=1$.
- \textcolor{blue}{The recovered candidate $\hat r=5$ is accepted exactly by the small-prime check, without sampling Miller--Rabin bases.}
-Using the recovered estimate $\hat r=5$,
-classical multiplication gives $R=(6,7)$,
-and the signature components are
-$r_{\sigma}=6\bmod5=1$ and
-$s=1^{-1}(2+1\cdot2)\bmod5=4$.
-Thus $(r_{\sigma},s)=(1,4)$.
-For each of the $100$ recovery trials
-with $T=4$, the signature generated
-using the recovered estimate matched
-the independent classical reference
-and passed classical arithmetic
-verification.
-\end{revision}
+The periodic function is evaluated through controlled additions of the precomputed points $P_j=2^jP$. All scalar inputs are retained, and outputs equal to $\mathcal O$ are explicitly encoded. No scalar-output lookup table or domain compression is used.
 
-\begin{revision}
-This instance provides reproducible noiseless
-validation of reversible point arithmetic,
-probabilistic order recovery, and its
-integration with classical signature
-generation for the stated test parameters.
-\end{revision} \begin{revision}
-The resource bounds of
-Theorem~\ref{thm:speedup} follow from the
-circuit analysis in Appendix~\ref{app:complexity},
-rather than from this individual numerical
-instance.
+Noiseless validation propagated the reversible arithmetic gates generated with Qiskit \cite{Qiskit2023}. All $2048$ scalar inputs were checked against independent group arithmetic, including auxiliary cleanup. The inverse-QFT measurement distribution was obtained by FFT from the circuit outputs, without a dense statevector over the full arithmetic workspace. 
+
+The distribution has its largest peaks at $y\in\{0,410,819,1229,1638\}$, near the multiples of $Q/5$. Measurement samples were drawn using random seed $20261012$. Across $100$ independent recovery trials, prefix budgets of $T=1,2,4$ measurements gave empirical exact-order recovery counts of $77$, $96$, and $100$, respectively. No parity correction was used.
+
+For this instance the finite law of Appendix~\ref{app:complexity}, evaluated with $r=5$, gives an exact-order recovery probability of approximately $0.9983425$ at $T=4$; this is a value for the known order, unlike the worst-case budget $T_\varepsilon^*$. The arithmetic check propagated all $2048$ scalar inputs from the identity, which exercises $40$ distinct adder transitions (four constants, five subgroup points, two control values) rather than every point-register input.
+
+For the fixed signing test, the message representative is $z=2$, the private key is $d=2$, and the nonce is $k=1$. The recovered candidate $\hat r=5$ is accepted exactly by the small-prime check, without sampling Miller--Rabin bases. Using the recovered estimate $\hat r=5$, classical multiplication gives $R=(6,7)$, and the signature components are $r_{\sigma}=6\bmod5=1$ and $s=1^{-1}(2+1\cdot2)\bmod5=4$. Thus $(r_{\sigma},s)=(1,4)$. For each of the $100$ recovery trials with $T=4$, the signature generated using the recovered estimate matched the independent classical reference and passed classical arithmetic verification.
+
+This instance provides reproducible noiseless validation of reversible point arithmetic, probabilistic order recovery, and its integration with classical signature generation for the stated test parameters. The resource bounds of Theorem~\ref{thm:speedup} follow from the circuit analysis in Appendix~\ref{app:complexity}, rather than from this individual numerical instance.
 \end{revision}
